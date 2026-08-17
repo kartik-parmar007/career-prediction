@@ -1,0 +1,129 @@
+{
+  "test_id": "backend",
+  "title": "Backend Development Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Assess your skills in server architectures, RESTful API design, relational schemas, caching, authentication, and error handling.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which HTTP status code should a REST API return when a resource is successfully created?",
+      "options": ["200 OK", "201 Created", "204 No Content", "202 Accepted"],
+      "correct_answer": 1,
+      "topic": "HTTP Protocols",
+      "difficulty": "easy",
+      "explanation": "HTTP 201 Created indicates that the request has succeeded and led to the creation of a new resource."
+    },
+    {
+      "id": 2,
+      "question": "What is the primary difference between a clustered and non-clustered index in relational databases?",
+      "options": [
+        "A clustered index determines the physical order of data rows in a table, so only one can exist per table",
+        "Non-clustered indexes cannot be used on foreign keys",
+        "Clustered indexes are stored in RAM while non-clustered are on disk",
+        "A table can have up to 10 clustered indexes"
+      ],
+      "correct_answer": 0,
+      "topic": "Database Indexing",
+      "difficulty": "medium",
+      "explanation": "A clustered index physically sorts table rows on disk based on the key; hence, only one clustered index can exist per table."
+    },
+    {
+      "id": 3,
+      "question": "What makes an HTTP method idempotent?",
+      "options": [
+        "Multiple identical requests have the exact same side-effect on the server as a single request",
+        "The request never alters database state (safe)",
+        "The server caches the response forever",
+        "It can only be invoked by authenticated administrators"
+      ],
+      "correct_answer": 0,
+      "topic": "REST API Architecture",
+      "difficulty": "medium",
+      "explanation": "An HTTP method is idempotent if executing it multiple times produces the same server state as executing it once (e.g., PUT, DELETE, GET)."
+    },
+    {
+      "id": 4,
+      "question": "Why should password hashes always use a unique 'salt' along with a slow key-derivation function like bcrypt or Argon2?",
+      "options": [
+        "To prevent precomputed rainbow table attacks and slow down brute-force attempts",
+        "To compress the password length to fit into fixed-width VARCHAR columns",
+        "To allow password recovery in plain text by administrators",
+        "To encrypt database backups in transit"
+      ],
+      "correct_answer": 0,
+      "topic": "Security & Cryptography",
+      "difficulty": "medium",
+      "explanation": "Salts ensure identical passwords have different hash outputs, mitigating rainbow table lookups; slow algorithms thwart offline GPU cracking."
+    },
+    {
+      "id": 5,
+      "question": "In a JWT (JSON Web Token), which part contains the claims such as user ID and expiration timestamp?",
+      "options": ["Header", "Payload", "Signature", "Secret key"],
+      "correct_answer": 1,
+      "topic": "Authentication & JWT",
+      "difficulty": "easy",
+      "explanation": "The payload is the second part of a JWT and contains encoded claims (statements about an entity and additional data)."
+    },
+    {
+      "id": 6,
+      "question": "What is the primary role of Redis in high-throughput backend systems?",
+      "options": [
+        "An in-memory key-value data store used for low-latency caching, session management, and rate limiting",
+        "A document database for storing unstructured multimedia files",
+        "An automated CI/CD deployment runner",
+        "A relational database management system with ACID transactions"
+      ],
+      "correct_answer": 0,
+      "topic": "Caching & In-Memory Stores",
+      "difficulty": "easy",
+      "explanation": "Redis operates in RAM, delivering sub-millisecond responses ideal for caching hot data, tracking user sessions, and enforcing rate limits."
+    },
+    {
+      "id": 7,
+      "question": "In database transaction management, what does the 'I' in ACID stand for?",
+      "options": ["Integrity", "Isolation", "Immutability", "Indexing"],
+      "correct_answer": 1,
+      "topic": "Database ACID Properties",
+      "difficulty": "easy",
+      "explanation": "ACID stands for Atomicity, Consistency, Isolation, and Durability. Isolation ensures concurrent transactions do not interfere with each other."
+    },
+    {
+      "id": 8,
+      "question": "What is the 'N+1 Query Problem' when using ORMs like SQLAlchemy or Prisma?",
+      "options": [
+        "Executing 1 initial query to get N parent rows, followed by N separate individual queries to fetch child relations",
+        "Allocating N+1 database connections in the connection pool",
+        "Adding N+1 indexes to a table causing write slowdowns",
+        "Executing recursive SQL statements until a condition is met"
+      ],
+      "correct_answer": 0,
+      "topic": "ORM Optimization",
+      "difficulty": "medium",
+      "explanation": "The N+1 problem occurs when an application executes 1 query for parent records and then fires N additional queries for related records instead of using a JOIN/eager loading."
+    },
+    {
+      "id": 9,
+      "question": "What is the purpose of an API Gateway in microservices architecture?",
+      "options": [
+        "Acts as a single entry point handling routing, rate limiting, authentication, and SSL termination",
+        "Replaces all backend database storage engines",
+        "Compiles backend source code to machine assembly",
+        "Generates automated mock test datasets"
+      ],
+      "correct_answer": 0,
+      "topic": "Microservices Architecture",
+      "difficulty": "hard",
+      "explanation": "An API gateway sits between clients and microservices, centralizing cross-cutting concerns like traffic routing, authentication, and throttling."
+    },
+    {
+      "id": 10,
+      "question": "Which database isolation level prevents dirty reads, non-repeatable reads, and phantom reads completely?",
+      "options": ["Read Uncommitted", "Read Committed", "Repeatable Read", "Serializable"],
+      "correct_answer": 3,
+      "topic": "Database Concurrency",
+      "difficulty": "hard",
+      "explanation": "Serializable is the strictest isolation level, ensuring concurrent transaction execution produces the same outcome as if they ran serially."
+    }
+  ]
+}

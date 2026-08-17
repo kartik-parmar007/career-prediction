@@ -1,0 +1,149 @@
+{
+  "test_id": "java",
+  "title": "Java Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your Java fundamentals: JVM memory model, OOP, Generics, Collections, Multithreading, and Spring Boot.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary difference between the JVM Heap and Stack memory in Java?",
+      "options": [
+        "Stack stores local primitive variables and method execution frames; Heap stores all instantiated objects and instance variables",
+        "Heap is thread-specific while Stack is shared globally across all threads",
+        "Stack memory is managed by the Garbage Collector while Heap is manually freed",
+        "Heap stores bytecodes while Stack stores compiled machine binaries"
+      ],
+      "correct_answer": 0,
+      "topic": "JVM Memory Model",
+      "difficulty": "medium",
+      "explanation": "Each thread has its own Stack for method call frames and local primitives; all objects live on the shared Heap managed by the JVM Garbage Collector."
+    },
+    {
+      "id": 2,
+      "question": "Why is the `String` class immutable in Java?",
+      "options": [
+        "For security, thread-safety, and enabling the String Constant Pool to reuse memory safely without side-effects",
+        "Because Java does not support character arrays",
+        "To prevent strings from exceeding 255 characters",
+        "To allow strings to be executed as bytecode"
+      ],
+      "correct_answer": 0,
+      "topic": "Java Core & Strings",
+      "difficulty": "easy",
+      "explanation": "Immutability allows String pooling (saving heap memory), guarantees thread safety without synchronization, and protects network/database parameters."
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between an `Interface` with default methods and an `Abstract Class` in Java 8+?",
+      "options": [
+        "A class can implement multiple interfaces but extend only one abstract class; abstract classes can have instance state (fields), interfaces cannot",
+        "Abstract classes cannot contain concrete methods",
+        "Interfaces can have constructors with parameters",
+        "There is no difference since Java 8"
+      ],
+      "correct_answer": 0,
+      "topic": "OOP & Interfaces",
+      "difficulty": "medium",
+      "explanation": "Java supports multiple interface inheritance but single class inheritance. Abstract classes maintain state via instance fields, which interfaces cannot."
+    },
+    {
+      "id": 4,
+      "question": "What does the `volatile` keyword guarantee in Java multi-threading?",
+      "options": [
+        "Guarantees visibility of variable changes across threads by reading/writing directly from main memory rather than CPU caches",
+        "Guarantees atomic execution of compound operations like `count++`",
+        "Locks the entire object from concurrent access",
+        "Prevents the garbage collector from reclaiming the variable"
+      ],
+      "correct_answer": 0,
+      "topic": "Multithreading & Concurrency",
+      "difficulty": "hard",
+      "explanation": "`volatile` ensures memory visibility across CPU cores but does NOT provide mutual exclusion/atomicity for compound non-atomic operations."
+    },
+    {
+      "id": 5,
+      "question": "What is the time complexity of `HashMap.get(key)` in Java on average and worst-case (Java 8+)?",
+      "options": [
+        "Average O(1); Worst-case O(log N) due to red-black balanced tree collision bins",
+        "Average O(N); Worst-case O(N^2)",
+        "Average O(log N); Worst-case O(N)",
+        "Always guaranteed O(1) in all scenarios"
+      ],
+      "correct_answer": 0,
+      "topic": "Collections Framework",
+      "difficulty": "medium",
+      "explanation": "Java 8 converts linked list collision chains to self-balancing Red-Black trees (TreeNode) when bin thresholds exceed 8, improving worst-case from O(N) to O(log N)."
+    },
+    {
+      "id": 6,
+      "question": "What is Dependency Injection (DI) in the Spring Framework?",
+      "options": [
+        "A design pattern where object dependencies are injected by the Spring IoC container at runtime rather than instantiated with `new` inside classes",
+        "A technique for injecting SQL scripts into database connections",
+        "A method to dynamically download JAR dependencies from Maven",
+        "An automated unit testing tool for REST APIs"
+      ],
+      "correct_answer": 0,
+      "topic": "Spring Framework & IoC",
+      "difficulty": "easy",
+      "explanation": "Spring's Inversion of Control (IoC) container manages bean lifecycles and injects collaborating objects (via `@Autowired` or constructor injection)."
+    },
+    {
+      "id": 7,
+      "question": "What is Type Erasure in Java Generics?",
+      "options": [
+        "Generic type parameters (`List<String>`) are replaced with their bounds or `Object` at compile time, retaining no runtime generic type info in bytecode",
+        "Deleting unused classes during compilation to save disk space",
+        "Converting primitive types to their wrapper objects",
+        "Clearing variable values from heap memory"
+      ],
+      "correct_answer": 0,
+      "topic": "Generics",
+      "difficulty": "hard",
+      "explanation": "Java generics maintain backward compatibility with older JVM versions by erasing type parameters during compilation."
+    },
+    {
+      "id": 8,
+      "question": "What is the difference between `Checked` and `Unchecked` exceptions in Java?",
+      "options": [
+        "Checked exceptions (subclasses of Exception) must be declared or handled with try-catch at compile time; Unchecked (subclasses of RuntimeException) do not",
+        "Unchecked exceptions crash the computer hardware",
+        "Checked exceptions are only thrown by the JVM garbage collector",
+        "Unchecked exceptions can only be caught in JUnit tests"
+      ],
+      "correct_answer": 0,
+      "topic": "Exception Handling",
+      "difficulty": "easy",
+      "explanation": "The Java compiler enforces handling for Checked exceptions (e.g. `IOException`, `SQLException`), while RuntimeExceptions (e.g. `NullPointerException`) are unchecked."
+    },
+    {
+      "id": 9,
+      "question": "In Java 8 Streams, what is the difference between intermediate and terminal operations?",
+      "options": [
+        "Intermediate operations (e.g. `filter`, `map`) are lazy and return a new Stream; Terminal operations (e.g. `collect`, `forEach`) trigger computation and produce a result",
+        "Terminal operations can be chained indefinitely",
+        "Intermediate operations write data to disk",
+        "Terminal operations run on separate threads exclusively"
+      ],
+      "correct_answer": 0,
+      "topic": "Java 8 Streams API",
+      "difficulty": "easy",
+      "explanation": "Streams are evaluated lazily: pipeline processing begins only when a terminal operation is invoked."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of the `@Transactional` annotation in Spring Boot?",
+      "options": [
+        "Automatically wraps method execution in a database transaction, rolling back on unhandled runtime exceptions and committing on success",
+        "Encrypts financial payment transactions",
+        "Logs all method parameters to a CSV file",
+        "Translates SQL queries to MongoDB syntax"
+      ],
+      "correct_answer": 0,
+      "topic": "Spring Transactions",
+      "difficulty": "medium",
+      "explanation": "`@Transactional` manages ACID transaction boundaries declaratively, committing upon completion or rolling back if an exception occurs."
+    }
+  ]
+}

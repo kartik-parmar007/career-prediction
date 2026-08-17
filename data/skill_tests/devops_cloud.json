@@ -1,0 +1,139 @@
+{
+  "test_id": "devops_cloud",
+  "title": "DevOps & Cloud Engineering Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Assess your expertise in Linux commands, Docker containers, Kubernetes clusters, CI/CD pipelines, Terraform, and cloud reliability.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary difference between a Docker container and a Virtual Machine (VM)?",
+      "options": [
+        "Containers share the host operating system kernel and are lightweight; VMs run a full guest OS on a hypervisor",
+        "VMs do not require an operating system",
+        "Containers only run on Linux",
+        "Containers cannot run microservices"
+      ],
+      "correct_answer": 0,
+      "topic": "Containerization Concepts",
+      "difficulty": "easy",
+      "explanation": "Containers isolate processes using Linux namespaces and cgroups sharing the host kernel, whereas VMs virtualize hardware and run independent guest OS kernels."
+    },
+    {
+      "id": 2,
+      "question": "In Kubernetes, what is the smallest deployable computing unit that can be created and managed?",
+      "options": ["Pod", "Container", "Service", "Node"],
+      "correct_answer": 0,
+      "topic": "Kubernetes Architecture",
+      "difficulty": "easy",
+      "explanation": "A Pod encapsulates one or more co-located containers, shared storage volumes, and a unique network IP."
+    },
+    {
+      "id": 3,
+      "question": "What is Infrastructure as Code (IaC) and what problem does it solve?",
+      "options": [
+        "Managing and provisioning computing infrastructure through version-controlled declarative code files, eliminating manual configuration drift",
+        "Writing Python scripts directly inside AWS EC2 instances",
+        "Encrypting database tables automatically",
+        "Monitoring server RAM and CPU metrics"
+      ],
+      "correct_answer": 0,
+      "topic": "Infrastructure as Code",
+      "difficulty": "easy",
+      "explanation": "IaC tools like Terraform enable reproducible, automated, and version-controlled infrastructure definitions across cloud providers."
+    },
+    {
+      "id": 4,
+      "question": "What command in Terraform compares the desired configuration state with the actual infrastructure state and creates an execution plan?",
+      "options": ["terraform plan", "terraform apply", "terraform init", "terraform refresh"],
+      "correct_answer": 0,
+      "topic": "Terraform",
+      "difficulty": "easy",
+      "explanation": "`terraform plan` creates an execution plan, previewing the resources Terraform will create, update, or destroy before applying."
+    },
+    {
+      "id": 5,
+      "question": "In CI/CD, what is the core difference between Continuous Delivery and Continuous Deployment?",
+      "options": [
+        "Continuous Delivery requires manual approval before releasing to production; Continuous Deployment automatically releases every passed build to production",
+        "Continuous Delivery only compiles code without testing",
+        "Continuous Deployment only works with Docker",
+        "There is no difference between them"
+      ],
+      "correct_answer": 0,
+      "topic": "CI/CD Methodologies",
+      "difficulty": "medium",
+      "explanation": "Continuous Delivery keeps code in an always-deployable state with manual sign-off; Continuous Deployment automates release straight to production."
+    },
+    {
+      "id": 6,
+      "question": "In Linux file permissions, what does the numeric permission `chmod 755 filename` grant?",
+      "options": [
+        "Owner: Read/Write/Execute (7); Group: Read/Execute (5); Others: Read/Execute (5)",
+        "Owner: Read only; Everyone else: Full access",
+        "Full read/write/execute permissions for everyone",
+        "Restricted read-only access for all users"
+      ],
+      "correct_answer": 0,
+      "topic": "Linux Administration",
+      "difficulty": "medium",
+      "explanation": "7 (4+2+1 = rwx) for owner, 5 (4+0+1 = r-x) for group, and 5 (4+0+1 = r-x) for others."
+    },
+    {
+      "id": 7,
+      "question": "In AWS networking, what is the role of a NAT Gateway in a Virtual Private Cloud (VPC)?",
+      "options": [
+        "Enables instances in a private subnet to initiate outbound internet traffic while preventing inbound internet connections",
+        "Distributes incoming user traffic across multiple EC2 instances",
+        "Stores relational database backups",
+        "Resolves internal DNS domain names"
+      ],
+      "correct_answer": 0,
+      "topic": "Cloud Networking (AWS)",
+      "difficulty": "medium",
+      "explanation": "NAT Gateways allow backend private resources (like database servers or worker instances) to download software updates from the web without exposing them to incoming attacks."
+    },
+    {
+      "id": 8,
+      "question": "What is a 'Blue-Green Deployment' strategy?",
+      "options": [
+        "Maintaining two identical production environments; new code is deployed to the idle (Green) environment and router traffic is switched instantly once verified",
+        "Deploying changes to 10% of users randomly",
+        "Shutting down all servers for maintenance during midnight",
+        "Deploying frontend and backend simultaneously"
+      ],
+      "correct_answer": 0,
+      "topic": "Deployment Strategies",
+      "difficulty": "medium",
+      "explanation": "Blue-Green deployment eliminates downtime and reduces deployment risk by running two identical environments and swapping traffic instantly."
+    },
+    {
+      "id": 9,
+      "question": "In Prometheus monitoring, what is the difference between a Counter and a Gauge metric?",
+      "options": [
+        "A Counter only increases (or resets to 0 on restart); a Gauge is a value that can go up and down (like memory usage)",
+        "A Gauge only counts integer increments",
+        "Counters are stored in databases; Gauges are discarded",
+        "A Gauge measures HTTP status codes exclusively"
+      ],
+      "correct_answer": 0,
+      "topic": "Observability & Monitoring",
+      "difficulty": "medium",
+      "explanation": "Counters represent cumulative metrics that only rise (e.g. total HTTP requests), whereas Gauges represent instantaneous snapshots (e.g. current memory utilization)."
+    },
+    {
+      "id": 10,
+      "question": "What does a Multi-Stage Dockerfile achieve?",
+      "options": [
+        "Separates the heavy build environment from the lean runtime container, resulting in tiny, secure production images",
+        "Runs multiple operating systems in a single container",
+        "Automatically scales containers across regions",
+        "Deploys images to AWS and GCP simultaneously"
+      ],
+      "correct_answer": 0,
+      "topic": "Docker Optimization",
+      "difficulty": "medium",
+      "explanation": "Multi-stage builds leave compilers, SDKs, and build dependencies in temporary stages, copying only the compiled artifacts into the final production image."
+    }
+  ]
+}

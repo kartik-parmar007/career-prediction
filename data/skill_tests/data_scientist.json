@@ -1,0 +1,129 @@
+{
+  "test_id": "data_scientist",
+  "title": "Data Scientist Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Assess your understanding of statistical inference, machine learning algorithms, cross-validation, feature engineering, and model metrics.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary difference between Type I and Type II errors in statistical hypothesis testing?",
+      "options": [
+        "Type I is a False Positive (rejecting a true null hypothesis); Type II is a False Negative (failing to reject a false null)",
+        "Type I is a False Negative; Type II is a False Positive",
+        "Type I is caused by small sample sizes; Type II is caused by skewed data",
+        "Type I only happens in linear regression models"
+      ],
+      "correct_answer": 0,
+      "topic": "Statistical Inference",
+      "difficulty": "medium",
+      "explanation": "Type I error (alpha) occurs when you incorrectly reject the null hypothesis; Type II error (beta) occurs when you fail to reject a false null."
+    },
+    {
+      "id": 2,
+      "question": "In classification problems with severe class imbalance (e.g. 99% negative, 1% positive), which evaluation metric is most misleading if used alone?",
+      "options": ["Accuracy", "Precision", "Recall", "ROC-AUC"],
+      "correct_answer": 0,
+      "topic": "Model Evaluation",
+      "difficulty": "easy",
+      "explanation": "A dummy classifier predicting all negatives achieves 99% accuracy while having zero utility for detecting the rare positive class."
+    },
+    {
+      "id": 3,
+      "question": "What problem occurs when a machine learning model has high variance and low bias?",
+      "options": ["Overfitting", "Underfitting", "Data Leakage", "Multicollinearity"],
+      "correct_answer": 0,
+      "topic": "Bias-Variance Tradeoff",
+      "difficulty": "easy",
+      "explanation": "High variance means the model is overly complex and fits training noise closely (overfitting), failing to generalize to unseen test data."
+    },
+    {
+      "id": 4,
+      "question": "What is the role of Regularization (L1 Lasso and L2 Ridge) in linear models?",
+      "options": [
+        "Penalizing large model coefficients to prevent overfitting and reduce model variance",
+        "Speeding up gradient descent by scaling learning rates",
+        "Converting non-linear data into binary classes",
+        "Automatically balancing dataset class labels"
+      ],
+      "correct_answer": 0,
+      "topic": "Regularization",
+      "difficulty": "medium",
+      "explanation": "Regularization adds a penalty term (L1: absolute weights, L2: squared weights) to the loss function to constrain coefficient magnitude and control complexity."
+    },
+    {
+      "id": 5,
+      "question": "Which algorithm is an ensemble method based on Bagging (Bootstrap Aggregating)?",
+      "options": ["Random Forest", "Gradient Boosting (XGBoost)", "AdaBoost", "Logistic Regression"],
+      "correct_answer": 0,
+      "topic": "Ensemble Methods",
+      "difficulty": "medium",
+      "explanation": "Random Forest builds multiple independent decision trees on bootstrapped subsets of data and averages their predictions (Bagging)."
+    },
+    {
+      "id": 6,
+      "question": "What is the primary purpose of Principal Component Analysis (PCA)?",
+      "options": [
+        "Unsupervised linear dimensionality reduction that projects data onto orthogonal axes of maximum variance",
+        "Supervised classification of categorical labels",
+        "Imputing missing values using nearest neighbors",
+        "Computing p-values in A/B tests"
+      ],
+      "correct_answer": 0,
+      "topic": "Dimensionality Reduction",
+      "difficulty": "medium",
+      "explanation": "PCA finds principal component vectors that maximize variance and minimize reconstruction error for dimensionality reduction."
+    },
+    {
+      "id": 7,
+      "question": "In Scikit-Learn, why must the scaler (e.g. `StandardScaler`) be fitted ONLY on the training split (`fit_transform`) and only applied (`transform`) to the test split?",
+      "options": [
+        "To prevent Data Leakage from the test set into the model training pipeline",
+        "Because Scikit-Learn throws an error if fit is called twice",
+        "To invert the scaling transformation",
+        "To balance the test dataset labels"
+      ],
+      "correct_answer": 0,
+      "topic": "Machine Learning Pipelines",
+      "difficulty": "medium",
+      "explanation": "Fitting on test data leaks test distribution parameters (mean/variance) into training, producing overly optimistic and biased evaluations."
+    },
+    {
+      "id": 8,
+      "question": "What is SHAP (SHapley Additive exPlanations) used for in modern data science?",
+      "options": [
+        "Explaining model predictions by computing the game-theoretic marginal contribution of each feature",
+        "Compressing neural network weights into 8-bit integers",
+        "Generating synthetic tabular data",
+        "Running unit tests on database queries"
+      ],
+      "correct_answer": 0,
+      "topic": "Model Explainability",
+      "difficulty": "hard",
+      "explanation": "SHAP provides unified interpretability for any machine learning model based on cooperative game theory Shapley values."
+    },
+    {
+      "id": 9,
+      "question": "What is the Elbow Method used for in K-Means clustering?",
+      "options": [
+        "Determining the optimal number of clusters (k) by plotting within-cluster sum of squares (inertia)",
+        "Detecting multivariate outliers in regression models",
+        "Measuring correlation between independent variables",
+        "Selecting the learning rate for gradient descent"
+      ],
+      "correct_answer": 0,
+      "topic": "Unsupervised Clustering",
+      "difficulty": "medium",
+      "explanation": "The Elbow Method plots inertia against k to spot the bend point where adding more clusters yields diminishing returns."
+    },
+    {
+      "id": 10,
+      "question": "What statistical test is most appropriate to determine if there is a significant association between two categorical variables in a contingency table?",
+      "options": ["Chi-Square Test of Independence", "Two-Sample t-Test", "One-Way ANOVA", "Paired Wilcoxon Signed-Rank Test"],
+      "correct_answer": 0,
+      "topic": "Statistical Tests",
+      "difficulty": "medium",
+      "explanation": "The Chi-Square test of independence compares observed and expected frequencies across categorical contingency tables."
+    }
+  ]
+}

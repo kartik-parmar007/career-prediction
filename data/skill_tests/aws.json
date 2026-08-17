@@ -1,0 +1,124 @@
+{
+  "test_id": "aws",
+  "title": "AWS Cloud Architecture Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your knowledge of core AWS services: IAM policies, EC2, S3, RDS, VPC networking, Lambda serverless, and CloudWatch.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary difference between an AWS Security Group and a Network Access Control List (NACL)?",
+      "options": [
+        "Security Groups are stateful and operate at the EC2 instance level; NACLs are stateless and operate at the Subnet level",
+        "NACLs are stateful while Security Groups are stateless",
+        "Security Groups only filter outbound traffic",
+        "NACLs can only be applied to S3 buckets"
+      ],
+      "correct_answer": 0,
+      "topic": "AWS VPC Security",
+      "difficulty": "medium",
+      "explanation": "Security Groups are stateful (inbound return traffic is allowed automatically) and attach to ENIs; NACLs are stateless rules applied to subnet boundaries."
+    },
+    {
+      "id": 2,
+      "question": "Which AWS S3 storage class is best suited for data accessed less than once a month but requiring millisecond retrieval when requested?",
+      "options": ["S3 Standard-Infrequent Access (S3 Standard-IA)", "S3 Glacier Deep Archive", "S3 Standard", "S3 Glacier Flexible Retrieval"],
+      "correct_answer": 0,
+      "topic": "Amazon S3 Storage Classes",
+      "difficulty": "easy",
+      "explanation": "S3 Standard-IA offers low storage pricing with rapid millisecond access for data accessed infrequently."
+    },
+    {
+      "id": 3,
+      "question": "In AWS IAM, what is the best practice for granting temporary permissions to an application running on an EC2 instance to access S3?",
+      "options": [
+        "Attach an IAM Role directly to the EC2 Instance Profile using AWS STS temporary credentials",
+        "Hard-code IAM User Access Key and Secret Key in an `.env` file on the instance",
+        "Store the root AWS account password in an S3 bucket",
+        "Make the S3 bucket publicly readable and writable"
+      ],
+      "correct_answer": 0,
+      "topic": "AWS IAM & Security",
+      "difficulty": "easy",
+      "explanation": "IAM Roles automatically rotate temporary session credentials through the EC2 metadata service without storing hard-coded keys on disk."
+    },
+    {
+      "id": 4,
+      "question": "What is the maximum execution duration (timeout) for a single AWS Lambda function invocation?",
+      "options": ["15 minutes", "5 minutes", "1 hour", "24 hours"],
+      "correct_answer": 0,
+      "topic": "Serverless & AWS Lambda",
+      "difficulty": "easy",
+      "explanation": "AWS Lambda functions have a hard execution timeout limit of 15 minutes (900 seconds) per invocation."
+    },
+    {
+      "id": 5,
+      "question": "In Amazon RDS, what is the primary benefit of deploying a Multi-AZ DB instance compared to a Read Replica?",
+      "options": [
+        "Multi-AZ provides synchronous replication and automatic failover for high availability; Read Replicas provide asynchronous read scaling",
+        "Multi-AZ is used only for data analytics queries",
+        "Read Replicas handle synchronous write transactions",
+        "Multi-AZ reduces database storage costs by 50%"
+      ],
+      "correct_answer": 0,
+      "topic": "Amazon RDS & High Availability",
+      "difficulty": "medium",
+      "explanation": "Multi-AZ maintains a standby replica in a secondary availability zone with synchronous writes and automatic DNS failover in under 2 minutes."
+    },
+    {
+      "id": 6,
+      "question": "What AWS service acts as a Content Delivery Network (CDN) to cache web assets globally at edge locations?",
+      "options": ["Amazon CloudFront", "Amazon Route 53", "AWS Direct Connect", "Amazon API Gateway"],
+      "correct_answer": 0,
+      "topic": "Edge & CDN Services",
+      "difficulty": "easy",
+      "explanation": "CloudFront securely distributes static and dynamic web content with low latency via a worldwide network of edge point-of-presence (PoP) locations."
+    },
+    {
+      "id": 7,
+      "question": "In an AWS VPC, what component connects a VPC subnet directly to the public internet?",
+      "options": ["Internet Gateway (IGW)", "Egress-Only Gateway", "VPC Peering Connection", "Virtual Private Gateway"],
+      "correct_answer": 0,
+      "topic": "AWS Networking",
+      "difficulty": "easy",
+      "explanation": "An Internet Gateway attached to a VPC provides a target in subnet route tables for internet-bound IPv4/IPv6 traffic."
+    },
+    {
+      "id": 8,
+      "question": "What is the difference between Amazon SQS and Amazon SNS?",
+      "options": [
+        "SQS is a pull-based distributed message queuing service for decoupled worker polling; SNS is a push-based pub/sub notification service",
+        "SNS stores messages in FIFO queues for 14 days",
+        "SQS only sends emails and SMS texts",
+        "They are identical services with different pricing"
+      ],
+      "correct_answer": 0,
+      "topic": "Messaging & Decoupling (SQS / SNS)",
+      "difficulty": "medium",
+      "explanation": "SQS holds messages until consumers poll and process them; SNS fans out published messages instantly to multiple subscriber endpoints (HTTP, Lambda, SQS)."
+    },
+    {
+      "id": 9,
+      "question": "What AWS service allows defining cloud infrastructure using familiar programming languages like TypeScript, Python, or Java?",
+      "options": ["AWS CDK (Cloud Development Kit)", "AWS CloudFormation Designer", "AWS OpsWorks", "AWS Elastic Beanstalk"],
+      "correct_answer": 0,
+      "topic": "Infrastructure as Code",
+      "difficulty": "medium",
+      "explanation": "AWS CDK lets developers define cloud resources using object-oriented code which compiles (synthesizes) down to standard CloudFormation templates."
+    },
+    {
+      "id": 10,
+      "question": "In AWS Auto Scaling, what is a 'Cooldown Period'?",
+      "options": [
+        "A configurable time window during which Auto Scaling does not launch or terminate additional instances, allowing new instances to stabilize and metrics to settle",
+        "The time required for an EC2 CPU to physically cool down",
+        "The delay when launching an instance in winter regions",
+        "The time before terminated instance data is wiped from disk"
+      ],
+      "correct_answer": 0,
+      "topic": "Auto Scaling & Elasticity",
+      "difficulty": "medium",
+      "explanation": "Cooldown periods prevent Auto Scaling from overcompensating and thrashing instances before previous scaling activities have taken effect."
+    }
+  ]
+}

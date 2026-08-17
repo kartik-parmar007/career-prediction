@@ -1,0 +1,149 @@
+{
+  "test_id": "machine_learning",
+  "title": "Machine Learning Foundations Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your machine learning knowledge: supervised vs unsupervised, gradient descent, loss functions, metrics, and tuning.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Gradient Descent in machine learning?",
+      "options": [
+        "An iterative optimization algorithm for finding the minimum of a differentiable loss function by taking steps proportional to the negative of the gradient",
+        "A method to convert continuous target variables into binary labels",
+        "A technique to calculate dataset mean and variance",
+        "A sorting algorithm for multidimensional arrays"
+      ],
+      "correct_answer": 0,
+      "topic": "Optimization & Gradient Descent",
+      "difficulty": "easy",
+      "explanation": "Gradient Descent updates model weights in the direction opposite to the gradient of the loss function with respect to weights: $w \\leftarrow w - \\alpha \\nabla L$."
+    },
+    {
+      "id": 2,
+      "question": "What is the difference between Precision and Recall?",
+      "options": [
+        "Precision is the proportion of true positive predictions among all predicted positives; Recall is the proportion of true positives detected among all actual positives",
+        "Precision measures training speed; Recall measures testing accuracy",
+        "Recall is only used in regression problems",
+        "Precision is always higher than Recall"
+      ],
+      "correct_answer": 0,
+      "topic": "Classification Metrics",
+      "difficulty": "easy",
+      "explanation": "Precision = TP / (TP + FP) (minimizes false alarms); Recall = TP / (TP + FN) (minimizes missed cases)."
+    },
+    {
+      "id": 3,
+      "question": "What is the F1-Score?",
+      "options": [
+        "The Harmonic Mean of Precision and Recall, providing a balanced metric especially on imbalanced datasets",
+        "The arithmetic average of True Positives and True Negatives",
+        "The percentage of correctly classified training samples",
+        "The ratio of learning rate to batch size"
+      ],
+      "correct_answer": 0,
+      "topic": "Classification Metrics",
+      "difficulty": "easy",
+      "explanation": "F1 = 2 * (Precision * Recall) / (Precision + Recall), penalizing extreme imbalances between precision and recall."
+    },
+    {
+      "id": 4,
+      "question": "What is 'Data Leakage' in machine learning pipelines?",
+      "options": [
+        "Information from outside the training dataset (such as target values or test distribution statistics) inadvertently used to train the model",
+        "A hacker stealing the dataset from server memory",
+        "Loss of training data rows due to corrupted disk sectors",
+        "Memory overflow during GPU tensor operations"
+      ],
+      "correct_answer": 0,
+      "topic": "ML Pipeline Integrity",
+      "difficulty": "medium",
+      "explanation": "Data leakage occurs when features contain information that would not be available at inference time, creating artificially inflated evaluation metrics."
+    },
+    {
+      "id": 5,
+      "question": "What is K-Fold Cross-Validation?",
+      "options": [
+        "Splitting data into K equal folds, training on K-1 folds and evaluating on the remaining fold, repeating K times to average performance",
+        "Training K different machine learning algorithms simultaneously",
+        "Scaling dataset features by a factor of K",
+        "Clustering data into K groups using K-Means"
+      ],
+      "correct_answer": 0,
+      "topic": "Model Validation",
+      "difficulty": "easy",
+      "explanation": "K-fold CV ensures every data point is used for both training and validation, providing a robust estimate of generalization performance."
+    },
+    {
+      "id": 6,
+      "question": "What is the difference between One-Hot Encoding and Target (Mean) Encoding for high-cardinality categorical features?",
+      "options": [
+        "One-Hot creates a binary column per category (causing curse of dimensionality); Target Encoding replaces categories with the mean target value for that category",
+        "Target encoding only works on text strings",
+        "One-hot encoding normalizes numbers to 0 and 1",
+        "Target encoding deletes missing values automatically"
+      ],
+      "correct_answer": 0,
+      "topic": "Feature Engineering",
+      "difficulty": "medium",
+      "explanation": "One-hot encoding on 1,000 categories creates 1,000 sparse columns; target encoding replaces categories with their conditional target probability."
+    },
+    {
+      "id": 7,
+      "question": "What is the 'Curse of Dimensionality' in machine learning?",
+      "options": [
+        "As the number of features increases, the feature space volume grows exponentially, causing data points to become sparse and distances equidistant",
+        "Datasets exceeding 1TB crashing standard laptops",
+        "Decision trees growing deeper than 100 levels",
+        "Neural networks consuming too much GPU electricity"
+      ],
+      "correct_answer": 0,
+      "topic": "Dimensionality & Geometry",
+      "difficulty": "medium",
+      "explanation": "High dimensionality makes distance metrics (Euclidean) less discriminative and requires exponentially more samples to train models effectively."
+    },
+    {
+      "id": 8,
+      "question": "In Decision Trees, what is 'Gini Impurity' or 'Information Gain' (Entropy) used for?",
+      "options": [
+        "Evaluating the quality of a split criterion to maximize class purity in child nodes",
+        "Measuring the depth of the tree in memory",
+        "Pruning leaf nodes based on CPU usage",
+        "Normalizing feature numerical scales"
+      ],
+      "correct_answer": 0,
+      "topic": "Decision Trees",
+      "difficulty": "medium",
+      "explanation": "Split algorithms (CART/C4.5) calculate Gini impurity or entropy reduction to select the feature and threshold that best separate classes."
+    },
+    {
+      "id": 9,
+      "question": "What is the difference between Batch Gradient Descent, Mini-Batch Gradient Descent, and Stochastic Gradient Descent (SGD)?",
+      "options": [
+        "Batch uses the entire dataset per update; SGD uses 1 sample per update; Mini-Batch uses a small batch (e.g. 32 or 64) balancing speed and stability",
+        "Batch only runs once; SGD runs forever",
+        "Mini-batch only works on small datasets under 1,000 rows",
+        "SGD is deterministic while Batch is random"
+      ],
+      "correct_answer": 0,
+      "topic": "Optimization Algorithms",
+      "difficulty": "medium",
+      "explanation": "Mini-batch SGD combines vectorization speed of GPU hardware with smooth gradient convergence, making it the industry standard."
+    },
+    {
+      "id": 10,
+      "question": "What is the ROC curve (Receiver Operating Characteristic) and what does AUC measure?",
+      "options": [
+        "Plots True Positive Rate against False Positive Rate across various probability classification thresholds; AUC measures overall ranking separability (1.0 is perfect)",
+        "Plots Training Loss against Validation Loss over epochs",
+        "Measures the correlation between independent variables",
+        "Plots residual errors in linear regression"
+      ],
+      "correct_answer": 0,
+      "topic": "Classification Evaluation",
+      "difficulty": "medium",
+      "explanation": "ROC-AUC evaluates binary classification discrimination threshold-independently; an AUC of 0.5 represents random guessing, while 1.0 represents perfect discrimination."
+    }
+  ]
+}

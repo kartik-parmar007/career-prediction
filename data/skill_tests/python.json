@@ -1,0 +1,144 @@
+{
+  "test_id": "python",
+  "title": "Python Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your Python proficiency: GIL, list comprehensions, generators, decorators, memory management, and OOP.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the Global Interpreter Lock (GIL) in CPython?",
+      "options": [
+        "A mutex mechanism that allows only one native thread to execute Python bytecode at a time, preventing true multi-core CPU parallelism in threads",
+        "A security lock preventing unauthorized script execution",
+        "A memory manager that clears global variables",
+        "A database lock for SQLite in Python"
+      ],
+      "correct_answer": 0,
+      "topic": "CPython GIL & Concurrency",
+      "difficulty": "medium",
+      "explanation": "CPython's GIL ensures thread-safe memory management by allowing only one thread to hold the Python interpreter lock at once. CPU-bound tasks use `multiprocessing` to bypass this."
+    },
+    {
+      "id": 2,
+      "question": "What is the primary difference between a Python List and a Tuple?",
+      "options": [
+        "Lists are mutable (elements can be added/modified); Tuples are immutable (cannot be modified after creation)",
+        "Tuples can only store numbers",
+        "Lists cannot contain duplicate values",
+        "Tuples do not support indexing"
+      ],
+      "correct_answer": 0,
+      "topic": "Data Structures",
+      "difficulty": "easy",
+      "explanation": "Lists `[1, 2]` are mutable and use more memory overhead; Tuples `(1, 2)` are fixed, immutable, hashable (can be dict keys), and memory-efficient."
+    },
+    {
+      "id": 3,
+      "question": "What does a Python Generator function with the `yield` keyword do?",
+      "options": [
+        "Produces a sequence of values lazily on-demand (one at a time) using an iterator, preserving state between yields without loading all items in memory",
+        "Terminates the program execution immediately",
+        "Spawns a new operating system background process",
+        "Converts a function to a class method"
+      ],
+      "correct_answer": 0,
+      "topic": "Generators & Iterators",
+      "difficulty": "medium",
+      "explanation": "Generators compute values lazily upon `next()` calls, enabling streaming of huge datasets or infinite sequences with constant $O(1)$ memory."
+    },
+    {
+      "id": 4,
+      "question": "What is a Python Decorator?",
+      "options": [
+        "A function that takes another function as an argument and extends its behavior without explicitly modifying the original function's source code",
+        "A GUI theme widget in Tkinter",
+        "A syntax highlighter for Jupyter Notebooks",
+        "A method to delete unused variables"
+      ],
+      "correct_answer": 0,
+      "topic": "Decorators & Higher-Order Functions",
+      "difficulty": "medium",
+      "explanation": "Decorators wrap functions (e.g. `@login_required`, `@timer`) by leveraging first-class functions and closures to add cross-cutting behavior."
+    },
+    {
+      "id": 5,
+      "question": "What is the output of `[x**2 for x in range(5) if x % 2 != 0]` in Python?",
+      "options": ["[1, 9]", "[0, 4, 16]", "[1, 4, 9]", "[1, 9, 25]"],
+      "correct_answer": 0,
+      "topic": "List Comprehensions",
+      "difficulty": "easy",
+      "explanation": "Range(5) generates 0, 1, 2, 3, 4. Odd numbers are 1 and 3. Squaring them yields `1**2 = 1` and `3**2 = 9`."
+    },
+    {
+      "id": 6,
+      "question": "In Python object-oriented programming, what is the role of `__init__` versus `__new__`?",
+      "options": [
+        "`__new__` is the constructor that creates and returns the instance; `__init__` is the initializer that configures attributes on the created instance",
+        "`__init__` creates the memory allocation; `__new__` deletes the object",
+        "`__new__` is only used for dictionary subclasses",
+        "`__init__` is deprecated in Python 3"
+      ],
+      "correct_answer": 0,
+      "topic": "OOP & Dunder Methods",
+      "difficulty": "hard",
+      "explanation": "`__new__` is a static method responsible for allocating the object in memory and returning it, whereas `__init__` initializes instance attributes."
+    },
+    {
+      "id": 7,
+      "question": "What happens when you use a mutable object (like a list `[]`) as a default parameter value in a function definition `def append_item(x, items=[])`?",
+      "options": [
+        "The default list is instantiated once at function definition time, so mutations persist across all subsequent calls that omit the parameter",
+        "A new empty list is created fresh on every function call",
+        "Python raises a SyntaxError at compile time",
+        "The list is cleared automatically after each return"
+      ],
+      "correct_answer": 0,
+      "topic": "Function Arguments & Mutability",
+      "difficulty": "medium",
+      "explanation": "Default arguments are evaluated once when the function is defined. Using mutable defaults creates a shared object across calls. Idiomatic fix: `items=None`."
+    },
+    {
+      "id": 8,
+      "question": "What is the primary memory management mechanism in Python?",
+      "options": [
+        "Reference counting combined with a cyclic garbage collector to resolve circular references",
+        "Manual malloc and free pointers",
+        "Deterministic stack allocation only",
+        "Operating system page swapping exclusively"
+      ],
+      "correct_answer": 0,
+      "topic": "Memory Management & Garbage Collection",
+      "difficulty": "medium",
+      "explanation": "CPython deallocates objects immediately when their reference count drops to zero, and uses a generational garbage collector for circular references."
+    },
+    {
+      "id": 9,
+      "question": "What is the purpose of the `with` statement and Context Managers in Python?",
+      "options": [
+        "Ensures setup and teardown actions (like closing files or releasing database locks) are executed reliably even if exceptions occur",
+        "Runs code in a multi-threaded sandbox",
+        "Translates Python code to C++ for execution",
+        "Creates a temporary copy of the Python interpreter"
+      ],
+      "correct_answer": 0,
+      "topic": "Context Managers",
+      "difficulty": "easy",
+      "explanation": "The `with` statement utilizes `__enter__` and `__exit__` dunder methods to guarantee resource cleanup (e.g. file closures) safely."
+    },
+    {
+      "id": 10,
+      "question": "In Python typing, what does `Optional[str]` (or `str | None` in Python 3.10+) denote?",
+      "options": [
+        "A type hint indicating the variable can either be a string or `None`",
+        "A string that is optional to include in the dictionary",
+        "A string with a maximum length limit",
+        "An encrypted string value"
+      ],
+      "correct_answer": 0,
+      "topic": "Type Hinting",
+      "difficulty": "easy",
+      "explanation": "`Optional[T]` is shorthand for `Union[T, None]`, explicitly declaring that a variable or function return may be `None`."
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+[
+  {
+    "id": "q1",
+    "question": "How much do you enjoy mathematics?",
+    "subtitle": "Rate your comfort and enthusiasm for mathematical thinking, algebra, and numerical concepts.",
+    "type": "scale",
+    "feature_key": "math_enjoyment",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "I prefer avoiding math whenever possible" },
+      { "value": 2, "label": "2 — Low", "description": "Basic arithmetic is fine, but not advanced math" },
+      { "value": 3, "label": "3 — Moderate", "description": "Comfortable with standard algebra and logic" },
+      { "value": 4, "label": "4 — High", "description": "I enjoy mathematical problem-solving" },
+      { "value": 5, "label": "5 — Very High", "description": "I thrive on advanced math, calculus, and linear algebra" }
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Do you enjoy programming?",
+    "subtitle": "Writing code, learning syntax, and creating software instructions.",
+    "type": "scale",
+    "feature_key": "programming_enjoyment",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "I dislike coding / prefer visual tools" },
+      { "value": 2, "label": "2 — Low", "description": "I tolerate small scripts when necessary" },
+      { "value": 3, "label": "3 — Moderate", "description": "I like building functional apps with code" },
+      { "value": 4, "label": "4 — High", "description": "I love coding and building software features" },
+      { "value": 5, "label": "5 — Very High", "description": "Programming is my primary passion and flow state" }
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Do you like designing UI and visual layouts?",
+    "subtitle": "Colors, typography, user flows, responsive layouts, and visual appeal.",
+    "type": "scale",
+    "feature_key": "ui_design_enjoyment",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "I don't care about visual design" },
+      { "value": 2, "label": "2 — Low", "description": "I prefer working on logic over looks" },
+      { "value": 3, "label": "3 — Moderate", "description": "I appreciate clean interfaces" },
+      { "value": 4, "label": "4 — High", "description": "I enjoy crafting sleek and intuitive UI" },
+      { "value": 5, "label": "5 — Very High", "description": "Obsessed with pixel-perfect design, animations, and UX" }
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Do you enjoy solving logical problems?",
+    "subtitle": "Puzzles, algorithmic reasoning, step-by-step problem deconstruction.",
+    "type": "scale",
+    "feature_key": "logic_problem_solving",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "I prefer straightforward, repetitive tasks" },
+      { "value": 2, "label": "2 — Low", "description": "I can do simple problem solving" },
+      { "value": 3, "label": "3 — Moderate", "description": "Enjoy standard algorithmic thinking" },
+      { "value": 4, "label": "4 — High", "description": "I love unraveling tricky logical puzzles" },
+      { "value": 5, "label": "5 — Very High", "description": "Thrive on complex algorithms and abstract optimization" }
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Do you prefer working with data?",
+    "subtitle": "Datasets, SQL tables, spreadsheets, data transformations, and metrics.",
+    "type": "scale",
+    "feature_key": "data_preference",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "I find data tables and numbers dull" },
+      { "value": 2, "label": "2 — Low", "description": "Occasional data lookup is fine" },
+      { "value": 3, "label": "3 — Moderate", "description": "Comfortable querying and filtering data" },
+      { "value": 4, "label": "4 — High", "description": "Love analyzing datasets and finding insights" },
+      { "value": 5, "label": "5 — Very High", "description": "Data pipelines, models, and deep insights excite me" }
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Do you like infrastructure and cloud technologies?",
+    "subtitle": "Servers, networking, Docker containers, AWS/GCP, Linux terminals, CI/CD.",
+    "type": "scale",
+    "feature_key": "cloud_infra_enjoyment",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "Terminal and server setup sounds tedious" },
+      { "value": 2, "label": "2 — Low", "description": "I prefer clicking buttons over configuring servers" },
+      { "value": 3, "label": "3 — Moderate", "description": "Comfortable with basic hosting and deployment" },
+      { "value": 4, "label": "4 — High", "description": "Enjoy Docker, cloud services, and automation" },
+      { "value": 5, "label": "5 — Very High", "description": "Passionate about Kubernetes, Terraform, and high availability" }
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "Do you enjoy cybersecurity?",
+    "subtitle": "System vulnerabilities, network defense, penetration testing, cryptography.",
+    "type": "scale",
+    "feature_key": "cybersecurity_enjoyment",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "Security protocols feel like a hassle" },
+      { "value": 2, "label": "2 — Low", "description": "I follow standard safety rules only" },
+      { "value": 3, "label": "3 — Moderate", "description": "Interested in basic security best practices" },
+      { "value": 4, "label": "4 — High", "description": "Fascinated by ethical hacking and defense" },
+      { "value": 5, "label": "5 — Very High", "description": "Deeply passionate about exploiting and securing systems" }
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "How comfortable are you with statistics?",
+    "subtitle": "Probability, distributions, hypothesis testing, regression models.",
+    "type": "scale",
+    "feature_key": "statistics_comfort",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "Stats is confusing and not enjoyable" },
+      { "value": 2, "label": "2 — Low", "description": "Understand basic averages and percentages" },
+      { "value": 3, "label": "3 — Moderate", "description": "Comfortable with standard distributions and graphs" },
+      { "value": 4, "label": "4 — High", "description": "Confident with correlation, regression, and probability" },
+      { "value": 5, "label": "5 — Very High", "description": "Expert in statistical modeling and inference" }
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "Do you prefer building products or analyzing information?",
+    "subtitle": "Choose the type of output that gives you the highest sense of accomplishment.",
+    "type": "categorical",
+    "feature_key": "build_vs_analyze",
+    "options": [
+      { "value": "build_user_facing", "label": "Building User-Facing Products", "description": "Creating apps, websites, and interfaces people use" },
+      { "value": "build_systems", "label": "Building Systems & Backends", "description": "Designing robust architectures, APIs, and pipelines" },
+      { "value": "analyze_data", "label": "Analyzing Data & Insights", "description": "Finding actionable trends, charts, and business metrics" },
+      { "value": "research_models", "label": "Researching & Training Models", "description": "Experimenting with algorithms, AI models, and predictions" },
+      { "value": "protect_test", "label": "Protecting & Quality Assurance", "description": "Defending systems, auditing code, and finding flaws" }
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Do you enjoy debugging?",
+    "subtitle": "Tracking down cryptic bugs, inspecting stack traces, fixing broken states.",
+    "type": "scale",
+    "feature_key": "debugging_enjoyment",
+    "options": [
+      { "value": 1, "label": "1 — Very Low", "description": "Debugging quickly frustrates me" },
+      { "value": 2, "label": "2 — Low", "description": "I prefer code that works without troubleshooting" },
+      { "value": 3, "label": "3 — Moderate", "description": "I can systematically track down issues" },
+      { "value": 4, "label": "4 — High", "description": "I find hunting down edge-case bugs satisfying" },
+      { "value": 5, "label": "5 — Very High", "description": "Like a detective; I relish deep troubleshooting challenges" }
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "How much time can you spend learning per week?",
+    "subtitle": "Your realistic weekly time commitment for skill advancement.",
+    "type": "categorical",
+    "feature_key": "learning_time_commitment",
+    "options": [
+      { "value": "under_5_hrs", "label": "< 5 hours / week", "description": "Light casual learning on weekends" },
+      { "value": "5_to_10_hrs", "label": "5 – 10 hours / week", "description": "Consistent 1 hour per day" },
+      { "value": "10_to_20_hrs", "label": "10 – 20 hours / week", "description": "Dedicated part-time upskilling" },
+      { "value": "20_plus_hrs", "label": "20+ hours / week", "description": "Full-time intensive bootcamp pace" }
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "What is your current programming knowledge?",
+    "subtitle": "Assess your practical coding background honestly.",
+    "type": "categorical",
+    "feature_key": "programming_experience_level",
+    "options": [
+      { "value": "none", "label": "Complete Beginner", "description": "No prior programming experience" },
+      { "value": "basics", "label": "Basic Foundations", "description": "Familiar with variables, loops, and simple scripts" },
+      { "value": "intermediate", "label": "Intermediate", "description": "Built small projects, familiar with Git and libraries" },
+      { "value": "advanced", "label": "Advanced / Professional", "description": "Comfortable building production-ready architectures" }
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "What is your current education / background level?",
+    "subtitle": "Helps calibrate learning trajectory recommendations.",
+    "type": "categorical",
+    "feature_key": "education_background",
+    "options": [
+      { "value": "high_school", "label": "High School / College Student", "description": "Starting early or exploring tech foundations" },
+      { "value": "cs_degree", "label": "Bachelor's in CS / IT / Engineering", "description": "Formal technical computer science background" },
+      { "value": "non_cs_degree", "label": "Bachelor's / Master's in Other Field", "description": "Transitioning from business, humanities, or science" },
+      { "value": "self_taught", "label": "Self-Taught / Bootcamp Grad", "description": "Hands-on practical learner building real projects" }
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "What is your preferred working style?",
+    "subtitle": "The environment and tasks where you do your best work.",
+    "type": "categorical",
+    "feature_key": "work_style_preference",
+    "options": [
+      { "value": "visual_creative", "label": "Visual & User Empathy", "description": "Focusing on what users feel, see, and interact with" },
+      { "value": "logic_architecture", "label": "Deep Logic & Architecture", "description": "Structuring clean server code, APIs, and schemas" },
+      { "value": "data_investigative", "label": "Investigative & Data Driven", "description": "Crunching numbers, validating hypotheses, reporting" },
+      { "value": "systems_reliability", "label": "Systems & Automation", "description": "Ensuring zero-downtime, automation, and cloud efficiency" },
+      { "value": "quality_adversarial", "label": "Adversarial & Precision", "description": "Pen-testing, breaking code, and test automation" }
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Do you prefer creative, analytical, or technical engineering work?",
+    "subtitle": "Your overarching career archetype and motivation.",
+    "type": "categorical",
+    "feature_key": "career_archetype",
+    "options": [
+      { "value": "creative_visual", "label": "Creative & Design Focused", "description": "UX wireframes, UI styling, frontend interactive art" },
+      { "value": "analytical_data", "label": "Analytical & Mathematical", "description": "Statistical modeling, business intelligence, data science" },
+      { "value": "technical_engineering", "label": "Core Software Engineering", "description": "Backend services, fullstack apps, databases, mobile apps" },
+      { "value": "systems_security", "label": "Infrastructure & Security", "description": "DevOps pipelines, cloud architecture, cybersecurity defense" },
+      { "value": "balanced_generalist", "label": "Balanced Generalist", "description": "Enjoy wearing multiple hats across the entire stack" }
+    ]
+  }
+]

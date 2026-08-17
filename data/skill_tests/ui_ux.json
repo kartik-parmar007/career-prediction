@@ -1,0 +1,139 @@
+{
+  "test_id": "ui_ux",
+  "title": "UI / UX Design Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Assess your understanding of user research, usability heuristics, Figma design systems, visual hierarchy, typography, and accessibility.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "According to Jakob Nielsen's 10 Usability Heuristics, what does 'Visibility of System Status' mean?",
+      "options": [
+        "The system should always keep users informed about what is going on through timely, appropriate visual feedback (e.g. progress bars, loaders)",
+        "The system must show server CPU and memory usage to users",
+        "The source code of the application should be public",
+        "All database tables should be viewable by all users"
+      ],
+      "correct_answer": 0,
+      "topic": "Usability Heuristics",
+      "difficulty": "easy",
+      "explanation": "Clear feedback (spinners, checkmarks, progress bars) ensures users always understand the result of their actions and current system state."
+    },
+    {
+      "id": 2,
+      "question": "What is the WCAG 2.1 Level AA minimum contrast ratio requirement for normal text against its background?",
+      "options": ["4.5:1", "3:1", "7:1", "2:1"],
+      "correct_answer": 0,
+      "topic": "Accessibility (WCAG)",
+      "difficulty": "medium",
+      "explanation": "WCAG 2.1 AA requires a contrast ratio of at least 4.5:1 for standard body text and 3:1 for large text (18pt or 14pt bold)."
+    },
+    {
+      "id": 3,
+      "question": "In Figma, what feature enables components to dynamically expand or contract based on their inner content and padding rules?",
+      "options": ["Auto-Layout", "Smart Animate", "Vector Network", "Boolean Groups"],
+      "correct_answer": 0,
+      "topic": "Figma Design Systems",
+      "difficulty": "easy",
+      "explanation": "Auto-Layout applies CSS Flexbox-like behavior to frames, allowing buttons, lists, and cards to resize automatically when content changes."
+    },
+    {
+      "id": 4,
+      "question": "What is Hick's Law in user experience design?",
+      "options": [
+        "The time it takes to make a decision increases logarithmically with the number and complexity of choices presented",
+        "Users spend most of their time on other websites, so your site should follow common conventions",
+        "The time to acquire a target is a function of target distance and width",
+        "People remember the first and last items in a list best"
+      ],
+      "correct_answer": 0,
+      "topic": "UX Psychology & Laws",
+      "difficulty": "medium",
+      "explanation": "Hick's Law shows that minimizing options (e.g. simplified menus, focused forms) speeds up decision making and reduces cognitive load."
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between a Wireframe and a Prototype?",
+      "options": [
+        "A wireframe is a static low-fidelity blueprint showing layout and content structure; a prototype is an interactive simulation demonstrating user flows",
+        "Wireframes are drawn in code; prototypes are drawn on paper",
+        "Prototypes only contain text without images",
+        "Wireframes are only created after the product is coded"
+      ],
+      "correct_answer": 0,
+      "topic": "Prototyping & Wireframing",
+      "difficulty": "easy",
+      "explanation": "Wireframes define structural information architecture, while prototypes add clickability and transitions to test realistic user journeys."
+    },
+    {
+      "id": 6,
+      "question": "What is 'Information Architecture' (IA) in digital product design?",
+      "options": [
+        "The structural organization, hierarchy, labeling, and navigation of content within a digital product to help users find information easily",
+        "The physical architecture of database server racks",
+        "The choice of frontend JavaScript frameworks",
+        "The color grading applied to product photography"
+      ],
+      "correct_answer": 0,
+      "topic": "Information Architecture",
+      "difficulty": "easy",
+      "explanation": "IA focuses on organizing and labeling websites and apps so users intuitively understand where they are and how to find information."
+    },
+    {
+      "id": 7,
+      "question": "In typography, what is 'Kerning'?",
+      "options": [
+        "Adjusting the spacing between specific pairs of individual characters to achieve a visually pleasing result",
+        "The vertical distance between baselines of consecutive lines of text (line-height)",
+        "The uniform spacing across an entire block of text (tracking)",
+        "The thickness or stroke weight of a font"
+      ],
+      "correct_answer": 0,
+      "topic": "Typography Fundamentals",
+      "difficulty": "medium",
+      "explanation": "Kerning adjusts spacing between individual letter pairs (e.g. 'AV' or 'To') to compensate for character geometry."
+    },
+    {
+      "id": 8,
+      "question": "What is the primary purpose of conducting a 'Card Sorting' user research study?",
+      "options": [
+        "To evaluate and design intuitive information architecture and navigation categorization based on user mental models",
+        "To test credit card payment processing speed",
+        "To rank user interface mockups by aesthetic beauty",
+        "To test keyboard shortcut response times"
+      ],
+      "correct_answer": 0,
+      "topic": "User Research Methodologies",
+      "difficulty": "medium",
+      "explanation": "Card sorting asks participants to organize topics into categories that make sense to them, guiding menu and taxonomy design."
+    },
+    {
+      "id": 9,
+      "question": "What is Fitts's Law in UI/UX interaction design?",
+      "options": [
+        "The time required to rapidly move to a target area is a function of the ratio between distance to the target and width of the target",
+        "UI elements should always be designed with flat colors",
+        "Users read digital screens in an F-shaped pattern",
+        "Mobile screens should have maximum 5 icons per row"
+      ],
+      "correct_answer": 0,
+      "topic": "Interaction Design",
+      "difficulty": "medium",
+      "explanation": "Fitts's Law dictates that interactive targets (like CTAs and buttons) should be large enough and positioned within easy reach (e.g. mobile thumb zone)."
+    },
+    {
+      "id": 10,
+      "question": "What are 'Design Tokens' in a design system?",
+      "options": [
+        "The single source of truth for design decisions (colors, spacing, typography, radii) stored as platform-agnostic key-value pairs (JSON/YAML)",
+        "Cryptocurrency tokens used to buy UI templates",
+        "Physical cards given to participants in user testing",
+        "API authentication tokens for Figma plugins"
+      ],
+      "correct_answer": 0,
+      "topic": "Design Systems",
+      "difficulty": "hard",
+      "explanation": "Design tokens store design values (e.g. `color.primary.500: #3b82f6`) that sync seamlessly between Figma variables and codebases across web and mobile."
+    }
+  ]
+}

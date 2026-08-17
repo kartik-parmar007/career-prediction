@@ -1,0 +1,149 @@
+{
+  "test_id": "react",
+  "title": "React Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your mastery of React 18+: JSX, Hooks, reconciliation, context, custom hooks, and performance optimization.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is JSX in React?",
+      "options": [
+        "A JavaScript syntax extension allowing HTML-like template syntax to be written directly in JavaScript code",
+        "A standalone database query language",
+        "A CSS preprocessor framework like Sass",
+        "A server-side Node.js routing library"
+      ],
+      "correct_answer": 0,
+      "topic": "JSX & Virtual DOM",
+      "difficulty": "easy",
+      "explanation": "JSX compiles down to `React.createElement()` or `_jsx()` function calls creating plain JavaScript objects representing UI elements."
+    },
+    {
+      "id": 2,
+      "question": "What is the primary rule regarding the order of React Hook calls inside a functional component?",
+      "options": [
+        "Hooks must be called at the top level of the component and never inside loops, conditions, or nested functions",
+        "Hooks must always be called inside a `try...catch` block",
+        "Hooks can only be called inside class component lifecycle methods",
+        "Hooks must be passed as props to child components"
+      ],
+      "correct_answer": 0,
+      "topic": "Rules of Hooks",
+      "difficulty": "easy",
+      "explanation": "React relies on the call order of hooks across renders to match up internal hook states with components."
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between `useMemo` and `useCallback`?",
+      "options": [
+        "`useMemo` memoizes the calculated result of a function; `useCallback` memoizes the function definition itself to prevent unnecessary child re-renders",
+        "`useCallback` executes asynchronously while `useMemo` is synchronous",
+        "`useMemo` is used for API fetching only",
+        "`useCallback` replaces the `useState` hook"
+      ],
+      "correct_answer": 0,
+      "topic": "React Hooks & Memoization",
+      "difficulty": "medium",
+      "explanation": "`useMemo(() => computeVal(a), [a])` caches values, whereas `useCallback(fn, deps)` caches callback function references."
+    },
+    {
+      "id": 4,
+      "question": "In React 18, what does Automatic Batching mean?",
+      "options": [
+        "React groups multiple state updates (including those inside promises, setTimeout, or event handlers) into a single re-render for performance",
+        "React compiles all components into a single file at runtime",
+        "React batches network fetch requests automatically",
+        "React merges all CSS files into one stylesheet"
+      ],
+      "correct_answer": 0,
+      "topic": "React 18 Features",
+      "difficulty": "medium",
+      "explanation": "React 18 batches all state updates regardless of origin (promises, native events, timeouts), reducing redundant intermediate renders."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of `useRef` in React beyond accessing DOM elements?",
+      "options": [
+        "Storing mutable values that persist across renders without triggering a component re-render when mutated",
+        "Creating global application state across all routes",
+        "Triggering component re-renders when data changes",
+        "Managing CSS media queries"
+      ],
+      "correct_answer": 0,
+      "topic": "React Hooks (useRef)",
+      "difficulty": "medium",
+      "explanation": "Mutating `.current` on a ref does not cause a re-render, making it ideal for storing timer IDs, previous state values, and instance flags."
+    },
+    {
+      "id": 6,
+      "question": "What happens when you call `setState` with the same primitive value as current state (`setCount(5)` when count is already 5)?",
+      "options": [
+        "React bails out (skips re-rendering the component and its children) using Object.is comparison",
+        "React throws an InfiniteLoopError",
+        "React force re-renders all parent components",
+        "React resets the state to 0"
+      ],
+      "correct_answer": 0,
+      "topic": "React Rendering Behavior",
+      "difficulty": "medium",
+      "explanation": "React checks state changes with `Object.is`. If the new value is identical to current state, React skips re-rendering children."
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of React Error Boundaries?",
+      "options": [
+        "Class components that catch JavaScript errors in their child component tree, log them, and display a fallback UI instead of crashing the app",
+        "A hook that catches syntax errors at compile time",
+        "A network proxy that intercepts 500 internal server errors",
+        "A CSS wrapper that prevents layout shift"
+      ],
+      "correct_answer": 0,
+      "topic": "Error Handling in React",
+      "difficulty": "medium",
+      "explanation": "Error boundaries (`componentDidCatch` / `getDerivedStateFromError`) catch unhandled rendering exceptions, preventing entire app white-screens."
+    },
+    {
+      "id": 8,
+      "question": "What is 'Prop Drilling' in React and what is the primary way to solve it?",
+      "options": [
+        "Passing props down through many nested intermediary components that do not need them; solved by React Context or global state managers (Zustand/Redux)",
+        "Drilling holes into virtual DOM nodes to improve speed",
+        "Validating props with TypeScript interfaces",
+        "Passing functions instead of objects as props"
+      ],
+      "correct_answer": 0,
+      "topic": "State Architecture",
+      "difficulty": "easy",
+      "explanation": "Prop drilling clutters intermediate component signatures; Context API or state libraries allow components to consume state directly without intermediate passthroughs."
+    },
+    {
+      "id": 9,
+      "question": "What does the `useTransition` hook introduced in React 18 allow developers to do?",
+      "options": [
+        "Mark non-urgent state updates as transitions that can be interrupted by urgent user interactions (like typing in an input)",
+        "Animate CSS transitions between pages",
+        "Navigate between React Router routes",
+        "Migrate class components to functional components"
+      ],
+      "correct_answer": 0,
+      "topic": "React 18 Concurrent Features",
+      "difficulty": "hard",
+      "explanation": "`useTransition` lets you prioritize responsive user input (urgent) over heavy filtering/rendering operations (transitions) without freezing the UI."
+    },
+    {
+      "id": 10,
+      "question": "Why should you never mutate state directly in React (e.g. `items.push(newItem)`)?",
+      "options": [
+        "Direct mutations bypass React's state comparison checks, leading to missed re-renders, stale UI, and broken time-travel debugging",
+        "Direct mutation crashes the browser memory",
+        "Direct mutation converts arrays to strings",
+        "JavaScript does not allow modifying objects"
+      ],
+      "correct_answer": 0,
+      "topic": "Immutability & State",
+      "difficulty": "easy",
+      "explanation": "React compares object references; mutating an array in-place keeps the same reference, preventing React from detecting state changes."
+    }
+  ]
+}

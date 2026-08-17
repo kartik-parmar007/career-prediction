@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Career Compatibility Assessment — AI IT Career Advisor{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 md:py-14">
+  
+  <!-- Stepper Header Card -->
+  <div class="glass-card p-4 sm:p-6 mb-6 sm:mb-8">
+    <div class="flex items-center justify-between gap-3 mb-3">
+      <div>
+        <h1 class="text-lg sm:text-2xl font-bold text-white flex items-center gap-2 font-display">
+          <i class="fa-solid fa-compass text-indigo-400 text-base sm:text-xl"></i> Career Assessment
+        </h1>
+        <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Answer 15 questions to evaluate your IT career match.</p>
+      </div>
+      <div class="text-right shrink-0">
+        <span id="quiz-progress-text" class="text-[11px] sm:text-xs font-semibold text-slate-300">1 of 15</span>
+        <span id="quiz-progress-pct" class="text-xs sm:text-sm font-bold text-indigo-400 block">7%</span>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+      <div id="quiz-progress-fill" class="progress-bar-fill" style="width: 7%;"></div>
+    </div>
+  </div>
+
+  <!-- Quiz Stepper Container -->
+  <div id="career-quiz-container" class="glass-card p-5 sm:p-8 md:p-10 shadow-2xl relative min-h-[380px] flex flex-col justify-between">
+    <!-- Rendered dynamically by static/js/career-test.js -->
+    <div class="flex items-center justify-center py-16">
+      <div class="flex items-center gap-2.5 text-indigo-300 text-sm">
+        <i class="fa-solid fa-spinner fa-spin text-lg"></i> Loading assessment questions...
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Multi-Step Analysis Loading Modal -->
+<div id="analysis-loading-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden px-4">
+  <div class="glass-panel p-6 sm:p-8 rounded-2xl max-w-sm sm:max-w-md w-full border border-indigo-500/40 shadow-2xl animate-fade-in">
+    <div class="text-center mb-5">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-950/80 border border-indigo-500/50 text-indigo-400 flex items-center justify-center text-xl sm:text-2xl mx-auto mb-3 shadow-glow">
+        <i class="fa-solid fa-brain fa-pulse"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Analyzing Profile...</h3>
+      <p class="text-xs text-slate-400">Evaluating your responses across 12 IT career paths.</p>
+    </div>
+
+    <!-- Loading Steps Checklist -->
+    <div class="space-y-2.5 mb-2">
+      <div id="step-processing-interests" class="loading-step-item loading-step-active">
+        <div class="loading-step-icon"><i class="fa-solid fa-circle-notch fa-spin text-indigo-400"></i></div>
+        <span class="text-xs font-semibold text-slate-200">Evaluating interests and mathematics style</span>
+      </div>
+
+      <div id="step-analyzing-preferences" class="loading-step-item loading-step-pending">
+        <div class="loading-step-icon"><i class="fa-regular fa-circle"></i></div>
+        <span class="text-xs font-semibold text-slate-200">Analyzing engineering preferences</span>
+      </div>
+
+      <div id="step-comparing-paths" class="loading-step-item loading-step-pending">
+        <div class="loading-step-icon"><i class="fa-regular fa-circle"></i></div>
+        <span class="text-xs font-semibold text-slate-200">Calculating compatibility across 12 careers</span>
+      </div>
+
+      <div id="step-generating-recs" class="loading-step-item loading-step-pending">
+        <div class="loading-step-icon"><i class="fa-regular fa-circle"></i></div>
+        <span class="text-xs font-semibold text-slate-200">Ranking Top 3 career recommendations</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/career-test.js') }}"></script>
+{% endblock %}

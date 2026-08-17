@@ -1,0 +1,30 @@
+# Environment & Credentials
+.env
+.env.local
+*.env
+
+# Python Caches & Virtualenvs
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+env/
+ENV/
+.venv/
+
+# IDE & System
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.gemini/
+
+# Vercel & Node
+.vercel
+node_modules/

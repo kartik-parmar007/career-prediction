@@ -1,0 +1,134 @@
+{
+  "test_id": "frontend",
+  "title": "Frontend Development Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Evaluate your proficiency in HTML5, CSS3, modern JavaScript, React components, state, and browser APIs.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which HTML5 semantic element is most appropriate for containing the primary navigation links of a website?",
+      "options": ["<section>", "<nav>", "<aside>", "<header>"],
+      "correct_answer": 1,
+      "topic": "HTML5 Semantics",
+      "difficulty": "easy",
+      "explanation": "The <nav> element represents a section of a page whose purpose is to provide navigation links."
+    },
+    {
+      "id": 2,
+      "question": "In the CSS Box Model, which property creates space *inside* the element's border, around the content?",
+      "options": ["margin", "padding", "outline", "gap"],
+      "correct_answer": 1,
+      "topic": "CSS Box Model",
+      "difficulty": "easy",
+      "explanation": "Padding defines space between the content and the inner edge of the border, whereas margin defines space outside the border."
+    },
+    {
+      "id": 3,
+      "question": "What is the primary difference between CSS Grid and CSS Flexbox?",
+      "options": [
+        "Grid is two-dimensional (rows & columns) while Flexbox is one-dimensional (row or column)",
+        "Flexbox supports responsive design while Grid does not",
+        "Grid only works with HTML5 tables",
+        "Flexbox is deprecated in modern browsers"
+      ],
+      "correct_answer": 0,
+      "topic": "CSS Layouts",
+      "difficulty": "medium",
+      "explanation": "CSS Grid is a 2D layout system handling rows and columns simultaneously, while Flexbox arranges elements along a single main axis."
+    },
+    {
+      "id": 4,
+      "question": "What will `console.log(typeof null)` output in JavaScript?",
+      "options": ["\"null\"", "\"undefined\"", "\"object\"", "\"number\""],
+      "correct_answer": 2,
+      "topic": "JavaScript Fundamentals",
+      "difficulty": "easy",
+      "explanation": "In JavaScript, `typeof null` returns 'object' due to a historical legacy bug from the original implementation."
+    },
+    {
+      "id": 5,
+      "question": "What does the JavaScript Event Loop do when a Promise resolves in modern browsers?",
+      "options": [
+        "Places the callback into the Macrotask Queue",
+        "Places the callback into the Microtask Queue",
+        "Executes the callback synchronously inside the call stack immediately",
+        "Spawns a new background operating system thread"
+      ],
+      "correct_answer": 1,
+      "topic": "JavaScript Asynchronous",
+      "difficulty": "medium",
+      "explanation": "Promise callbacks (.then, .catch, await) are scheduled in the Microtask Queue, which executes before the next Macrotask."
+    },
+    {
+      "id": 6,
+      "question": "In React, what is the key rule when using the `useEffect` hook with an empty dependency array `[]`?",
+      "options": [
+        "It re-runs on every state change",
+        "It only runs once when the component mounts",
+        "It will never execute",
+        "It causes an infinite rendering loop"
+      ],
+      "correct_answer": 1,
+      "topic": "React Hooks",
+      "difficulty": "medium",
+      "explanation": "An empty dependency array `[]` tells React that the effect doesn't depend on any props or state, so it runs only once after the initial render."
+    },
+    {
+      "id": 7,
+      "question": "Why is the `key` prop essential when rendering dynamic lists in React?",
+      "options": [
+        "It styles list elements automatically",
+        "It provides a CSS class identifier",
+        "It helps React identify which items have changed, been added, or removed during reconciliation",
+        "It acts as a primary key in IndexedDB"
+      ],
+      "correct_answer": 2,
+      "topic": "React Reconciliation",
+      "difficulty": "medium",
+      "explanation": "Keys help React's virtual DOM reconciliation algorithm identify individual elements across renders to minimize DOM re-creations."
+    },
+    {
+      "id": 8,
+      "question": "Which HTTP header is primarily used to instruct the browser to prevent Cross-Site Scripting (XSS) by restricting resource origins?",
+      "options": [
+        "Content-Security-Policy",
+        "Access-Control-Allow-Origin",
+        "Strict-Transport-Security",
+        "X-Frame-Options"
+      ],
+      "correct_answer": 0,
+      "topic": "Web Security",
+      "difficulty": "hard",
+      "explanation": "Content-Security-Policy (CSP) allows site administrators to restrict the resources (such as JavaScript, CSS, Images) that the browser is allowed to load."
+    },
+    {
+      "id": 9,
+      "question": "What is the primary benefit of code splitting with dynamic `import()` in frontend applications?",
+      "options": [
+        "Reduces initial bundle size and speeds up initial page load",
+        "Encrypts JavaScript source code in production",
+        "Eliminates the need for CSS preprocessors",
+        "Enables automatic server-side rendering"
+      ],
+      "correct_answer": 0,
+      "topic": "Web Performance",
+      "difficulty": "medium",
+      "explanation": "Code splitting breaks bundles into smaller chunks loaded on demand, significantly improving First Contentful Paint (FCP) and Time to Interactive (TTI)."
+    },
+    {
+      "id": 10,
+      "question": "What is the role of Web Workers in client-side web development?",
+      "options": [
+        "They run background tasks on separate threads without blocking the main UI thread",
+        "They cache assets offline in place of Service Workers",
+        "They manage CSS animations directly on the GPU",
+        "They provide direct access to the DOM from worker threads"
+      ],
+      "correct_answer": 0,
+      "topic": "Browser Architecture",
+      "difficulty": "hard",
+      "explanation": "Web Workers allow running CPU-heavy JavaScript scripts in background threads, keeping the browser UI responsive and free from stutter."
+    }
+  ]
+}

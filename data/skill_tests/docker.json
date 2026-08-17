@@ -1,0 +1,139 @@
+{
+  "test_id": "docker",
+  "title": "Docker & Containerization Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your Docker proficiency: Dockerfile directives, image layers, volumes, bridge networks, and Docker Compose.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the difference between `CMD` and `ENTRYPOINT` in a Dockerfile?",
+      "options": [
+        "`ENTRYPOINT` sets the default executable command; `CMD` provides default arguments that can be overridden easily by CLI parameters",
+        "`CMD` executes during docker build; `ENTRYPOINT` executes at runtime",
+        "`ENTRYPOINT` can only run Python scripts",
+        "There is no functional difference"
+      ],
+      "correct_answer": 0,
+      "topic": "Dockerfile Directives",
+      "difficulty": "medium",
+      "explanation": "`ENTRYPOINT [\"python\", \"app.py\"]` defines the fixed container binary, while `CMD [\"--port\", \"8080\"]` defines default parameters that can be overridden at run time."
+    },
+    {
+      "id": 2,
+      "question": "Why should you order Dockerfile instructions from least frequently changing to most frequently changing?",
+      "options": [
+        "To maximize Docker layer caching and significantly reduce container image build times",
+        "Because Docker throws an error if commands are out of order",
+        "To compress image layers onto disk",
+        "To ensure network ports open in sequential order"
+      ],
+      "correct_answer": 0,
+      "topic": "Docker Layer Caching",
+      "difficulty": "easy",
+      "explanation": "Docker invalidates cache for all downstream instructions whenever a layer changes. Placing dependency installation (e.g. `npm install`) before source code copying preserves build cache."
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between a Docker Named Volume and a Bind Mount?",
+      "options": [
+        "Named Volumes are managed directly by Docker inside `/var/lib/docker/volumes`; Bind Mounts map an exact host directory path into the container",
+        "Bind Mounts persist data when containers are deleted while Named Volumes do not",
+        "Named Volumes only work on Windows hosts",
+        "Bind Mounts can only be read-only"
+      ],
+      "correct_answer": 0,
+      "topic": "Docker Storage & Volumes",
+      "difficulty": "medium",
+      "explanation": "Named volumes are isolated and managed by Docker for database persistence; bind mounts link specific workstation host directories for live code development."
+    },
+    {
+      "id": 4,
+      "question": "What command removes all stopped containers, unused networks, and dangling images in one step?",
+      "options": ["docker system prune", "docker clean --all", "docker destroy", "docker reset"],
+      "correct_answer": 0,
+      "topic": "Docker CLI Operations",
+      "difficulty": "easy",
+      "explanation": "`docker system prune` frees disk space by deleting stopped containers, unused networks, dangling images, and build caches."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of `.dockerignore` file?",
+      "options": [
+        "Excludes files and directories (like `node_modules`, `.git`, secrets) from the build context sent to the Docker daemon",
+        "Prevents Docker from installing Linux security updates",
+        "Ignores runtime errors inside the container",
+        "Hides containers from `docker ps` commands"
+      ],
+      "correct_answer": 0,
+      "topic": "Docker Build Context",
+      "difficulty": "easy",
+      "explanation": "`.dockerignore` prevents transferring heavy local files (`.git`, `node_modules`, `.env`) into the build context, accelerating build times."
+    },
+    {
+      "id": 6,
+      "question": "What is the default network driver assigned to standalone containers launched with `docker run`?",
+      "options": ["bridge", "host", "overlay", "macvlan"],
+      "correct_answer": 0,
+      "topic": "Docker Networking",
+      "difficulty": "easy",
+      "explanation": "The default `bridge` network provides private internal IP addresses and port forwarding to the host."
+    },
+    {
+      "id": 7,
+      "question": "What happens when a container reaches its assigned memory limit (`--memory=512m`) and attempts to allocate more RAM?",
+      "options": [
+        "The Linux Out-Of-Memory (OOM) Killer terminates the container process with exit code 137",
+        "Docker expands the RAM allocation dynamically from the host",
+        "The container pauses until RAM is freed",
+        "The container deletes cached files automatically"
+      ],
+      "correct_answer": 0,
+      "topic": "Resource Constraints & OOM",
+      "difficulty": "medium",
+      "explanation": "When cgroup memory limits are exceeded, the kernel OOM killer kills the primary process in the container (SIGKILL, exit 137)."
+    },
+    {
+      "id": 8,
+      "question": "In Docker Compose, what does the `depends_on` attribute control?",
+      "options": [
+        "The startup and shutdown ordering of services (e.g. starting database before API)",
+        "The CPU share allocated between services",
+        "The Git branch dependencies for build",
+        "The network bandwidth throttling"
+      ],
+      "correct_answer": 0,
+      "topic": "Docker Compose",
+      "difficulty": "easy",
+      "explanation": "`depends_on` defines the sequence in which Compose creates and starts services, though application-level readiness health checks should still be used."
+    },
+    {
+      "id": 9,
+      "question": "Why should rootless containers or non-root `USER` directives be used in production Dockerfiles?",
+      "options": [
+        "To mitigate container escape vulnerabilities and prevent attackers from gaining root access to the host kernel",
+        "To reduce container disk footprint",
+        "To allow containers to run without an operating system",
+        "To improve network latency"
+      ],
+      "correct_answer": 0,
+      "topic": "Container Security",
+      "difficulty": "medium",
+      "explanation": "Running as a non-root user (e.g. `USER appuser`) adheres to least privilege principles, limiting damage if the application inside is exploited."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of Docker Health Checks (`HEALTHCHECK`) in a Dockerfile?",
+      "options": [
+        "Tells Docker how to test if the internal application is actually functional and healthy (not just running the PID)",
+        "Scans source code for security vulnerabilities",
+        "Monitors physical CPU temperature",
+        "Checks if newer Docker image versions are available"
+      ],
+      "correct_answer": 0,
+      "topic": "Container Health & Orchestration",
+      "difficulty": "medium",
+      "explanation": "HEALTHCHECK runs commands inside the container (e.g. `curl -f http://localhost:8080/health || exit 1`) to signal unhealthy states to orchestrators."
+    }
+  ]
+}

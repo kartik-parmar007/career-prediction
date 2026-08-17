@@ -1,0 +1,86 @@
+{
+  "frontend": {
+    "name": "Frontend Development",
+    "primary_skills": ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Responsive Design", "Web APIs", "State Management (Redux/Zustand)", "Performance Optimization", "Git"],
+    "beginner_topics": ["HTML Semantic Elements", "CSS Box Model & Flexbox", "JavaScript Basics & DOM Manipulation"],
+    "intermediate_topics": ["React Hooks & Components", "Async JavaScript & Fetch API", "Tailwind / CSS Grid"],
+    "advanced_topics": ["Server-Side Rendering (Next.js)", "Web Performance & Core Web Vitals", "State Architecture & Testing"]
+  },
+  "backend": {
+    "name": "Backend Development",
+    "primary_skills": ["Node.js / Express", "Python / FastAPI / Django", "Java / Spring Boot", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL", "Redis Caching", "Docker", "Authentication (JWT/OAuth)", "System Design"],
+    "beginner_topics": ["Server Basics & HTTP Methods", "Database CRUD Operations", "JSON Handling"],
+    "intermediate_topics": ["RESTful API Architecture", "Relational Database Indexing", "Authentication & Middleware"],
+    "advanced_topics": ["Microservices & Message Queues", "Caching Strategies & Performance", "Scalable System Architecture"]
+  },
+  "fullstack": {
+    "name": "Full Stack Development",
+    "primary_skills": ["JavaScript / TypeScript", "React / Next.js", "Node.js / Express", "PostgreSQL / MongoDB", "REST APIs", "Docker", "CI/CD & Cloud Deployment", "Git & GitHub", "Tailwind CSS", "Auth & Security"],
+    "beginner_topics": ["Frontend Fundamentals", "Basic Server Routing", "Database Setup"],
+    "intermediate_topics": ["Full Stack Integration", "API Authentication", "State Management & Deployment"],
+    "advanced_topics": ["Monorepo Architectures", "End-to-End Testing", "Cloud Infrastructure & SRE"]
+  },
+  "mobile": {
+    "name": "Mobile Development",
+    "primary_skills": ["React Native", "Flutter / Dart", "Swift (iOS)", "Kotlin (Android)", "Mobile UI/UX", "Offline Storage & SQLite", "Push Notifications", "REST API Integration", "App Store Deployment"],
+    "beginner_topics": ["Mobile UI Layouts & Components", "State Handling", "Navigation Patterns"],
+    "intermediate_topics": ["Device Hardware APIs (Camera, GPS)", "Offline Sync & Local DBs", "Animation & Gestures"],
+    "advanced_topics": ["Native Modules & Bridge Optimization", "Performance Profiling", "Automated App Store CI/CD"]
+  },
+  "data_analyst": {
+    "name": "Data Analytics",
+    "primary_skills": ["SQL (Aggregations, Window Functions)", "Excel (Pivot Tables, Power Query)", "Python (Pandas, Matplotlib, Seaborn)", "Power BI", "Tableau", "Descriptive Statistics", "Business Metrics (KPIs, Cohorts)", "Data Cleaning"],
+    "beginner_topics": ["Basic SQL Queries (SELECT, WHERE, GROUP BY)", "Excel Formulas", "Data Visualization Principles"],
+    "intermediate_topics": ["Advanced SQL (JOINs, Window Functions)", "Pandas Data Wrangling", "Interactive Dashboards (Power BI)"],
+    "advanced_topics": ["Statistical Hypothesis Testing", "Cohort & Retention Analysis", "Executive Data Storytelling"]
+  },
+  "data_scientist": {
+    "name": "Data Science",
+    "primary_skills": ["Python (NumPy, SciPy, Pandas)", "Applied Probability & Statistics", "Scikit-Learn", "Feature Engineering", "Supervised & Unsupervised ML", "Data Visualization", "Jupyter Notebooks", "SQL"],
+    "beginner_topics": ["Exploratory Data Analysis (EDA)", "Descriptive & Inferential Stats", "Linear & Logistic Regression"],
+    "intermediate_topics": ["Decision Trees, Random Forests & Boosting", "Cross-Validation & Hyperparameter Tuning", "Feature Scaling & Dimensionality Reduction"],
+    "advanced_topics": ["Model Explainability (SHAP, LIME)", "Time-Series Forecasting", "Production Model Evaluation"]
+  },
+  "ai_ml": {
+    "name": "AI & Machine Learning",
+    "primary_skills": ["Python", "PyTorch / TensorFlow", "Neural Networks & Deep Learning", "NLP & Transformers (Hugging Face)", "Computer Vision (OpenCV)", "Vector Databases (Pinecone/Chroma)", "LLM Fine-Tuning & RAG", "MLOps (MLflow, Docker)"],
+    "beginner_topics": ["Matrix Operations (NumPy)", "Gradient Descent & Backpropagation", "Basic Scikit-Learn Pipelines"],
+    "intermediate_topics": ["Convolutional & Recurrent Neural Networks", "Transformer Architectures & Attention", "Embeddings & Vector Search"],
+    "advanced_topics": ["LLM Agentic Frameworks (LangChain/LlamaIndex)", "Model Quantization & GPU Optimization", "Production MLOps Pipelines"]
+  },
+  "devops_cloud": {
+    "name": "DevOps & Cloud Engineering",
+    "primary_skills": ["Linux & Bash Scripting", "AWS / Azure / GCP", "Docker Containerization", "Kubernetes Orchestration", "CI/CD Pipelines (GitHub Actions)", "Infrastructure as Code (Terraform)", "Monitoring (Prometheus & Grafana)", "Networking & DNS"],
+    "beginner_topics": ["Linux Commands & Permissions", "Docker Fundamentals (Dockerfile, docker-compose)", "Git Branching & PRs"],
+    "intermediate_topics": ["CI/CD Pipeline Automation", "AWS Core Services (EC2, S3, RDS, IAM)", "Terraform IaC Basics"],
+    "advanced_topics": ["Kubernetes Cluster Administration", "Service Meshes & High Availability", "Zero-Downtime Deployment & Observability"]
+  },
+  "cybersecurity": {
+    "name": "Cybersecurity",
+    "primary_skills": ["Networking Protocols (TCP/IP, DNS, TLS)", "Penetration Testing (Kali Linux, Burp Suite, Nmap)", "OWASP Top 10", "Cryptography & PKI", "Linux & Windows Security", "SIEM & Log Analysis (Splunk)", "Incident Response"],
+    "beginner_topics": ["Network Fundamentals & Packet Inspection (Wireshark)", "Common Web Vulnerabilities (SQLi, XSS)", "Password & Auth Security"],
+    "intermediate_topics": ["Vulnerability Scanning & Exploitation Tools", "Firewall & IDS/IPS Configuration", "Security Architecture & Cryptography"],
+    "advanced_topics": ["Red Team / Blue Team Tactics", "Threat Hunting & Reverse Engineering", "SOC Monitoring & Compliance Frameworks"]
+  },
+  "qa_automation": {
+    "name": "QA & Test Automation",
+    "primary_skills": ["Test Automation (Playwright, Selenium, Cypress)", "Python / JavaScript Testing (Pytest, Jest)", "API Testing (Postman, REST-assured)", "CI/CD Test Integration", "Performance Testing (JMeter, k6)", "Test Design & Bug Reporting"],
+    "beginner_topics": ["Software Testing Life Cycle (STLC)", "Writing Test Cases & Scenarios", "Manual Testing Principles"],
+    "intermediate_topics": ["UI Automation with Playwright/Selenium", "API Testing & Mocking", "Page Object Model Pattern"],
+    "advanced_topics": ["Continuous Testing in CI/CD Pipelines", "Load & Stress Testing", "Cross-Browser & Visual Regression Testing"]
+  },
+  "ui_ux": {
+    "name": "UI/UX Design",
+    "primary_skills": ["Figma & FigJam", "User Research & Interviews", "Information Architecture", "Wireframing & Prototyping", "Design Systems & Component Libraries", "Typography & Color Theory", "Usability Testing", "Accessibility (WCAG 2.1)"],
+    "beginner_topics": ["Design Fundamentals & Grid Layouts", "Figma Basics & Vector Tools", "Color Harmonies & Font Pairing"],
+    "intermediate_topics": ["Interactive Prototyping & Auto-Layout", "User Journey Mapping & Persona Creation", "Responsive Design Systems"],
+    "advanced_topics": ["Design System Governance & Tokens", "Quantitative Usability Metrics", "Accessibility Auditing & Micro-interactions"]
+  },
+  "data_engineer": {
+    "name": "Data Engineering",
+    "primary_skills": ["Advanced SQL", "Python / Scala", "Apache Spark (PySpark)", "Data Pipelines & ETL (Apache Airflow)", "Data Warehousing (Snowflake, BigQuery)", "Distributed Streaming (Apache Kafka)", "Data Modeling (Star/Snowflake Schema)", "Docker"],
+    "beginner_topics": ["Relational Database Modeling", "SQL DDL/DML & Transformations", "Python File Processing (CSV, JSON, Parquet)"],
+    "intermediate_topics": ["ETL Workflow Automation (Airflow)", "Data Warehouse Architecture (Snowflake)", "Batch Processing with PySpark"],
+    "advanced_topics": ["Real-time Stream Processing (Kafka + Flink)", "Data Lakehouse Architecture (Delta Lake)", "Data Quality, Lineage & Governance"]
+  }
+}

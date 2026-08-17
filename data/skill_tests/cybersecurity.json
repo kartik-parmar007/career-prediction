@@ -1,0 +1,149 @@
+{
+  "test_id": "cybersecurity",
+  "title": "Cybersecurity Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Test your mastery of network security protocols, OWASP vulnerabilities, penetration testing, cryptography, and SIEM monitoring.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is SQL Injection (SQLi) and how is it most effectively prevented?",
+      "options": [
+        "Malicious SQL commands injected via user input; prevented by using Parameterized Queries (Prepared Statements)",
+        "Overloading a database with excessive queries; prevented by rate limiting",
+        "Stealing session cookies via JavaScript; prevented by HttpOnly flags",
+        "Corrupting database index files; prevented by regular backups"
+      ],
+      "correct_answer": 0,
+      "topic": "OWASP Vulnerabilities",
+      "difficulty": "easy",
+      "explanation": "Parameterized queries ensure the database engine treats user input strictly as literal parameter data, never as executable SQL code."
+    },
+    {
+      "id": 2,
+      "question": "In the CIA Triad of information security, what does 'Integrity' mean?",
+      "options": [
+        "Ensuring data is accurate, authentic, and protected against unauthorized modification or deletion",
+        "Ensuring systems are online 24/7 without downtime",
+        "Preventing unauthorized viewing of confidential files",
+        "Backing up files to secondary data centers"
+      ],
+      "correct_answer": 0,
+      "topic": "Security Fundamentals",
+      "difficulty": "easy",
+      "explanation": "Integrity guarantees that data has not been altered, tampered with, or forged in transit or storage."
+    },
+    {
+      "id": 3,
+      "question": "What is the primary difference between Symmetric and Asymmetric encryption?",
+      "options": [
+        "Symmetric uses the same key for encryption and decryption; Asymmetric uses a public key to encrypt and a private key to decrypt",
+        "Asymmetric encryption is faster than symmetric encryption",
+        "Symmetric encryption does not require a secret key",
+        "Asymmetric encryption is only used for hard drive storage"
+      ],
+      "correct_answer": 0,
+      "topic": "Cryptography & PKI",
+      "difficulty": "easy",
+      "explanation": "Symmetric algorithms (like AES) use a shared secret key; Asymmetric algorithms (like RSA, ECC) use mathematically linked public/private key pairs."
+    },
+    {
+      "id": 4,
+      "question": "What is a Cross-Site Scripting (XSS) attack?",
+      "options": [
+        "An attacker injects malicious client-side JavaScript into trusted websites viewed by other users",
+        "An attacker intercepts unencrypted Wi-Fi packets",
+        "An attacker floods a web server with TCP SYN packets",
+        "An attacker cracks a password hash using a dictionary list"
+      ],
+      "correct_answer": 0,
+      "topic": "Web Application Security",
+      "difficulty": "easy",
+      "explanation": "XSS occurs when an application includes untrusted data in a web page without proper validation or escaping, executing malicious scripts in the victim's browser."
+    },
+    {
+      "id": 5,
+      "question": "In network scanning with Nmap, what does a 'SYN Stealth Scan' (`-sS`) do?",
+      "options": [
+        "Sends TCP SYN packets and waits for SYN-ACK without completing the final ACK handshake, leaving the connection half-open",
+        "Encrypts all network scanning packets using TLS",
+        "Attempts to brute force SSH passwords on all open ports",
+        "Spoofs MAC addresses on the local wireless subnet"
+      ],
+      "correct_answer": 0,
+      "topic": "Penetration Testing Tools",
+      "difficulty": "medium",
+      "explanation": "SYN stealth scanning avoids establishing a full TCP connection, making it faster and less likely to be logged by simple legacy connection monitors."
+    },
+    {
+      "id": 6,
+      "question": "What is the security risk of storing passwords hashed with MD5 or SHA-1?",
+      "options": [
+        "They are cryptographically broken, extremely fast to compute, and vulnerable to precomputed rainbow tables and collision attacks",
+        "They use too much RAM when verifying logins",
+        "They can only hash strings shorter than 8 characters",
+        "They require an active internet connection to evaluate"
+      ],
+      "correct_answer": 0,
+      "topic": "Cryptographic Hash Functions",
+      "difficulty": "easy",
+      "explanation": "MD5 and SHA-1 have known collision vulnerabilities and are computationally fast, making them trivial to crack with modern GPUs compared to slow KDFs like Argon2/bcrypt."
+    },
+    {
+      "id": 7,
+      "question": "What is a 'Man-in-the-Middle' (MitM) attack and what prevents it on the web?",
+      "options": [
+        "An attacker intercepts and alters communication between two parties; prevented by HTTPS (TLS) with valid Certificate Authority validation",
+        "An attacker registers a typo domain name; prevented by DNSSEC",
+        "An attacker installs a keylogger on a physical keyboard",
+        "An attacker floods a firewall with ICMP packets"
+      ],
+      "correct_answer": 0,
+      "topic": "Network Security Protocols",
+      "difficulty": "medium",
+      "explanation": "TLS ensures both encryption (preventing eavesdropping) and mutual authentication via digital certificates (preventing impersonation)."
+    },
+    {
+      "id": 8,
+      "question": "In modern cybersecurity, what is the core philosophy of 'Zero Trust' architecture?",
+      "options": [
+        "'Never trust, always verify' — authenticate and authorize every user, device, and network transaction regardless of location",
+        "Assuming all internal network perimeter traffic is safe",
+        "Disabling all user logins on weekends",
+        "Blocking all external IP addresses from visiting company websites"
+      ],
+      "correct_answer": 0,
+      "topic": "Security Architecture",
+      "difficulty": "medium",
+      "explanation": "Zero Trust eliminates implicit trust based on network perimeter, requiring continuous authentication, least privilege access, and micro-segmentation."
+    },
+    {
+      "id": 9,
+      "question": "What is the primary function of a SIEM (Security Information and Event Management) system like Splunk or Wazuh?",
+      "options": [
+        "Aggregating, correlating, and analyzing real-time security event logs across servers, firewalls, and endpoints to detect anomalies",
+        "Blocking all incoming HTTP requests automatically",
+        "Compiling backend source code with security warnings",
+        "Generating synthetic passwords for corporate users"
+      ],
+      "correct_answer": 0,
+      "topic": "SIEM & SOC Operations",
+      "difficulty": "medium",
+      "explanation": "SIEM systems centralize log data across enterprise infrastructure, matching log streams against correlation rules to trigger incident alerts."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between Vulnerability Scanning and Penetration Testing?",
+      "options": [
+        "Vulnerability scanning is automated identification of potential known flaws; Penetration testing actively attempts to exploit vulnerabilities to prove impact",
+        "Penetration testing is automated while scanning is manual",
+        "Vulnerability scanning can only test hardware devices",
+        "They are identical terms for the same audit procedure"
+      ],
+      "correct_answer": 0,
+      "topic": "Security Assessment",
+      "difficulty": "easy",
+      "explanation": "Scanners produce lists of potential vulnerabilities, whereas ethical pen-testers actively exploit weaknesses to determine realistic business compromise risk."
+    }
+  ]
+}

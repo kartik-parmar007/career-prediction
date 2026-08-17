@@ -1,0 +1,144 @@
+{
+  "test_id": "ai_ml",
+  "title": "AI / Machine Learning Engineer Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Evaluate your expertise in neural network architectures, backpropagation, Transformers, LLMs, RAG pipelines, and model deployment.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary role of the activation function (e.g., ReLU, GELU) in a deep neural network?",
+      "options": [
+        "To introduce non-linearity, allowing the network to learn arbitrary complex functions beyond linear combinations",
+        "To normalize input feature vectors to unit length",
+        "To compute matrix multiplication on the GPU",
+        "To prevent gradient updates in the input layer"
+      ],
+      "correct_answer": 0,
+      "topic": "Neural Network Fundamentals",
+      "difficulty": "easy",
+      "explanation": "Without non-linear activations, stacking multiple dense layers collapses mathematically into a single equivalent linear transformation."
+    },
+    {
+      "id": 2,
+      "question": "What mechanism enables Transformer architectures to process input sequence tokens in parallel rather than sequentially like RNNs?",
+      "options": [
+        "Multi-Head Self-Attention and Positional Encodings",
+        "Recurrent Hidden State Vectors",
+        "Long Short-Term Memory Gating Units",
+        "Convolutional Pooling Layers"
+      ],
+      "correct_answer": 0,
+      "topic": "Transformers & Attention",
+      "difficulty": "medium",
+      "explanation": "Self-attention computes attention weights between all token pairs concurrently, while positional encodings inject sequence order information."
+    },
+    {
+      "id": 3,
+      "question": "What does RAG (Retrieval-Augmented Generation) do in modern LLM applications?",
+      "options": [
+        "Retrieves relevant external domain documents via semantic search and injects them into the LLM prompt context before generation",
+        "Retrains model weights from scratch every time a user asks a question",
+        "Converts text prompts into 3D animations",
+        "Encrypts LLM token streams using symmetric cryptography"
+      ],
+      "correct_answer": 0,
+      "topic": "Generative AI & RAG",
+      "difficulty": "easy",
+      "explanation": "RAG enhances LLM outputs with accurate, up-to-date facts retrieved dynamically from vector databases, reducing hallucinations."
+    },
+    {
+      "id": 4,
+      "question": "What is the purpose of LoRA (Low-Rank Adaptation) in parameter-efficient fine-tuning (PEFT)?",
+      "options": [
+        "Freezes the pre-trained weights and injects trainable rank-decomposition matrices into transformer layers, vastly reducing memory",
+        "Quantizes all weights to 1-bit binary representations",
+        "Removes half of the transformer attention heads permanently",
+        "Increases the context window by compression"
+      ],
+      "correct_answer": 0,
+      "topic": "LLM Fine-Tuning",
+      "difficulty": "hard",
+      "explanation": "LoRA decomposes weight update matrices $\\Delta W$ into low-rank matrices $A \\times B$, updating <1% of parameters while preserving performance."
+    },
+    {
+      "id": 5,
+      "question": "Which loss function is standard for training multi-class classification neural networks with Softmax output?",
+      "options": [
+        "Categorical Cross-Entropy Loss",
+        "Mean Squared Error (MSE)",
+        "Mean Absolute Error (MAE)",
+        "Hinge Loss"
+      ],
+      "correct_answer": 0,
+      "topic": "Loss Functions & Optimization",
+      "difficulty": "easy",
+      "explanation": "Categorical Cross-Entropy calculates the divergence between predicted probability distributions (from Softmax) and one-hot ground-truth labels."
+    },
+    {
+      "id": 6,
+      "question": "What is the 'Vanishing Gradient Problem' during deep neural network backpropagation?",
+      "options": [
+        "Gradients become exponentially small as they propagate backward through layers, stopping early weights from updating",
+        "The model loss becomes zero after one epoch",
+        "Learning rate automatically decays to infinity",
+        "Weights overflow 32-bit floating point boundaries"
+      ],
+      "correct_answer": 0,
+      "topic": "Deep Learning Optimization",
+      "difficulty": "medium",
+      "explanation": "With functions like Sigmoid or Tanh, derivative values < 1 multiplied through many layers cause gradient signals to vanish to near-zero."
+    },
+    {
+      "id": 7,
+      "question": "In Vector Databases (such as Pinecone, Chroma, Milvus), what metric measures the cosine of the angle between two embedding vectors?",
+      "options": ["Cosine Similarity", "Euclidean Distance (L2)", "Manhattan Distance (L1)", "Hamming Distance"],
+      "correct_answer": 0,
+      "topic": "Vector Embeddings",
+      "difficulty": "easy",
+      "explanation": "Cosine similarity measures vector direction similarity independent of magnitude, producing values between -1 and 1."
+    },
+    {
+      "id": 8,
+      "question": "What is the key advantage of PyTorch over older static computation graph frameworks?",
+      "options": [
+        "Dynamic computation graphs (Define-by-Run) allowing runtime graph changes and seamless Python debugging",
+        "It only runs on quantum computers",
+        "It eliminates the need for GPU accelerators",
+        "It has no support for tensor autograd"
+      ],
+      "correct_answer": 0,
+      "topic": "PyTorch Architecture",
+      "difficulty": "medium",
+      "explanation": "PyTorch constructs computational graphs dynamically on each forward pass, making custom architectures and native Python debugging straightforward."
+    },
+    {
+      "id": 9,
+      "question": "What is 'Temperature' in LLM token generation sampling?",
+      "options": [
+        "A hyperparameter scaling logits to control randomness: lower values yield deterministic outputs; higher values yield creative variety",
+        "The physical temperature of the GPU hardware",
+        "The number of GPUs allocated to inference",
+        "The token generation rate per second"
+      ],
+      "correct_answer": 0,
+      "topic": "LLM Inference",
+      "difficulty": "easy",
+      "explanation": "Dividing logits by temperature before softmax flattens (high T) or sharpens (low T) the probability distribution."
+    },
+    {
+      "id": 10,
+      "question": "What is the primary function of MLOps tools like MLflow or Weights & Biases?",
+      "options": [
+        "Tracking experiments, logging hyperparameters, versioning models, and managing the model registry",
+        "Generating synthetic training images",
+        "Writing Python unit tests automatically",
+        "Serving HTML frontend templates"
+      ],
+      "correct_answer": 0,
+      "topic": "MLOps & Model Lifecycle",
+      "difficulty": "medium",
+      "explanation": "MLOps platforms track experiments across runs, log metrics/artifacts, and provide model registries for deployment governance."
+    }
+  ]
+}

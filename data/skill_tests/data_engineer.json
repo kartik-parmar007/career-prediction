@@ -1,0 +1,149 @@
+{
+  "test_id": "data_engineer",
+  "title": "Database & Data Engineering Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Assess your understanding of distributed data pipelines, PySpark, Airflow DAGs, Snowflake data warehousing, Kafka streaming, and data modeling.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary difference between ETL (Extract, Transform, Load) and ELT (Extract, Load, Transform)?",
+      "options": [
+        "In ELT, raw data is loaded directly into modern cloud data warehouses and transformed in-place using warehouse compute (SQL/dbt)",
+        "ETL does not require a database",
+        "ELT cannot process JSON or CSV files",
+        "ETL is only used for real-time streaming"
+      ],
+      "correct_answer": 0,
+      "topic": "ETL vs ELT Architecture",
+      "difficulty": "easy",
+      "explanation": "Modern cloud warehouses (Snowflake, BigQuery) have massive parallel compute, allowing raw data ingestion followed by scalable in-warehouse ELT transformation."
+    },
+    {
+      "id": 2,
+      "question": "Why is the Apache Parquet file format preferred over CSV or JSON for big data analytics?",
+      "options": [
+        "Parquet is columnar, provides efficient compression, and enables column pruning and predicate pushdown to skip reading unneeded data",
+        "Parquet files can be edited in Microsoft Notepad",
+        "Parquet files do not require schemas",
+        "Parquet is an uncompressed row-based text format"
+      ],
+      "correct_answer": 0,
+      "topic": "Data Storage & Columnar Formats",
+      "difficulty": "medium",
+      "explanation": "Columnar storage allows analytics queries that only select a few columns to avoid scanning irrelevant columns, drastically reducing I/O and query time."
+    },
+    {
+      "id": 3,
+      "question": "In Apache Airflow, what does DAG stand for and what constraint does it enforce?",
+      "options": [
+        "Directed Acyclic Graph; enforces that tasks execute with strict dependency direction and cannot have circular loops",
+        "Data Aggregation Gateway; limits queries to 1,000 rows",
+        "Distributed Async Generator; generates synthetic data",
+        "Database Action Group; handles database migrations"
+      ],
+      "correct_answer": 0,
+      "topic": "Workflow Orchestration (Airflow)",
+      "difficulty": "easy",
+      "explanation": "A DAG defines tasks and their upstream/downstream relationships without circular feedback loops, ensuring predictable pipeline execution."
+    },
+    {
+      "id": 4,
+      "question": "In Apache Spark, what is the difference between a Transformation and an Action?",
+      "options": [
+        "Transformations (like `map`, `filter`) are lazy and build an execution lineage DAG; Actions (like `count`, `collect`, `write`) trigger actual distributed execution",
+        "Transformations write data directly to disk immediately",
+        "Actions only run on the Spark driver node without workers",
+        "Transformations can only be run once per session"
+      ],
+      "correct_answer": 0,
+      "topic": "Apache Spark Architecture",
+      "difficulty": "medium",
+      "explanation": "Spark lazily evaluates transformations to optimize the entire query plan (via Catalyst optimizer) until an Action explicitly requests computation."
+    },
+    {
+      "id": 5,
+      "question": "What is 'Data Skew' in distributed computing (Spark/Hadoop) and how does it affect performance?",
+      "options": [
+        "Data is unevenly distributed across partitions, causing a few straggler worker nodes to take dramatically longer than others",
+        "Data values contain typographical errors",
+        "The database timestamp clock is out of sync",
+        "The dataset has more columns than rows"
+      ],
+      "correct_answer": 0,
+      "topic": "Distributed Computing Optimization",
+      "difficulty": "hard",
+      "explanation": "When partitioning keys are skewed (e.g. 80% of rows have key='USA'), the worker handling that key is overwhelmed while others sit idle."
+    },
+    {
+      "id": 6,
+      "question": "What is a Slowly Changing Dimension (SCD) Type 2 in dimensional data modeling?",
+      "options": [
+        "Tracking full historical changes by creating a new row for each update with valid start/end timestamps and an active flag",
+        "Overwriting existing column values in-place without preserving history (SCD Type 1)",
+        "Adding a new column to the table for every change",
+        "Deleting historical records older than 90 days"
+      ],
+      "correct_answer": 0,
+      "topic": "Dimensional Data Modeling",
+      "difficulty": "medium",
+      "explanation": "SCD Type 2 preserves complete historical audit trails by inserting a new record with effective date ranges whenever dimensional attributes change."
+    },
+    {
+      "id": 7,
+      "question": "In Apache Kafka, what is a 'Consumer Group'?",
+      "options": [
+        "A set of consumers that cooperate to consume data from topic partitions in parallel, where each partition is read by only one consumer in the group",
+        "A group of users visiting a website simultaneously",
+        "A database table storing consumer addresses",
+        "A security role granting read access to Kafka topics"
+      ],
+      "correct_answer": 0,
+      "topic": "Streaming Systems (Kafka)",
+      "difficulty": "medium",
+      "explanation": "Consumer groups allow horizontal scaling of message consumption by dividing topic partitions across multiple consumer instances."
+    },
+    {
+      "id": 8,
+      "question": "What is the primary architectural feature of modern Cloud Data Warehouses like Snowflake?",
+      "options": [
+        "Decoupled storage and compute, allowing compute clusters to scale up, down, or pause instantly independent of storage volume",
+        "Running entirely in memory without persistent storage",
+        "Using NoSQL key-value stores exclusively",
+        "Requiring manual server hardware provisioning"
+      ],
+      "correct_answer": 0,
+      "topic": "Cloud Data Warehousing",
+      "difficulty": "easy",
+      "explanation": "Separating compute (Virtual Warehouses) from central cloud storage (S3/Azure Blob) enables elastic scaling and concurrency without resource contention."
+    },
+    {
+      "id": 9,
+      "question": "In dbt (data build tool), what is a 'materialization'?",
+      "options": [
+        "The strategy determining how a dbt model is built in the warehouse (e.g. view, table, incremental, ephemeral)",
+        "Converting JSON strings into binary files",
+        "Extracting data from an on-premise mainframe",
+        "Creating automated visual dashboard charts"
+      ],
+      "correct_answer": 0,
+      "topic": "Analytics Engineering & dbt",
+      "difficulty": "medium",
+      "explanation": "dbt materializations define whether SQL select statements are deployed as database Views, physical Tables, or Incremental updates."
+    },
+    {
+      "id": 10,
+      "question": "What is 'Idempotency' in data pipeline engineering and why is it essential?",
+      "options": [
+        "A pipeline running multiple times with the same input produces the exact same output without creating duplicate or corrupt records",
+        "A pipeline that executes in under 1 second",
+        "A pipeline that only ingests CSV files",
+        "A pipeline that encrypts columns using AES-256"
+      ],
+      "correct_answer": 0,
+      "topic": "Data Pipeline Reliability",
+      "difficulty": "medium",
+      "explanation": "Idempotent pipelines (e.g. using upserts or partition overwrites) can safely retry after unexpected network or worker failures without duplicating data."
+    }
+  ]
+}

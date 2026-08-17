@@ -1,0 +1,149 @@
+{
+  "test_id": "sql",
+  "title": "SQL & Database Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your relational SQL mastery: aggregations, joins, subqueries, indexing, constraints, and transactions.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the difference between `DELETE FROM users;` and `TRUNCATE TABLE users;`?",
+      "options": [
+        "`DELETE` removes rows one-by-one and logs each deletion in the transaction log (can be rolled back); `TRUNCATE` deallocates data pages instantly as DDL",
+        "`TRUNCATE` deletes the table structure completely",
+        "`DELETE` is faster than `TRUNCATE`",
+        "`TRUNCATE` allows a `WHERE` clause"
+      ],
+      "correct_answer": 0,
+      "topic": "DML vs DDL Operations",
+      "difficulty": "medium",
+      "explanation": "TRUNCATE is a high-speed DDL operation that resets identity counters and deallocates data pages with minimal transaction logging."
+    },
+    {
+      "id": 2,
+      "question": "What is the difference between `UNION` and `UNION ALL` in SQL?",
+      "options": [
+        "`UNION` removes duplicate rows from the combined result set (with sort overhead); `UNION ALL` retains all duplicates and is faster",
+        "`UNION ALL` only works on two tables with identical primary keys",
+        "`UNION` joins tables horizontally; `UNION ALL` vertically",
+        "There is no difference in modern SQL databases"
+      ],
+      "correct_answer": 0,
+      "topic": "Set Operations",
+      "difficulty": "easy",
+      "explanation": "UNION runs a distinct sorting pass to eliminate duplicate rows, while UNION ALL simply appends results together directly."
+    },
+    {
+      "id": 3,
+      "question": "In SQL window functions, what is the difference between `RANK()` and `DENSE_RANK()`?",
+      "options": [
+        "`RANK()` skips rank values after a tie (e.g. 1, 2, 2, 4); `DENSE_RANK()` does not skip values (e.g. 1, 2, 2, 3)",
+        "`DENSE_RANK()` only ranks strings; `RANK()` ranks numbers",
+        "`RANK()` requires a PARTITION BY clause while `DENSE_RANK()` does not",
+        "`DENSE_RANK()` assigns negative numbers to ties"
+      ],
+      "correct_answer": 0,
+      "topic": "Window Functions",
+      "difficulty": "medium",
+      "explanation": "RANK produces gaps in ranking sequences when ties occur, whereas DENSE_RANK assigns consecutive integers without gaps."
+    },
+    {
+      "id": 4,
+      "question": "What does the `COALESCE(val1, val2, val3)` function return in SQL?",
+      "options": [
+        "The first non-null expression among its arguments",
+        "The concatenation of all string values",
+        "The arithmetic average of numeric values",
+        "The largest numerical value"
+      ],
+      "correct_answer": 0,
+      "topic": "SQL Functions",
+      "difficulty": "easy",
+      "explanation": "COALESCE evaluates arguments in sequence and returns the first value that is not NULL, or NULL if all are null."
+    },
+    {
+      "id": 5,
+      "question": "What is a Composite (Compound) Index in a relational database?",
+      "options": [
+        "An index built on two or more columns of a table, which can be used by queries filtering on the leftmost prefix of those columns",
+        "An index that automatically compresses table rows into zip files",
+        "An index that spans across two distinct database servers",
+        "An index that only works on foreign keys"
+      ],
+      "correct_answer": 0,
+      "topic": "Database Indexing",
+      "difficulty": "medium",
+      "explanation": "Composite indexes index multiple columns (e.g. `(last_name, first_name)`). Queries must filter by the leftmost columns to benefit from the index."
+    },
+    {
+      "id": 6,
+      "question": "What does a Common Table Expression (CTE) defined with `WITH` achieve in SQL?",
+      "options": [
+        "Defines a temporary named result set within the execution scope of a single SELECT, INSERT, UPDATE, or DELETE statement",
+        "Creates a permanent table stored on physical disk",
+        "Backs up table records to a cloud storage bucket",
+        "Encrypts the column values in memory"
+      ],
+      "correct_answer": 0,
+      "topic": "Common Table Expressions (CTEs)",
+      "difficulty": "easy",
+      "explanation": "CTEs simplify complex nested subqueries and enable recursive hierarchical queries (e.g. organizational trees)."
+    },
+    {
+      "id": 7,
+      "question": "What happens when you execute `SELECT COUNT(*)` versus `SELECT COUNT(column_name)` on a table with some NULL values in `column_name`?",
+      "options": [
+        "`COUNT(*)` counts all rows including NULLs; `COUNT(column_name)` counts only rows where `column_name` is NOT NULL",
+        "Both return the exact same count number",
+        "`COUNT(column_name)` throws an error on encountering NULL",
+        "`COUNT(*)` only counts primary key columns"
+      ],
+      "correct_answer": 0,
+      "topic": "SQL Aggregations & NULL Handling",
+      "difficulty": "easy",
+      "explanation": "`COUNT(*)` counts total rows in the result set, while `COUNT(column)` ignores null values in that specific column."
+    },
+    {
+      "id": 8,
+      "question": "What is a 'Phantom Read' anomaly during concurrent database transactions?",
+      "options": [
+        "Transaction A reads a set of rows satisfying a condition; Transaction B inserts new matching rows and commits; Transaction A re-executes the query and sees new 'phantom' rows",
+        "A transaction reads uncommitted changes from another transaction (Dirty Read)",
+        "A transaction modifies data that was deleted by the operating system",
+        "A query returns cached results after the server restarted"
+      ],
+      "correct_answer": 0,
+      "topic": "Transaction Isolation Levels",
+      "difficulty": "hard",
+      "explanation": "Phantom reads occur when a transaction re-reads a range of rows and finds additional rows inserted by another committed transaction."
+    },
+    {
+      "id": 9,
+      "question": "What is Database Normalization (e.g. 3rd Normal Form - 3NF)?",
+      "options": [
+        "Organizing database tables and columns to minimize data redundancy and prevent insert/update/delete anomalies",
+        "Converting all strings to lowercase in the database",
+        "Scaling database servers across 3 geographic zones",
+        "Backing up database tables every 3 hours"
+      ],
+      "correct_answer": 0,
+      "topic": "Database Normalization",
+      "difficulty": "medium",
+      "explanation": "3NF ensures every non-key attribute is non-transitively dependent on the primary key, preventing duplicate data storage and inconsistencies."
+    },
+    {
+      "id": 10,
+      "question": "In SQL, what is the purpose of the `EXPLAIN ANALYZE` command?",
+      "options": [
+        "Executes the query and displays the actual query execution plan, node timings, rows scanned, and index usage details",
+        "Checks SQL syntax without running the query",
+        "Automatically optimizes and rewrites slow queries",
+        "Translates SQL queries into Python code"
+      ],
+      "correct_answer": 0,
+      "topic": "Query Optimization & Execution Plans",
+      "difficulty": "medium",
+      "explanation": "`EXPLAIN ANALYZE` runs the statement and outputs detailed profiling data showing sequential scans, index scans, hash joins, and actual execution time per node."
+    }
+  ]
+}

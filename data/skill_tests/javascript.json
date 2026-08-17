@@ -1,0 +1,144 @@
+{
+  "test_id": "javascript",
+  "title": "JavaScript Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your core JavaScript expertise: closures, prototypes, event loop, promises, ES6+, and DOM APIs.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a Closure in JavaScript?",
+      "options": [
+        "A function bundled together with references to its lexical environment, allowing it to access outer variables even after the outer function has executed",
+        "A method that terminates an infinite while loop",
+        "A keyword used to close a database connection",
+        "An HTML tag that closes a script tag"
+      ],
+      "correct_answer": 0,
+      "topic": "Closures & Scope",
+      "difficulty": "medium",
+      "explanation": "Closures allow an inner function to retain access to variables declared in its enclosing lexical scope even when invoked outside that scope."
+    },
+    {
+      "id": 2,
+      "question": "What is the output of `console.log(0.1 + 0.2 === 0.3)` in standard JavaScript?",
+      "options": ["false", "true", "undefined", "NaN"],
+      "correct_answer": 0,
+      "topic": "JavaScript Numbers & IEEE 754",
+      "difficulty": "easy",
+      "explanation": "Due to IEEE 754 floating-point binary representation, `0.1 + 0.2` equals `0.30000000000000004`, which is strictly not equal to `0.3`."
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between `==` and `===` in JavaScript?",
+      "options": [
+        "`==` performs type coercion before comparison; `===` checks both value and type strictly without coercion",
+        "`===` converts both operands to strings",
+        "`==` can only compare numbers",
+        "There is no difference in modern ES6+"
+      ],
+      "correct_answer": 0,
+      "topic": "Type Coercion & Operators",
+      "difficulty": "easy",
+      "explanation": "Strict equality `===` evaluates to true only if both operands are of the same type and hold the same value."
+    },
+    {
+      "id": 4,
+      "question": "What is 'Hoisting' in JavaScript?",
+      "options": [
+        "Variable and function declarations are moved to the top of their containing scope during compilation before code execution",
+        "Lifting elements up in the DOM tree",
+        "Compressing JavaScript code into smaller files",
+        "Assigning values to undefined variables automatically"
+      ],
+      "correct_answer": 0,
+      "topic": "Hoisting & Execution Context",
+      "difficulty": "medium",
+      "explanation": "Hoisting allocates memory for variable (`var`) and function declarations during the creation phase of the execution context."
+    },
+    {
+      "id": 5,
+      "question": "What is the 'Temporal Dead Zone' (TDZ) regarding `let` and `const` variables?",
+      "options": [
+        "The period between entering the scope and the actual line where the variable is declared, during which accessing it throws a ReferenceError",
+        "The time taken for a Promise to time out",
+        "The interval between setTimeout calls",
+        "The delay when loading scripts with async or defer"
+      ],
+      "correct_answer": 0,
+      "topic": "ES6 let & const",
+      "difficulty": "medium",
+      "explanation": "Unlike `var` which initializes as `undefined`, `let` and `const` remain uninitialized in the TDZ until their declaration line is executed."
+    },
+    {
+      "id": 6,
+      "question": "What does `Promise.all([p1, p2, p3])` do if one of the promises rejects?",
+      "options": [
+        "It rejects immediately with the error of the first rejected promise, ignoring other pending promises (fail-fast)",
+        "It waits for all promises and returns both errors and successes",
+        "It retries the failed promise up to 3 times",
+        "It silently replaces the rejected promise with null"
+      ],
+      "correct_answer": 0,
+      "topic": "Asynchronous JavaScript & Promises",
+      "difficulty": "medium",
+      "explanation": "Promise.all is all-or-nothing: if any input promise rejects, the entire returned promise rejects immediately."
+    },
+    {
+      "id": 7,
+      "question": "How does the `this` keyword behave inside an Arrow Function compared to a regular function?",
+      "options": [
+        "Arrow functions do not bind their own `this`; they retain the `this` value of the enclosing lexical scope",
+        "Arrow functions always bind `this` to the global `window` object",
+        "Arrow functions create a dynamic new `this` context on every invocation",
+        "Arrow functions throw an error if `this` is used inside them"
+      ],
+      "correct_answer": 0,
+      "topic": "Arrow Functions & this",
+      "difficulty": "easy",
+      "explanation": "Arrow functions establish `this` based on the scope in which the arrow function was defined (lexical scoping)."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of `Array.prototype.reduce()`?",
+      "options": [
+        "Executes a reducer callback function on each element of the array, resulting in a single accumulated output value",
+        "Removes all duplicate items from an array",
+        "Shortens the array length by half",
+        "Sorts the array in descending order"
+      ],
+      "correct_answer": 0,
+      "topic": "Array Methods",
+      "difficulty": "easy",
+      "explanation": "`.reduce()` iteratively aggregates array values into a single accumulator result (e.g. sum, grouped object, flattened array)."
+    },
+    {
+      "id": 9,
+      "question": "What is Event Bubbling in the browser DOM?",
+      "options": [
+        "An event triggers on the deepest target element first and then propagates upwards through its parent ancestors in the DOM tree",
+        "Events propagate downward from the window to the target element",
+        "Events are executed in parallel across Web Workers",
+        "Events that trigger animated bubbles on screen"
+      ],
+      "correct_answer": 0,
+      "topic": "DOM Event Propagation",
+      "difficulty": "medium",
+      "explanation": "During event bubbling, an event triggers on the inner target element first, bubbling up through each parent element unless `event.stopPropagation()` is called."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between `deepCopy` and `shallowCopy` of an object containing nested objects?",
+      "options": [
+        "A shallow copy only duplicates top-level properties (nested objects share references); a deep copy duplicates all nested objects recursively",
+        "Shallow copy converts objects to arrays",
+        "Deep copy only works on primitive types",
+        "Deep copy deletes the original object"
+      ],
+      "correct_answer": 0,
+      "topic": "Object Mutability & Cloning",
+      "difficulty": "medium",
+      "explanation": "Shallow copying (`Object.assign` or spread `{...obj}`) keeps nested object references pointing to original memory, whereas deep copies (e.g. `structuredClone()`) clone all nested levels."
+    }
+  ]
+}

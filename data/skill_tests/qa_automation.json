@@ -1,0 +1,144 @@
+{
+  "test_id": "qa_automation",
+  "title": "QA & Automation Engineering Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Assess your skills in automated testing frameworks, Playwright/Selenium, API testing, test case design, and CI/CD quality gates.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the Page Object Model (POM) design pattern in UI test automation?",
+      "options": [
+        "A design pattern where web pages are represented as classes and elements/actions as methods, separating test logic from page structure",
+        "A tool that automatically captures screenshots of every webpage",
+        "A CSS library for styling automated test reports",
+        "A methodology where only the home page is tested"
+      ],
+      "correct_answer": 0,
+      "topic": "Test Automation Design Patterns",
+      "difficulty": "medium",
+      "explanation": "POM encapsulates page locators and interaction behaviors in dedicated classes, ensuring test scripts remain clean, reusable, and easy to maintain when UI changes."
+    },
+    {
+      "id": 2,
+      "question": "In the Testing Pyramid concept, which layer should contain the largest volume of tests?",
+      "options": ["Unit Tests", "Integration Tests", "End-to-End (E2E) UI Tests", "Manual Exploratory Tests"],
+      "correct_answer": 0,
+      "topic": "Testing Strategy",
+      "difficulty": "easy",
+      "explanation": "Unit tests are fast, cheap, and isolated, forming the wide base of the pyramid, while slow and brittle E2E UI tests form the narrow apex."
+    },
+    {
+      "id": 3,
+      "question": "In black-box test design, what is Boundary Value Analysis (BVA)?",
+      "options": [
+        "Testing values at the extreme minimum, maximum, just inside, and just outside valid input boundaries",
+        "Testing the physical network bandwidth limits of the test server",
+        "Testing whether database foreign keys are constrained",
+        "Testing only the middle average value of an input range"
+      ],
+      "correct_answer": 0,
+      "topic": "Test Design Techniques",
+      "difficulty": "easy",
+      "explanation": "BVA focuses on the boundaries of input domains (e.g. 0, 1, 99, 100, 101 for a 1-100 range) where programming errors are most frequently made."
+    },
+    {
+      "id": 4,
+      "question": "What is the primary cause of 'flaky' automated UI tests?",
+      "options": [
+        "Hard-coded fixed sleep delays (`sleep(5)`) and race conditions with dynamic asynchronous elements rather than explicit smart waits",
+        "Using CSS locators instead of XPath",
+        "Testing on Chrome instead of Firefox",
+        "Running tests on dual-monitor workstations"
+      ],
+      "correct_answer": 0,
+      "topic": "Test Reliability & Flakiness",
+      "difficulty": "medium",
+      "explanation": "Hard-coded sleeps fail under varying network/CPU loads; auto-waiting locators and explicit condition polling eliminate race conditions."
+    },
+    {
+      "id": 5,
+      "question": "In modern test frameworks like Playwright, what is 'Auto-Waiting'?",
+      "options": [
+        "The framework automatically checks element visibility, stability, and enabled state before performing actions like click or type",
+        "The browser halts all JavaScript execution for 10 seconds",
+        "The test runner delays test execution until 9:00 AM",
+        "The server pauses incoming HTTP requests during test runs"
+      ],
+      "correct_answer": 0,
+      "topic": "Playwright Architecture",
+      "difficulty": "medium",
+      "explanation": "Playwright automatically performs actionability checks (visible, attached to DOM, stable, enabled, not obscured) before executing actions."
+    },
+    {
+      "id": 6,
+      "question": "What is Regression Testing?",
+      "options": [
+        "Re-running functional and non-functional tests to ensure previously developed and tested software still performs correctly after a change",
+        "Testing code written in older legacy programming languages",
+        "Testing software strictly before the alpha release",
+        "Testing database backup restoration procedures"
+      ],
+      "correct_answer": 0,
+      "topic": "Testing Types",
+      "difficulty": "easy",
+      "explanation": "Regression testing verifies that recent code commits, bug fixes, or config changes have not inadvertently broken existing working features."
+    },
+    {
+      "id": 7,
+      "question": "In API test automation, what does JSON Schema Validation verify?",
+      "options": [
+        "That the JSON response structure, field data types, required keys, and formatting conform strictly to the expected API contract",
+        "That the JSON file is compressed with gzip",
+        "That all JSON strings are written in uppercase",
+        "That the response time was under 100ms"
+      ],
+      "correct_answer": 0,
+      "topic": "API Testing",
+      "difficulty": "medium",
+      "explanation": "JSON Schema validation guarantees that API payloads maintain structural integrity and correct data types, preventing contract breakage."
+    },
+    {
+      "id": 8,
+      "question": "What is the key difference between Load Testing and Stress Testing?",
+      "options": [
+        "Load testing measures system behavior under expected normal and peak traffic; Stress testing pushes the system beyond maximum capacity to find breaking points",
+        "Stress testing only tests database CPU usage",
+        "Load testing is performed manually without tools",
+        "Stress testing tests the mental stamina of the QA team"
+      ],
+      "correct_answer": 0,
+      "topic": "Performance Testing",
+      "difficulty": "easy",
+      "explanation": "Load testing verifies performance under anticipated loads; stress testing pushes past limits to test failure modes and recovery gracefulness."
+    },
+    {
+      "id": 9,
+      "question": "In Pytest or unit test frameworks, what are Test Fixtures used for?",
+      "options": [
+        "Providing reusable, reliable baseline context and resources (e.g. database connections, test data, browser instances) with setup/teardown logic",
+        "Fixing syntax errors in Python code automatically",
+        "Compiling test scripts into binary executables",
+        "Formatting HTML test output reports"
+      ],
+      "correct_answer": 0,
+      "topic": "Unit Testing & Frameworks",
+      "difficulty": "medium",
+      "explanation": "Fixtures initialize and tear down dependencies cleanly before and after test functions, ensuring test isolation and modularity."
+    },
+    {
+      "id": 10,
+      "question": "What is a Quality Gate in a CI/CD pipeline?",
+      "options": [
+        "A set of automated threshold criteria (e.g., zero failed tests, >80% code coverage, zero high-severity security vulnerabilities) required to pass before deployment",
+        "A physical security badge scanner for server rooms",
+        "A code linter that rejects tabs in place of spaces",
+        "A manual checklist signed on paper by management"
+      ],
+      "correct_answer": 0,
+      "topic": "CI/CD Quality Engineering",
+      "difficulty": "easy",
+      "explanation": "Quality gates prevent low-quality, vulnerable, or failing code builds from advancing to staging or production environments."
+    }
+  ]
+}

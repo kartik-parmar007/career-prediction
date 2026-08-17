@@ -1,0 +1,144 @@
+{
+  "test_id": "fullstack",
+  "title": "Full Stack Development Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Test your end-to-end knowledge spanning UI state, server endpoints, CORS, database integration, and deployment.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the purpose of CORS (Cross-Origin Resource Sharing) headers?",
+      "options": [
+        "To allow or restrict resources requested on a web page from another domain outside the origin",
+        "To speed up database indexing on the server",
+        "To compress static asset bundles before transmission",
+        "To automatically authenticate users using browser biometric credentials"
+      ],
+      "correct_answer": 0,
+      "topic": "Web Security & CORS",
+      "difficulty": "easy",
+      "explanation": "CORS is an HTTP-header based mechanism that allows a server to indicate any origins other than its own from which a browser should permit loading resources."
+    },
+    {
+      "id": 2,
+      "question": "Where is the safest place to store sensitive session tokens (like JWT) in a modern web application to prevent XSS theft?",
+      "options": [
+        "In `localStorage`",
+        "In `sessionStorage`",
+        "In an `HttpOnly`, `Secure`, and `SameSite` cookie",
+        "In a global JavaScript variable window.__TOKEN"
+      ],
+      "correct_answer": 2,
+      "topic": "Authentication & Security",
+      "difficulty": "medium",
+      "explanation": "HttpOnly cookies cannot be accessed by client-side JavaScript, preventing malicious XSS scripts from reading and exfiltrating the token."
+    },
+    {
+      "id": 3,
+      "question": "In Next.js or fullstack React frameworks, what is the primary difference between Server Components and Client Components?",
+      "options": [
+        "Server Components render strictly on the server and send zero JavaScript to the client bundle",
+        "Client Components cannot make fetch requests",
+        "Server Components cannot access environment variables",
+        "Client Components run directly inside the Node.js runtime on the server"
+      ],
+      "correct_answer": 0,
+      "topic": "Full Stack React / Next.js",
+      "difficulty": "medium",
+      "explanation": "React Server Components (RSC) execute exclusively on the server, allowing direct database access while keeping client bundle sizes lightweight."
+    },
+    {
+      "id": 4,
+      "question": "What is 'Optimistic UI' updating in frontend-backend integration?",
+      "options": [
+        "Updating the client UI immediately assuming the server request will succeed, rolling back if it fails",
+        "Waiting for all background API jobs to finish before showing any UI",
+        "Automatically retrying failed HTTP requests indefinitely",
+        "Minifying HTML files to reduce loading times"
+      ],
+      "correct_answer": 0,
+      "topic": "Full Stack UX",
+      "difficulty": "medium",
+      "explanation": "Optimistic UI provides instant visual feedback to users by updating UI state before the server response returns, reverting on error."
+    },
+    {
+      "id": 5,
+      "question": "Which HTTP header is sent by browsers during a CORS preflight request?",
+      "options": ["OPTIONS", "HEAD", "TRACE", "CONNECT"],
+      "correct_answer": 0,
+      "topic": "HTTP Protocols",
+      "difficulty": "easy",
+      "explanation": "Browsers automatically send an HTTP OPTIONS request to the server to check if the cross-origin request is allowed before sending the actual request."
+    },
+    {
+      "id": 6,
+      "question": "When designing a relational database for a blog with Users and Posts (1 User has many Posts), where does the foreign key belong?",
+      "options": [
+        "In the `posts` table referencing `users(id)`",
+        "In the `users` table referencing `posts(id)`",
+        "In a separate many-to-many junction table",
+        "In neither table; relational databases do not use foreign keys"
+      ],
+      "correct_answer": 0,
+      "topic": "Database Modeling",
+      "difficulty": "easy",
+      "explanation": "In a one-to-many relationship, the 'many' side (posts) holds the foreign key `user_id` pointing to the 'one' side (users)."
+    },
+    {
+      "id": 7,
+      "question": "What is the key advantage of using GraphQL over traditional REST endpoints?",
+      "options": [
+        "Clients can request precisely the fields they need, preventing over-fetching and under-fetching",
+        "GraphQL automatically writes database SQL queries without a backend",
+        "GraphQL replaces the need for server-side validation",
+        "GraphQL eliminates the need for database indexes"
+      ],
+      "correct_answer": 0,
+      "topic": "API Architecture",
+      "difficulty": "medium",
+      "explanation": "GraphQL enables client-specified queries to retrieve exact data requirements in a single round-trip, avoiding redundant payload overhead."
+    },
+    {
+      "id": 8,
+      "question": "What is the primary role of a reverse proxy like Nginx in a production full stack deployment?",
+      "options": [
+        "Terminating SSL/TLS, load balancing traffic, and serving static files efficiently",
+        "Executing frontend React component code",
+        "Managing relational database transaction isolation levels",
+        "Compiling TypeScript code into JavaScript on the fly"
+      ],
+      "correct_answer": 0,
+      "topic": "Deployment & Infrastructure",
+      "difficulty": "medium",
+      "explanation": "Nginx sits in front of backend application servers to handle SSL termination, load balance incoming web traffic, and rapidly serve static assets."
+    },
+    {
+      "id": 9,
+      "question": "What is database connection pooling and why is it crucial for fullstack backends?",
+      "options": [
+        "Reusing a set of pre-established database connections to avoid the high latency of opening a new TCP handshake on every request",
+        "Backing up database tables to multiple cloud storage buckets",
+        "Clustering multiple database servers into a single shard",
+        "Compressing JSON payloads before sending to the client"
+      ],
+      "correct_answer": 0,
+      "topic": "Backend Performance",
+      "difficulty": "hard",
+      "explanation": "Establishing TCP and SSL connections to a database is expensive; connection pools maintain active connections ready for immediate reuse."
+    },
+    {
+      "id": 10,
+      "question": "What is the primary purpose of a Webhook?",
+      "options": [
+        "A server-to-server HTTP POST push notification triggered by an event in a third-party service (e.g., Stripe payment)",
+        "A browser extension that intercepts user clicks",
+        "A CSS hook that styles React components dynamically",
+        "A Git command used to resolve merge conflicts"
+      ],
+      "correct_answer": 0,
+      "topic": "System Integration",
+      "difficulty": "medium",
+      "explanation": "Webhooks are user-defined HTTP callbacks that enable platforms (like Stripe, GitHub) to notify your server immediately when an event occurs."
+    }
+  ]
+}

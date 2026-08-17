@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}AI IT Career Advisor — Discover Your Ideal Tech Career{% endblock %}
+
+{% block content %}
+<div class="relative overflow-hidden">
+  
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-14 sm:pt-16 sm:pb-20 md:pt-24 md:pb-24 text-center relative z-10">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/80 border border-indigo-500/30 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-4 sm:mb-6 animate-fade-in">
+      <i class="fa-solid fa-sparkles text-cyan-400"></i> AI-Powered Career Guidance
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-[1.15] mb-4 sm:mb-6 font-display">
+      Discover Your Ideal Path in <span class="gradient-text">Information Tech</span>
+    </h1>
+
+    <p class="text-sm sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+      Match your skills, problem-solving style, and interests to top tech careers. Take our 15-question assessment to unlock your personalized roadmap.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto mb-10 sm:mb-14 px-2">
+      <a href="/career-test" class="gradient-btn w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
+        <i class="fa-solid fa-compass"></i> Start Career Assessment
+      </a>
+      <a href="/skill-tests" class="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-700 hover:border-slate-500 bg-slate-900/70 hover:bg-slate-800 text-slate-200 text-sm font-semibold transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-vial"></i> Explore Skill Tests
+      </a>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto pt-6 sm:pt-8 border-t border-slate-800/80 text-left">
+      <div class="p-3.5 sm:p-4 rounded-xl glass-card">
+        <div class="text-xl sm:text-2xl font-bold text-indigo-400 font-display">12 Paths</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Core IT Career Domains</div>
+      </div>
+      <div class="p-3.5 sm:p-4 rounded-xl glass-card">
+        <div class="text-xl sm:text-2xl font-bold text-cyan-400 font-display">10 MCQs</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Skill Readiness Tests</div>
+      </div>
+      <div class="p-3.5 sm:p-4 rounded-xl glass-card">
+        <div class="text-xl sm:text-2xl font-bold text-emerald-400 font-display">ML Match</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Compatibility Scoring</div>
+      </div>
+      <div class="p-3.5 sm:p-4 rounded-xl glass-card">
+        <div class="text-xl sm:text-2xl font-bold text-amber-400 font-display">Free Access</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 mt-0.5">No Signups Required</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-1.5">Simple Process</h2>
+      <h3 class="text-xl sm:text-3xl font-extrabold text-white">How It Works</h3>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="glass-card p-5 sm:p-6">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-indigo-950 border border-indigo-500/40 text-indigo-400 font-bold flex items-center justify-center text-sm mb-3">1</div>
+        <h4 class="text-sm sm:text-base font-bold text-white mb-1">Career Quiz</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">Answer 15 questions about your programming, logic, design, and systems preferences.</p>
+      </div>
+
+      <div class="glass-card p-5 sm:p-6">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-cyan-950 border border-cyan-500/40 text-cyan-400 font-bold flex items-center justify-center text-sm mb-3">2</div>
+        <h4 class="text-sm sm:text-base font-bold text-white mb-1">Career Matches</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">Receive your ranked top 3 career matches with compatibility percentages and insights.</p>
+      </div>
+
+      <div class="glass-card p-5 sm:p-6">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-950 border border-emerald-500/40 text-emerald-400 font-bold flex items-center justify-center text-sm mb-3">3</div>
+        <h4 class="text-sm sm:text-base font-bold text-white mb-1">Skill Test</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">Assess your current technical readiness with a focused 10-question MCQ diagnostic.</p>
+      </div>
+
+      <div class="glass-card p-5 sm:p-6">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-950 border border-amber-500/40 text-amber-400 font-bold flex items-center justify-center text-sm mb-3">4</div>
+        <h4 class="text-sm sm:text-base font-bold text-white mb-1">Roadmap & Mentor</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">Get a phased curriculum targeting your weak areas with support from your AI mentor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 IT Career Fields Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6 sm:mb-8">
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-cyan-400 mb-1">Explore Pathways</h2>
+        <h3 class="text-xl sm:text-3xl font-extrabold text-white">12 High-Demand IT Careers</h3>
+      </div>
+      <a href="/skill-tests" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 self-start sm:self-auto transition">
+        Browse All Tests <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+
+    <div id="careers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+      <!-- Loaded dynamically via API -->
+      <div class="col-span-full py-12 text-center text-indigo-300 text-sm">
+        <i class="fa-solid fa-spinner fa-spin text-xl mb-2"></i>
+        <p>Loading career pathways...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    <div class="glass-card p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-indigo-500/30 bg-gradient-to-b from-indigo-950/40 to-slate-900/70">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+        <div>
+          <span class="badge-pill badge-indigo mb-2.5">Fast & Accessible</span>
+          <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3">
+            Ready to find your best-fit tech career?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+            Take the 15-question assessment to discover where your strengths shine most in modern software engineering, data, cloud, and AI.
+          </p>
+          <div class="flex flex-wrap gap-3 text-xs text-slate-300">
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Instant Results</div>
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Actionable Roadmap</div>
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> AI Mentor Assistance</div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 justify-start lg:justify-end">
+          <a href="/career-test" class="gradient-btn px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-center flex items-center justify-center gap-2">
+            <i class="fa-solid fa-sparkles"></i> Take Assessment
+          </a>
+          <a href="/mentor" class="px-6 py-3 rounded-xl border border-slate-700 bg-slate-900/90 text-slate-200 text-xs sm:text-sm font-semibold hover:bg-slate-800 transition text-center flex items-center justify-center gap-2">
+            <i class="fa-solid fa-robot"></i> Open AI Mentor
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const res = await fetch('/api/careers');
+    const data = await res.json();
+    if (data.status === 'success' && data.careers) {
+      const grid = document.getElementById('careers-grid');
+      if (grid) {
+        grid.innerHTML = data.careers.map(c => `
+          <div class="glass-card p-4 sm:p-5 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-950/80 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-lg group-hover:scale-105 transition">
+                  <i class="${c.icon || 'fa-solid fa-code'}"></i>
+                </div>
+                <span class="badge-pill badge-indigo text-[10px]">${c.difficulty}</span>
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-white mb-1 group-hover:text-indigo-300 transition">${c.title}</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4 line-clamp-2 sm:line-clamp-3">${c.short_description}</p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-slate-400">${c.salary_range.split('-')[0]}</span>
+              <a href="/skill-test?test_id=${c.id}" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 py-1">
+                Take Test <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+  } catch (e) {
+    console.error('Failed to load careers for homepage:', e);
+  }
+});
+</script>
+{% endblock %}

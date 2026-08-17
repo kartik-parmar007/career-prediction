@@ -1,0 +1,139 @@
+{
+  "test_id": "mobile",
+  "title": "Mobile App Development Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Assess your skills in mobile UI layouts, React Native/Flutter, offline caching, lifecycle methods, and native device APIs.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "In React Native, which component should be used to render large, scrollable lists with high performance and memory virtualization?",
+      "options": ["<ScrollView>", "<FlatList>", "<View>", "<ListView>"],
+      "correct_answer": 1,
+      "topic": "React Native Components",
+      "difficulty": "easy",
+      "explanation": "FlatList only renders items currently visible on screen (windowing), saving memory and ensuring smooth 60fps scrolling."
+    },
+    {
+      "id": 2,
+      "question": "In mobile layout engines (Flexbox in React Native), what is the default `flexDirection`?",
+      "options": ["row", "column", "row-reverse", "column-reverse"],
+      "correct_answer": 1,
+      "topic": "Mobile Layout & Styling",
+      "difficulty": "easy",
+      "explanation": "Unlike web CSS where flexDirection defaults to 'row', React Native defaults to 'column' to match portrait mobile screens."
+    },
+    {
+      "id": 3,
+      "question": "What is the primary difference between asynchronous storage (AsyncStorage/MMKV) and SQLite in mobile apps?",
+      "options": [
+        "AsyncStorage is key-value for small data; SQLite is a relational database for structured queries",
+        "SQLite only works on Android",
+        "AsyncStorage requires a continuous internet connection",
+        "SQLite cannot store numbers"
+      ],
+      "correct_answer": 0,
+      "topic": "Mobile Data Storage",
+      "difficulty": "medium",
+      "explanation": "AsyncStorage/MMKV is designed for key-value preferences and tokens, while SQLite handles relational tables and complex queries."
+    },
+    {
+      "id": 4,
+      "question": "Which native operating system capability handles background push notifications when an app is closed on iOS and Android?",
+      "options": [
+        "Apple APNs (Apple Push Notification service) and Google FCM (Firebase Cloud Messaging)",
+        "WebSockets running in the foreground",
+        "Local HTTP long-polling",
+        "Bluetooth Low Energy broadcasting"
+      ],
+      "correct_answer": 0,
+      "topic": "Push Notifications",
+      "difficulty": "medium",
+      "explanation": "APNs (iOS) and FCM (Android) are OS-level push services that wake up apps and deliver notifications even when closed."
+    },
+    {
+      "id": 5,
+      "question": "In mobile navigation, what is a 'Stack Navigator'?",
+      "options": [
+        "A navigation pattern where new screens are pushed on top of a stack and popped when going back",
+        "A horizontal tab bar at the bottom of the screen",
+        "A hidden side menu that slides in from the left",
+        "A modal dialog for entering passwords"
+      ],
+      "correct_answer": 0,
+      "topic": "Mobile Navigation",
+      "difficulty": "easy",
+      "explanation": "Stack navigation transitions between screens by pushing new routes onto a navigation history stack."
+    },
+    {
+      "id": 6,
+      "question": "What causes UI frame drops and sluggish animations on mobile devices?",
+      "options": [
+        "Heavy synchronous JavaScript computations running on the main UI JavaScript thread",
+        "Using PNG images instead of JPEG",
+        "Having more than 3 screens in navigation",
+        "Using dark mode styling"
+      ],
+      "correct_answer": 0,
+      "topic": "Mobile Performance",
+      "difficulty": "medium",
+      "explanation": "When the JS thread is blocked with heavy computations, animation frames are dropped, causing lag. Using native animation drivers prevents this."
+    },
+    {
+      "id": 7,
+      "question": "In Swift (iOS development), what is an 'Optional'?",
+      "options": [
+        "A type that can hold either a concrete value or `nil` (absence of value)",
+        "A function that executes only if battery is > 50%",
+        "A button that the user can skip pressing",
+        "A framework that can be removed from the build"
+      ],
+      "correct_answer": 0,
+      "topic": "iOS Swift Fundamentals",
+      "difficulty": "medium",
+      "explanation": "Optionals in Swift represent values that may or may not exist, safely preventing null pointer exceptions at runtime."
+    },
+    {
+      "id": 8,
+      "question": "In Kotlin (Android development), what are Coroutines primarily used for?",
+      "options": [
+        "Managing asynchronous, non-blocking background operations smoothly without callback hell",
+        "Rendering vector XML drawables",
+        "Defining Android Manifest permissions",
+        "Creating custom hardware drivers"
+      ],
+      "correct_answer": 0,
+      "topic": "Android Kotlin Fundamentals",
+      "difficulty": "medium",
+      "explanation": "Kotlin coroutines provide lightweight concurrency for network calls, database queries, and async background tasks."
+    },
+    {
+      "id": 9,
+      "question": "What is the purpose of Safe Area in modern mobile app UI design?",
+      "options": [
+        "Ensuring UI elements are not obscured by device notches, camera cutouts, or home indicator bars",
+        "Encrypting sensitive user passwords on screen",
+        "Limiting app download size in app stores",
+        "Preventing accidental screen taps by children"
+      ],
+      "correct_answer": 0,
+      "topic": "Mobile UI/UX",
+      "difficulty": "easy",
+      "explanation": "SafeArea insets pad content so it does not overlap status bars, camera islands, rounded display corners, or home swipe indicators."
+    },
+    {
+      "id": 10,
+      "question": "What is 'CodePush' or Over-The-Air (OTA) update in React Native apps?",
+      "options": [
+        "Deploying JavaScript and asset bundle fixes directly to user devices without submitting a new binary build to App Stores",
+        "Pushing code from GitHub directly to Android Studio",
+        "Updating device firmware automatically",
+        "Testing code on physical devices over Wi-Fi"
+      ],
+      "correct_answer": 0,
+      "topic": "Mobile DevOps & Release",
+      "difficulty": "hard",
+      "explanation": "OTA updates allow developers to publish urgent JS bundle and asset bug fixes directly to end users instantly without full App Store review."
+    }
+  ]
+}

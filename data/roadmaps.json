@@ -1,0 +1,794 @@
+{
+  "frontend": {
+    "career_title": "Frontend Developer",
+    "summary": "A structured journey from web foundations to advanced single-page applications and performance architecture.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Modern Web Foundations",
+        "duration": "3 - 4 Weeks",
+        "skills": ["HTML5 Semantic Elements", "Modern CSS3 (Flexbox & Grid)", "Responsive Mobile-First Design", "Git & GitHub Workflow"],
+        "topics": ["Semantic markup & accessibility basics", "CSS layout engines (Flexbox & Grid)", "Media queries & responsive units", "Version control & GitHub repositories"],
+        "practice_tasks": ["Build a responsive product landing page with semantic HTML5 and CSS Flexbox", "Create a multi-column pricing card grid using CSS Grid"],
+        "project": "Personal Portfolio & Interactive Resume Website",
+        "milestone": "Master core HTML/CSS and deploy your first live responsive site to GitHub Pages or Vercel."
+      },
+      {
+        "phase": 2,
+        "title": "JavaScript Deep Dive & DOM APIs",
+        "duration": "4 - 5 Weeks",
+        "skills": ["ES6+ Modern Syntax", "DOM Manipulation & Event Loop", "Async JS (Promises & Fetch API)", "Browser Storage (localStorage/sessionStorage)"],
+        "topics": ["Arrow functions, destructuring, modules", "DOM querying, event bubbling & delegation", "Fetching REST APIs and handling JSON", "Error handling and client-side data persistence"],
+        "practice_tasks": ["Build an interactive Task Manager with localStorage persistence", "Create a real-time Weather Forecast app consuming OpenWeather API"],
+        "project": "Interactive Kanban Task Board with Drag & Drop",
+        "milestone": "Write clean, modular asynchronous vanilla JavaScript without any frameworks."
+      },
+      {
+        "phase": 3,
+        "title": "React Core & Component Architecture",
+        "duration": "4 - 6 Weeks",
+        "skills": ["React 18+", "JSX & Component Lifecycles", "Hooks (useState, useEffect, useRef, useMemo)", "Component State & Props"],
+        "topics": ["Functional component architecture", "State management & side effect synchronization", "Forms, controlled inputs & validation", "Component composition & custom hooks"],
+        "practice_tasks": ["Build a searchable movie catalog app with debounce search", "Develop a custom hook for window resize and online status"],
+        "project": "E-Commerce Product Explorer with Filter & Cart System",
+        "milestone": "Confidently architect scalable, modular React SPAs with clean state separation."
+      },
+      {
+        "phase": 4,
+        "title": "Advanced State Management & Routing",
+        "duration": "3 - 4 Weeks",
+        "skills": ["React Router v6", "State Management (Zustand / Redux Toolkit)", "Tailwind CSS Styling", "UI Component Libraries (Shadcn/UI)"],
+        "topics": ["Client-side routing, loaders & error boundaries", "Global application state stores", "Utility-first CSS styling systems", "Accessible UI components and design systems"],
+        "practice_tasks": ["Migrate prop-drilled state to a centralized Zustand store", "Create a multi-step checkout workflow with dynamic routing"],
+        "project": "Collaborative Dashboard with Real-Time Data & Dark Mode",
+        "milestone": "Handle complex global state and professional design systems."
+      },
+      {
+        "phase": 5,
+        "title": "Next.js, Server Components & Full Stack Basics",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Next.js App Router", "Server & Client Components", "Server Actions & API Routes", "SEO Optimization & Metadata"],
+        "topics": ["Server-Side Rendering (SSR) & Static Site Generation (SSG)", "Next.js routing, nested layouts and streaming", "Server Actions for form submissions", "OpenGraph tags, sitemaps, and Core Web Vitals"],
+        "practice_tasks": ["Convert a React SPA to Next.js App Router", "Implement dynamic SEO metadata for blog posts"],
+        "project": "SaaS Blog Platform with Markdown CMS & Analytics",
+        "milestone": "Build full-featured, SEO-optimized production Next.js web applications."
+      },
+      {
+        "phase": 6,
+        "title": "Performance, Testing & Production Deployment",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Frontend Testing (Vitest, React Testing Library)", "Web Performance Optimization", "CI/CD & Vercel Deployment", "Interview & Portfolio Polish"],
+        "topics": ["Unit and integration component testing", "Code splitting, lazy loading & image optimization", "Automated GitHub Actions CI/CD workflows", "Resume polish, case study write-ups, and live project demos"],
+        "practice_tasks": ["Write comprehensive test suites for a checkout flow", "Audit and improve Lighthouse performance score to 95+"],
+        "project": "Production-Ready Full Featured SaaS Web App with 100% CI Testing",
+        "milestone": "Ready to apply for Junior and Mid-Level Frontend Engineer positions."
+      }
+    ]
+  },
+  "backend": {
+    "career_title": "Backend Developer",
+    "summary": "Master server-side programming, relational & NoSQL databases, API design, authentication, and cloud deployment.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Core Language & Server Foundations",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Python / Node.js", "Data Structures & Algorithms", "HTTP/HTTPS Protocol", "Linux Terminal & Git"],
+        "topics": ["OOP, memory management, and asynchronous I/O", "HTTP methods, status codes, headers, and payloads", "Environment variables and configuration management", "Linux command line & shell scripting"],
+        "practice_tasks": ["Build a CLI tool that parses server logs and outputs error metrics", "Create a simple HTTP server without frameworks"],
+        "project": "Command-Line File Storage & Metadata Management Tool",
+        "milestone": "Understand server request-response lifecycles and language fundamentals."
+      },
+      {
+        "phase": 2,
+        "title": "REST API Architecture & Frameworks",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Express.js / FastAPI", "Routing & Middleware", "Request Validation & Error Handling", "API Documentation (Swagger/OpenAPI)"],
+        "topics": ["RESTful resource modeling and endpoint design", "Middleware chains, rate limiting, and CORS", "Input sanitization (Pydantic / Zod)", "Interactive API documentation"],
+        "practice_tasks": ["Build a CRUD REST API for a bookmark manager with validation", "Implement centralized custom error handling and logger middleware"],
+        "project": "Multi-Tenant Resource Management REST API with Auto-Swagger Docs",
+        "milestone": "Build robust, documented, and resilient REST APIs following industry standards."
+      },
+      {
+        "phase": 3,
+        "title": "Relational Databases & SQL Mastery",
+        "duration": "4 - 5 Weeks",
+        "skills": ["PostgreSQL", "Complex SQL Queries & Indexing", "Database Migrations", "ORMs (Prisma / SQLAlchemy)"],
+        "topics": ["Relational schemas, foreign keys, and constraints", "Joins, aggregations, subqueries, and window functions", "B-Tree indexing and query performance analysis (EXPLAIN ANALYZE)", "Data migrations and connection pooling"],
+        "practice_tasks": ["Design an e-commerce database schema and write complex reporting queries", "Optimize a slow query from 500ms down to 10ms using indexes"],
+        "project": "High-Performance Inventory & Order Processing Database Engine",
+        "milestone": "Design scalable relational schemas and optimize database query performance."
+      },
+      {
+        "phase": 4,
+        "title": "Authentication, Security & Caching",
+        "duration": "3 - 4 Weeks",
+        "skills": ["JWT & Session Auth", "OAuth 2.0 & Role-Based Access (RBAC)", "Password Hashing & Salt (bcrypt)", "Redis Caching"],
+        "topics": ["Stateless JWT tokens vs server sessions", "Role and permission middlewares", "OWASP backend security (SQLi, CSRF, rate limits)", "Redis in-memory caching and session stores"],
+        "practice_tasks": ["Implement JWT access/refresh token rotation with cookie storage", "Add Redis caching to expensive database endpoints"],
+        "project": "Secure Auth Gateway with Multi-Factor Auth & Redis Rate Limiter",
+        "milestone": "Protect backend systems with modern security and ultra-fast caching."
+      },
+      {
+        "phase": 5,
+        "title": "Docker, Microservices & Message Queues",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Docker & Docker Compose", "Message Brokers (RabbitMQ / BullMQ)", "Background Workers & Jobs", "Microservices Architecture"],
+        "topics": ["Multi-stage Docker builds for backend servers", "Asynchronous job processing and task queues", "Event-driven architecture and inter-service communication", "Health checks, graceful shutdown, and container networking"],
+        "practice_tasks": ["Containerize backend API + PostgreSQL + Redis with Docker Compose", "Build an asynchronous email & PDF report generation worker"],
+        "project": "Distributed Video Processing Pipeline with Task Queues & Workers",
+        "milestone": "Architect decoupled, event-driven background processing systems."
+      },
+      {
+        "phase": 6,
+        "title": "System Design, CI/CD & Cloud Deployment",
+        "duration": "3 - 4 Weeks",
+        "skills": ["System Design & Scalability", "CI/CD (GitHub Actions)", "Cloud Hosting (AWS EC2/RDS, Render)", "Monitoring & Observability"],
+        "topics": ["Load balancing, horizontal scaling, and sharding", "Automated testing & linting in CI pipelines", "Deploying dockerized backends to cloud infrastructure", "Structured logging, Prometheus metrics, and APM tracing"],
+        "practice_tasks": ["Write an architectural design document for a URL shortener scaling to 10M requests", "Deploy a backend microservice to AWS with automated GitHub Actions"],
+        "project": "Scalable URL Shortener & Analytics API with 99.9% Uptime Deployment",
+        "milestone": "Ready to crack backend system design interviews and land backend roles."
+      }
+    ]
+  },
+  "fullstack": {
+    "career_title": "Full Stack Developer",
+    "summary": "Master client-side UI, server-side APIs, database modeling, and end-to-end cloud deployments.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Frontend & Interactive UI",
+        "duration": "4 - 5 Weeks",
+        "skills": ["HTML5/CSS3", "JavaScript ES6+", "React 18+", "Tailwind CSS"],
+        "topics": ["Responsive UI layout & design systems", "Async JavaScript, Fetch API, and DOM handling", "Component hierarchy, hooks, and client state", "Modular CSS & utility styling"],
+        "practice_tasks": ["Create a modern responsive SaaS landing page with dark mode", "Build a dynamic filtered dashboard in React"],
+        "project": "Interactive Crypto & Stock Portfolio Tracker",
+        "milestone": "Craft sleek, responsive frontend interfaces."
+      },
+      {
+        "phase": 2,
+        "title": "Backend APIs & Server Logic",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Node.js / Express or Python / FastAPI", "RESTful API Design", "Middleware & Routing", "Validation & Error Handling"],
+        "topics": ["HTTP request-response cycle and status codes", "Structuring scalable MVC/Clean Architecture", "Environment variables, logging, and security headers", "Input validation and custom middleware"],
+        "practice_tasks": ["Build a complete REST API with CRUD endpoints", "Implement API rate limiting and structured request logging"],
+        "project": "Multi-Tenant Task Management API with OpenAPI Docs",
+        "milestone": "Build robust server-side APIs."
+      },
+      {
+        "phase": 3,
+        "title": "Databases & Full Stack Integration",
+        "duration": "4 - 5 Weeks",
+        "skills": ["PostgreSQL", "MongoDB", "Prisma / SQLAlchemy ORM", "Client-Server Data Fetching"],
+        "topics": ["Relational schemas, foreign keys, and indexes", "NoSQL document stores and aggregation pipelines", "Type-safe database queries with modern ORMs", "React Query / SWR for caching and optimistic UI updates"],
+        "practice_tasks": ["Design a relational schema with complex entity relationships", "Connect React UI to backend API with optimistic updates"],
+        "project": "Full Stack Collaborative Note-Taking & Markdown Workspace",
+        "milestone": "Seamlessly connect frontend UI with persistent database records."
+      },
+      {
+        "phase": 4,
+        "title": "Authentication & Security Architecture",
+        "duration": "3 - 4 Weeks",
+        "skills": ["JWT & HttpOnly Cookies", "OAuth 2.0 (Google/GitHub)", "RBAC (Role-Based Access Control)", "CORS & Security Best Practices"],
+        "topics": ["Secure session management and token refreshes", "Social login integration", "Protecting routes on both client and server", "OWASP top 10 security mitigations"],
+        "practice_tasks": ["Implement user registration with email verification flow", "Add role-based admin dashboard with protected routes"],
+        "project": "Enterprise Auth System with MFA & Audit Logs",
+        "milestone": "Implement bank-grade authentication and access control."
+      },
+      {
+        "phase": 5,
+        "title": "Full Stack Frameworks (Next.js) & State",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Next.js App Router", "Server Components & Server Actions", "Zustand Global State", "File Uploads (S3 / Cloudinary)"],
+        "topics": ["Unified fullstack routing & server-side rendering", "Direct server actions for secure database mutation", "Handling multipart file uploads to cloud buckets", "Real-time updates via WebSockets or SSE"],
+        "practice_tasks": ["Build a photo sharing feed with direct S3 uploads", "Create a real-time notification badge using WebSockets"],
+        "project": "Full Stack Social Community & Discussion Platform",
+        "milestone": "Master unified fullstack frameworks with lightning-fast performance."
+      },
+      {
+        "phase": 6,
+        "title": "Docker, CI/CD, Cloud Deployment & Testing",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Docker & Docker Compose", "GitHub Actions CI/CD", "Cloud Deployment (AWS/Vercel/Render)", "End-to-End Testing (Playwright)"],
+        "topics": ["Multi-container setups with Docker Compose", "Automated test runs and deployment pipelines", "Custom domain configuration, SSL, and monitoring", "Writing automated end-to-end tests for critical user flows"],
+        "practice_tasks": ["Containerize the entire full stack application", "Set up automated GitHub Actions for linting, testing, and deployment"],
+        "project": "Production-Ready Full Stack SaaS Application with Stripe Billing Integration",
+        "milestone": "Full Stack Developer ready for high-impact software engineering roles."
+      }
+    ]
+  },
+  "data_analyst": {
+    "career_title": "Data Analyst",
+    "summary": "Master SQL, Excel, Python data wrangling, Business Intelligence dashboards, and executive data storytelling.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Excel Mastery & Descriptive Analytics",
+        "duration": "2 - 3 Weeks",
+        "skills": ["Advanced Excel", "Pivot Tables & Power Query", "Descriptive Statistics", "Data Cleaning"],
+        "topics": ["VLOOKUP, XLOOKUP, INDEX/MATCH", "Power Query ETL data transformations", "Mean, median, mode, variance, and standard deviation", "Handling missing and duplicate data"],
+        "practice_tasks": ["Clean a messy sales dataset with 50,000 rows using Power Query", "Build an automated sales summary workbook with dynamic Pivot Tables"],
+        "project": "Executive Sales Performance & KPI Excel Workbook",
+        "milestone": "Clean and summarize raw business datasets rapidly in spreadsheets."
+      },
+      {
+        "phase": 2,
+        "title": "Advanced SQL & Database Querying",
+        "duration": "4 - 5 Weeks",
+        "skills": ["SQL Aggregations", "Complex JOINs & Subqueries", "Window Functions", "Common Table Expressions (CTEs)"],
+        "topics": ["GROUP BY, HAVING, and aggregate functions", "INNER, LEFT, RIGHT, and FULL OUTER JOINs", "ROW_NUMBER, RANK, DENSE_RANK, LEAD, LAG", "CTEs and query optimization"],
+        "practice_tasks": ["Write SQL queries to compute customer churn and month-over-month revenue growth", "Build a cohort retention analysis using window functions"],
+        "project": "E-Commerce Customer Retention & Cohort SQL Analysis",
+        "milestone": "Write complex SQL queries to extract deep business insights."
+      },
+      {
+        "phase": 3,
+        "title": "Business Intelligence & Interactive Dashboards",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Power BI / Tableau", "Data Modeling (Star Schema)", "DAX Formulas / Calculated Fields", "Visual Hierarchy"],
+        "topics": ["Connecting multiple data sources to BI tools", "Creating dimension and fact table relationships", "Writing DAX measures (Year-over-Year, Year-to-Date)", "Designing interactive filters, drill-downs, and executive dashboards"],
+        "practice_tasks": ["Model a multi-table database into an analytics star schema", "Create an interactive financial dashboard with drill-down views"],
+        "project": "Executive Supply Chain & Logistics Power BI Dashboard",
+        "milestone": "Publish interactive dashboards for C-suite decision-makers."
+      },
+      {
+        "phase": 4,
+        "title": "Python for Data Analysis & Automation",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Python Basics", "Pandas & NumPy", "Matplotlib & Seaborn", "Jupyter Notebooks"],
+        "topics": ["DataFrames, series, filtering, and grouping", "Handling datetime series and missing values", "Data visualization best practices", "Automating recurring reporting tasks"],
+        "practice_tasks": ["Perform exploratory data analysis on a real estate dataset", "Build a reusable Python script that generates PDF reports weekly"],
+        "project": "Automated Market Pricing & Trend Analysis in Python",
+        "milestone": "Automate exploratory data analysis and reporting with Python."
+      },
+      {
+        "phase": 5,
+        "title": "Hypothesis Testing & A/B Experimentation",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Inferential Statistics", "A/B Testing Methodology", "Hypothesis Testing (t-test, ANOVA, Chi-Square)", "Statistical Significance"],
+        "topics": ["P-values, confidence intervals, and effect size", "Designing controlled randomized experiments", "Sample size determination and statistical power", "Interpreting test results and avoiding common statistical fallacies"],
+        "practice_tasks": ["Analyze A/B test conversion rate results with Python scipy.stats", "Calculate sample size required for 95% statistical power"],
+        "project": "Product Feature A/B Test Evaluation & Recommendation Report",
+        "milestone": "Design and interpret statistically rigorous A/B experiments."
+      },
+      {
+        "phase": 6,
+        "title": "Data Storytelling & Portfolio Case Studies",
+        "duration": "2 - 3 Weeks",
+        "skills": ["Data Storytelling", "Executive Presentation", "Portfolio Creation", "Interview Case Study Prep"],
+        "topics": ["Structuring presentations for non-technical stakeholders", "Translating numbers into concrete business ROI", "Writing comprehensive case study articles on GitHub/Medium", "Live SQL and analytics take-home challenge preparation"],
+        "practice_tasks": ["Create a slide deck explaining revenue drop drivers to business leaders", "Complete a mock 60-minute SQL and dashboard interview case study"],
+        "project": "Comprehensive Data Portfolio with 3 Real-World Industry Case Studies",
+        "milestone": "Ready to land Data Analyst and Business Intelligence positions."
+      }
+    ]
+  },
+  "data_scientist": {
+    "career_title": "Data Scientist",
+    "summary": "Master statistical modeling, feature engineering, machine learning algorithms, and predictive experimentation.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Mathematical Foundations & Python",
+        "duration": "4 Weeks",
+        "skills": ["Linear Algebra & Calculus", "Probability & Statistics", "Python (NumPy, SciPy)", "Exploratory Data Analysis"],
+        "topics": ["Matrix transformations, eigenvalues, partial derivatives", "Probability distributions, Bayes theorem, hypothesis testing", "Vectorized computing with NumPy", "Advanced EDA with Pandas and Seaborn"],
+        "practice_tasks": ["Implement linear regression from scratch using matrix algebra", "Perform comprehensive statistical EDA on a medical dataset"],
+        "project": "Exploratory Data Analysis & Statistical Risk Factor Study",
+        "milestone": "Strong command of statistical and numerical foundations."
+      },
+      {
+        "phase": 2,
+        "title": "Supervised Machine Learning",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Scikit-Learn", "Regression Algorithms", "Classification Algorithms", "Cross-Validation & Metrics"],
+        "topics": ["Linear/Ridge/Lasso Regression", "Logistic Regression, Decision Trees, SVMs", "Precision, Recall, F1-Score, ROC-AUC", "Stratified K-Fold cross validation"],
+        "practice_tasks": ["Build a customer churn predictor with Scikit-Learn", "Compare 5 classification models on imbalanced data"],
+        "project": "Predictive Loan Default Risk Scoring Model",
+        "milestone": "Build, tune, and evaluate classic supervised machine learning models."
+      },
+      {
+        "phase": 3,
+        "title": "Ensemble Methods & Advanced Feature Engineering",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Random Forests", "Gradient Boosting (XGBoost, LightGBM, CatBoost)", "Feature Selection & Scaling", "Hyperparameter Optimization"],
+        "topics": ["Bagging vs Boosting mechanics", "Categorical encodings (Target, One-Hot, Ordinal)", "Handling extreme outliers and missingness", "Bayesian optimization and Optuna tuning"],
+        "practice_tasks": ["Tune an XGBoost model using Optuna for a Kaggle competition", "Extract polynomial and interaction features to boost accuracy"],
+        "project": "High-Accuracy Housing Price Prediction Model with Gradient Boosting",
+        "milestone": "Achieve competitive accuracy using modern ensemble methods."
+      },
+      {
+        "phase": 4,
+        "title": "Unsupervised Learning & Dimensionality Reduction",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Clustering (K-Means, DBSCAN, Hierarchical)", "PCA & t-SNE", "Anomaly Detection", "Recommender Systems"],
+        "topics": ["Optimal cluster selection (Elbow method, Silhouette score)", "Principal Component Analysis for feature compression", "Isolation Forests for fraud/anomaly detection", "Collaborative filtering for product recommendations"],
+        "practice_tasks": ["Segment customer base using K-Means and visualize with PCA", "Build an anomaly detector for fraudulent financial transactions"],
+        "project": "Customer Segmentation & Personalized Recommender Engine",
+        "milestone": "Discover hidden structures and clusters in unlabeled data."
+      },
+      {
+        "phase": 5,
+        "title": "Model Interpretability & Time Series",
+        "duration": "4 Weeks",
+        "skills": ["SHAP & LIME", "Time-Series Forecasting (ARIMA, Prophet)", "Feature Importance", "Model Governance"],
+        "topics": ["Explainable AI using Shapley values", "Trend, seasonality, and stationarity in time series", "Autoregressive integrated moving average models", "Ethical AI and bias mitigation"],
+        "practice_tasks": ["Explain individual predictions using SHAP waterfall plots", "Forecast monthly energy demand for the next 12 months"],
+        "project": "Explainable Time-Series Energy Demand Forecasting System",
+        "milestone": "Deliver trustworthy, interpretable predictive models."
+      },
+      {
+        "phase": 6,
+        "title": "Model Deployment, ML Pipelines & Portfolio",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Flask / FastAPI for ML", "MLflow Experiment Tracking", "Docker for Data Science", "Portfolio & Case Studies"],
+        "topics": ["Serving ML models as low-latency REST endpoints", "Experiment tracking and model registry with MLflow", "Containerizing data science environments", "Writing research-grade case studies"],
+        "practice_tasks": ["Deploy a trained Scikit-Learn model to a Flask API in Docker", "Track 20 experiment runs with hyperparameters in MLflow"],
+        "project": "End-to-End Production ML Prediction Microservice with Monitoring",
+        "milestone": "Ready to land Data Scientist and Applied ML roles."
+      }
+    ]
+  },
+  "ai_ml": {
+    "career_title": "AI/ML Engineer",
+    "summary": "Deep learning, Neural Networks, PyTorch, Transformers, Large Language Models (LLMs), RAG pipelines, and MLOps.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Deep Learning Fundamentals & PyTorch",
+        "duration": "4 - 5 Weeks",
+        "skills": ["PyTorch Basics", "Tensors & Autograd", "Multi-Layer Perceptrons (MLPs)", "Optimization & Loss Functions"],
+        "topics": ["Tensor operations on CPU/GPU", "Backpropagation and computational graphs", "Activation functions (ReLU, GELU, Softmax)", "Optimizers (AdamW, SGD with Momentum, Cosine Annealing)"],
+        "practice_tasks": ["Implement a neural network from scratch using PyTorch tensors", "Train an MLP image classifier on Fashion-MNIST with >90% accuracy"],
+        "project": "Custom Neural Network Training Framework in PyTorch",
+        "milestone": "Train neural networks confidently in PyTorch."
+      },
+      {
+        "phase": 2,
+        "title": "Computer Vision & CNN Architectures",
+        "duration": "4 Weeks",
+        "skills": ["Convolutional Neural Networks (CNNs)", "ResNet & Transfer Learning", "Object Detection (YOLO)", "Image Augmentation (Albumentations)"],
+        "topics": ["Convolutions, pooling, stride, and padding", "Fine-tuning pre-trained models (Torchvision)", "Real-time object detection architectures", "Combating overfitting with data augmentations"],
+        "practice_tasks": ["Fine-tune a ResNet50 model for medical scan classification", "Run real-time webcam object detection using YOLOv8"],
+        "project": "Real-Time Multi-Class Object Detection & Tracking App",
+        "milestone": "Build and deploy computer vision pipelines."
+      },
+      {
+        "phase": 3,
+        "title": "NLP, Transformers & Hugging Face",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Transformers & Self-Attention", "Hugging Face Ecosystem", "BERT, RoBERTa & T5", "Tokenization & Embeddings"],
+        "topics": ["Multi-head self-attention mechanisms", "Encoder-only vs Decoder-only vs Encoder-Decoder", "Fine-tuning Hugging Face Transformers for classification", "Vector embeddings and cosine similarity"],
+        "practice_tasks": ["Fine-tune a BERT model for sentiment analysis on financial news", "Compute and cluster semantic embeddings for 10,000 articles"],
+        "project": "Semantic Document Search Engine with Transformer Embeddings",
+        "milestone": "Fine-tune state-of-the-art transformer models for NLP tasks."
+      },
+      {
+        "phase": 4,
+        "title": "Large Language Models & Generative AI",
+        "duration": "4 - 5 Weeks",
+        "skills": ["LLM Prompt Engineering", "LangChain & LlamaIndex", "Vector Databases (Pinecone, Chroma)", "Retrieval-Augmented Generation (RAG)"],
+        "topics": ["Few-shot prompting, Chain-of-Thought, ReAct agents", "Chunking strategies and hybrid retrieval (dense + sparse)", "Building production RAG pipelines over enterprise PDFs", "Function calling and agentic workflows"],
+        "practice_tasks": ["Build a RAG chatbot that answers questions from uploaded technical manuals", "Create an AI agent with tool use (web search, calculator, API call)"],
+        "project": "Production Enterprise RAG Assistant with Hybrid Search & Citations",
+        "milestone": "Engineer production-grade LLM applications and RAG systems."
+      },
+      {
+        "phase": 5,
+        "title": "LLM Fine-Tuning & Quantization",
+        "duration": "3 - 4 Weeks",
+        "skills": ["LoRA & QLoRA Parameter-Efficient Fine-Tuning", "vLLM & Ollama Serving", "Model Quantization (GGUF, AWQ)", "Evaluation & Guardrails"],
+        "topics": ["Fine-tuning open-weights models (Llama 3, Mistral) on custom datasets", "4-bit and 8-bit quantization for GPU memory efficiency", "High-throughput model serving with vLLM", "Implementing AI safety guardrails and hallucination checks"],
+        "practice_tasks": ["Fine-tune a 7B LLM on domain-specific medical Q&A with LoRA", "Benchmark vLLM token generation throughput against standard PyTorch"],
+        "project": "Domain-Specific Fine-Tuned LLM Microservice with vLLM Fast Inference",
+        "milestone": "Fine-tune and serve customized open-source foundation models."
+      },
+      {
+        "phase": 6,
+        "title": "MLOps, Model Serving & Scalable Deployment",
+        "duration": "3 - 4 Weeks",
+        "skills": ["MLOps & CI/CD for AI", "Docker & Kubernetes for AI", "Monitoring (Prometheus/Evidently)", "Portfolio & Technical Interview Prep"],
+        "topics": ["Automated training and deployment pipelines", "Data and model drift detection", "GPU infrastructure orchestration on AWS/RunPod", "Architectural interview preparation for AI systems"],
+        "practice_tasks": ["Set up an automated model deployment pipeline with GitHub Actions", "Implement real-time latency and drift monitoring for an AI API"],
+        "project": "End-to-End Scalable AI SaaS Microservice with GPU Acceleration & Monitoring",
+        "milestone": "Ready to land AI/ML Engineer and Applied AI Specialist roles."
+      }
+    ]
+  },
+  "devops_cloud": {
+    "career_title": "DevOps/Cloud Engineer",
+    "summary": "Master Linux administration, Docker containerization, Kubernetes orchestration, CI/CD pipelines, Infrastructure as Code, and Cloud reliability.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Linux, Networking & Shell Automation",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Linux System Administration", "Bash Scripting", "Networking (TCP/IP, DNS, SSH, IPTables)", "Git & Version Control"],
+        "topics": ["Process management, permissions, and systemd services", "Writing robust Bash automation scripts with error handling", "Subnetting, routing, DNS records, and TLS certificates", "Git branching strategies and merge conflict resolution"],
+        "practice_tasks": ["Write a Bash script that automatically monitors server disk usage and alerts via webhook", "Configure a hardened Linux server with SSH keys, UFW firewall, and fail2ban"],
+        "project": "Automated Linux Server Hardening & Health Monitoring Suite",
+        "milestone": "Comfortable administering Linux servers and automating operations via Bash."
+      },
+      {
+        "phase": 2,
+        "title": "Containerization with Docker",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Docker", "Multi-Stage Dockerfiles", "Docker Compose", "Container Security"],
+        "topics": ["Container architecture, layers, and caching", "Writing minimal production images (Alpine/Distroless)", "Orchestrating multi-container environments with Docker Compose", "Container vulnerability scanning (Trivy)"],
+        "practice_tasks": ["Create a multi-stage Docker build reducing image size from 1.2GB to 85MB", "Set up a full stack web app + PostgreSQL + Redis with Docker Compose"],
+        "project": "Multi-Tier Application Containerization & Security Hardening",
+        "milestone": "Containerize any application with optimized, secure Docker images."
+      },
+      {
+        "phase": 3,
+        "title": "CI/CD Pipeline Automation",
+        "duration": "3 - 4 Weeks",
+        "skills": ["GitHub Actions", "GitLab CI / Jenkins", "Automated Testing & Linting", "Artifact Registries (Docker Hub, ECR)"],
+        "topics": ["Workflow syntax, matrix builds, and runners", "Automated unit test runs and code quality checks", "Building, tagging, and pushing Docker images automatically", "Deploying to staging and production on branch merge"],
+        "practice_tasks": ["Build a GitHub Actions pipeline that lints, tests, builds Docker, and deploys", "Implement automated semantic versioning and release notes generator"],
+        "project": "Enterprise-Grade Multi-Environment CI/CD Automation Pipeline",
+        "milestone": "Eliminate manual deployments with fully automated CI/CD pipelines."
+      },
+      {
+        "phase": 4,
+        "title": "Cloud Computing (AWS / GCP) & Architecture",
+        "duration": "4 - 5 Weeks",
+        "skills": ["AWS Core Services (VPC, EC2, S3, RDS, IAM)", "Security Groups & NACLs", "Auto Scaling & Load Balancers (ALB)", "Cloud Security Best Practices"],
+        "topics": ["Designing custom VPCs with public and private subnets", "High availability architecture across Multiple Availability Zones", "IAM least-privilege policies and role assumption", "Managed relational databases with automated backups"],
+        "practice_tasks": ["Design a custom VPC with NAT Gateways and private database subnets", "Deploy a high-availability auto-scaling web application behind an ALB"],
+        "project": "High-Availability Multi-AZ Cloud Infrastructure on AWS",
+        "milestone": "Architect secure, scalable, and resilient cloud infrastructure."
+      },
+      {
+        "phase": 5,
+        "title": "Infrastructure as Code (Terraform)",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Terraform Basics & HCL", "Terraform Modules & State Management", "Remote Backends (S3 + DynamoDB)", "Terragrunt / Drift Detection"],
+        "topics": ["Declarative infrastructure provisioning", "Writing reusable Terraform modules", "State locking, workspaces, and migration", "Automated terraform plan/apply in CI/CD"],
+        "practice_tasks": ["Provision an entire AWS VPC, RDS database, and EC2 cluster with Terraform", "Create a reusable Terraform module for microservice deployments"],
+        "project": "Production Multi-Region Cloud Infrastructure Defined Entirely in Terraform",
+        "milestone": "Provision and manage complex cloud environments entirely via code."
+      },
+      {
+        "phase": 6,
+        "title": "Kubernetes & Production Observability",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Kubernetes (Pods, Deployments, Services, Ingress)", "Helm Charts", "Monitoring (Prometheus & Grafana)", "Logging (ELK / Loki)"],
+        "topics": ["Kubernetes cluster architecture and kubectl commands", "ConfigMaps, Secrets, and Persistent Volumes", "Packaging applications with Helm charts", "Setting up Prometheus alerting and Grafana dashboards"],
+        "practice_tasks": ["Deploy a microservice application on Kubernetes with Ingress and SSL", "Create a Grafana dashboard with alert notifications to Slack/Discord"],
+        "project": "Production Kubernetes Cluster with Helm, Prometheus Monitoring & Zero-Downtime Rollouts",
+        "milestone": "Ready to land DevOps Engineer, Cloud Architect, and SRE positions."
+      }
+    ]
+  },
+  "cybersecurity": {
+    "career_title": "Cybersecurity Engineer",
+    "summary": "Master network security, penetration testing, threat modeling, cryptography, and defensive incident response.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Networking Protocols & Security Fundamentals",
+        "duration": "3 - 4 Weeks",
+        "skills": ["TCP/IP, UDP, DNS, DHCP, HTTP/S", "Wireshark Packet Analysis", "Linux Security & Command Line", "Security Principles (CIA Triad)"],
+        "topics": ["Packet inspection, 3-way handshakes, and port scanning", "Analyzing PCAP files for suspicious traffic patterns", "Linux permissions, iptables, and security logs", "Confidentiality, Integrity, and Availability concepts"],
+        "practice_tasks": ["Capture and analyze network traffic during an HTTP login in Wireshark", "Set up a localized firewall with iptables blocking unauthorized ports"],
+        "project": "Network Packet Analyzer & Anomaly Detection Tool",
+        "milestone": "Understand network flows and inspect raw traffic for anomalies."
+      },
+      {
+        "phase": 2,
+        "title": "Web Application Security & OWASP Top 10",
+        "duration": "4 - 5 Weeks",
+        "skills": ["OWASP Top 10 Vulnerabilities", "Burp Suite & ZAP", "SQL Injection (SQLi) & XSS", "Authentication & CSRF Attacks"],
+        "topics": ["Exploiting and remediating SQL injection and cross-site scripting", "Session hijacking and CSRF token bypasses", "Intercepting and modifying HTTP traffic with Burp Suite", "Secure coding guidelines and input validation"],
+        "practice_tasks": ["Complete 10 PortSwigger Web Security Academy labs on SQLi and XSS", "Audit an intentionally vulnerable web app (DVWA/Juice Shop) and write a report"],
+        "project": "Comprehensive Web Application Vulnerability Audit & Remediation Guide",
+        "milestone": "Identify and patch the most critical web application vulnerabilities."
+      },
+      {
+        "phase": 3,
+        "title": "Penetration Testing & Ethical Hacking",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Kali Linux & Tools", "Nmap & Vulnerability Scanners", "Metasploit Framework", "Privilege Escalation"],
+        "topics": ["Reconnaissance, scanning, and enumeration techniques", "Exploiting known CVEs with Metasploit", "Linux and Windows privilege escalation vectors", "Writing professional penetration testing executive reports"],
+        "practice_tasks": ["Perform full penetration test on 3 HackTheBox / TryHackMe machines", "Scan a network with Nmap and identify outdated services with known CVEs"],
+        "project": "End-to-End Penetration Test & Executive Risk Assessment Report",
+        "milestone": "Conduct ethical penetration tests and articulate business risk."
+      },
+      {
+        "phase": 4,
+        "title": "Cryptography & Identity Access Management",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Symmetric & Asymmetric Encryption", "Hashing Algorithms (SHA-256)", "PKI & Digital Certificates", "IAM & Zero Trust Architecture"],
+        "topics": ["AES, RSA, ECC, and Diffie-Hellman key exchange", "SSL/TLS handshake mechanics and certificate authorities", "Implementing least privilege and role-based access control", "Zero-trust network architecture principles"],
+        "practice_tasks": ["Build a Python tool that encrypts files using AES-GCM with PBKDF2 key derivation", "Configure an OpenSSL self-signed certificate authority and issue certs"],
+        "project": "End-to-End Encrypted File Sharing Tool with Digital Signatures",
+        "milestone": "Apply modern cryptographic standards and identity management."
+      },
+      {
+        "phase": 5,
+        "title": "Defensive Security, SIEM & Incident Response",
+        "duration": "4 Weeks",
+        "skills": ["SIEM Tools (Splunk / Elastic Security)", "Log Analysis & Threat Detection", "Incident Response Playbooks", "Endpoint Detection & Response (EDR)"],
+        "topics": ["Ingesting syslog, auth logs, and web logs into SIEM", "Writing detection rules for brute-force and port scans", "Incident response lifecycle: Preparation, Detection, Containment, Eradication, Recovery", "Memory and disk forensics basics (Volatility, Autopsy)"],
+        "practice_tasks": ["Configure Splunk to detect failed SSH brute-force login attempts", "Investigate a compromised system memory dump and extract malicious processes"],
+        "project": "Automated SIEM Threat Detection Dashboard & Incident Response Playbook",
+        "milestone": "Monitor enterprise networks, detect intrusions, and handle incidents."
+      },
+      {
+        "phase": 6,
+        "title": "Cloud Security, Compliance & Certifications",
+        "duration": "3 - 4 Weeks",
+        "skills": ["AWS Security (GuardDuty, IAM, Security Hub)", "Compliance Standards (SOC2, ISO 27001, GDPR)", "Certification Prep (CompTIA Security+, CEH)", "Portfolio Polish"],
+        "topics": ["Securing AWS S3 buckets, IAM roles, and cloud audit trails (CloudTrail)", "Understanding regulatory frameworks and audits", "Practice exams and conceptual review for Security+ or CEH", "Resume building and technical cybersecurity interview preparation"],
+        "practice_tasks": ["Audit an AWS cloud account using ScoutSuite and fix misconfigurations", "Draft a SOC2 compliance audit readiness checklist for a SaaS startup"],
+        "project": "Cloud Security Posture Assessment & Automated Compliance Checker",
+        "milestone": "Ready to land Cybersecurity Analyst, SOC Analyst, and Security Engineer roles."
+      }
+    ]
+  },
+  "qa_automation": {
+    "career_title": "QA/Automation Engineer",
+    "summary": "Master test automation with Playwright, Selenium, API testing, performance testing, and continuous testing in CI/CD.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Software Testing Fundamentals & Test Design",
+        "duration": "2 - 3 Weeks",
+        "skills": ["STLC & SDLC", "Test Case Writing", "Bug Reporting & Severity", "Manual Testing Techniques"],
+        "topics": ["Functional, regression, smoke, and exploratory testing", "Boundary value analysis & equivalence partitioning", "Writing actionable bug reports in Jira/GitHub Issues", "Test management and test planning"],
+        "practice_tasks": ["Write 25 detailed test cases covering an e-commerce checkout flow", "Log 5 reproducible bug tickets with reproduction steps and logs"],
+        "project": "Comprehensive Test Plan & Test Suite for a Modern Web Application",
+        "milestone": "Master methodical test design and defect tracking."
+      },
+      {
+        "phase": 2,
+        "title": "Programming & Test Frameworks",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Python / JavaScript for QA", "Pytest / Jest Test Runners", "Assertions & Fixtures", "Test Parameterization"],
+        "topics": ["Object-oriented programming for test automation", "Writing unit and integration tests with Pytest", "Using setup/teardown fixtures and test mocks", "Running data-driven tests with parameterized inputs"],
+        "practice_tasks": ["Write a unit test suite for a shopping cart calculation module", "Create parameterized tests validating various credit card number formats"],
+        "project": "Modular Test Suite with Custom Pytest Fixtures & HTML Reporting",
+        "milestone": "Write robust automated unit and integration tests."
+      },
+      {
+        "phase": 3,
+        "title": "UI Test Automation (Playwright & Selenium)",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Playwright / Selenium WebDriver", "Page Object Model (POM)", "Locators & Dynamic Waits", "Cross-Browser Testing"],
+        "topics": ["Browser automation architecture", "Writing resilient locators (CSS, XPath, accessibility roles)", "Page Object Model design pattern for maintainable tests", "Handling popups, iframes, multi-tabs, and file uploads"],
+        "practice_tasks": ["Automate a complete user login, search, and checkout flow in Playwright", "Implement Page Object Model for a 5-page web application"],
+        "project": "Production-Grade E2E Test Automation Framework in Playwright",
+        "milestone": "Automate complex browser user journeys across Chrome, Firefox, and Safari."
+      },
+      {
+        "phase": 4,
+        "title": "API Test Automation & Mocking",
+        "duration": "3 - 4 Weeks",
+        "skills": ["REST API Testing (Postman & Pytest/Requests)", "JSON Schema Validation", "API Mocking (MockServer/WireMock)", "Auth Token Handling"],
+        "topics": ["Validating status codes, response times, headers, and JSON schemas", "Chaining API requests (e.g. login -> get token -> create resource)", "Mocking third-party API dependencies in test environments", "Contract testing basics"],
+        "practice_tasks": ["Build a Postman test collection with automated assertions and run via Newman", "Write automated Python API tests validating CRUD operations against a mock API"],
+        "project": "Automated REST API Test Harness with Dynamic Chaining & Schema Validation",
+        "milestone": "Validate API reliability, performance, and contract compliance."
+      },
+      {
+        "phase": 5,
+        "title": "Performance & Load Testing",
+        "duration": "3 Weeks",
+        "skills": ["Load Testing (k6 / JMeter)", "Virtual Users & Stress Scenarios", "Performance Metrics (p95/p99 Latency)", "Bottleneck Identification"],
+        "topics": ["Spike, stress, soak, and breakpoint testing", "Writing realistic load test scripts with virtual user ramp-up", "Analyzing latency percentiles, throughput, and error rates", "Collaborating with backend teams to resolve bottlenecks"],
+        "practice_tasks": ["Simulate 1,000 concurrent users hitting an API endpoint using k6", "Identify the maximum throughput breaking point of a web service"],
+        "project": "Automated Load Testing & Performance Benchmark Report Suite with k6",
+        "milestone": "Benchmark and stress-test high-traffic systems before production."
+      },
+      {
+        "phase": 6,
+        "title": "CI/CD Continuous Testing & SDET Interview Prep",
+        "duration": "3 Weeks",
+        "skills": ["GitHub Actions Test Integration", "Allure Test Reporting", "Docker for Test Execution", "Portfolio & SDET Interview Prep"],
+        "topics": ["Running automated UI and API tests on every pull request", "Generating visual Allure test execution reports with screenshots and video", "Parallel test execution in Docker containers", "Coding challenges, automation architecture questions, and resume polish"],
+        "practice_tasks": ["Configure GitHub Actions to run Playwright tests in parallel on PRs", "Build a dashboard showcasing test run trends and flaky test analysis"],
+        "project": "Continuous Automated Quality Gate Pipeline in GitHub Actions with Visual Reports",
+        "milestone": "Ready to land QA Automation Engineer and SDET positions."
+      }
+    ]
+  },
+  "ui_ux": {
+    "career_title": "UI/UX Designer",
+    "summary": "Master user research, wireframing, high-fidelity UI design in Figma, design systems, usability testing, and interactive prototyping.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Design Principles & Visual Fundamentals",
+        "duration": "3 Weeks",
+        "skills": ["Visual Hierarchy", "Typography & Font Pairing", "Color Theory & Contrast", "Grid Systems & Spacing"],
+        "topics": ["Gestalt principles in digital interfaces", "Selecting and scaling typography for readability", "Accessible color palettes (WCAG AA/AAA standards)", "8pt spatial grid systems and layout harmony"],
+        "practice_tasks": ["Redesign an ugly landing page applying proper visual hierarchy and spacing", "Create a cohesive color and typography style guide for a fintech app"],
+        "project": "Visual Design Style Guide & Responsive Landing Page Concept",
+        "milestone": "Create visually polished, balanced, and accessible digital layouts."
+      },
+      {
+        "phase": 2,
+        "title": "Figma Mastery & Component Architecture",
+        "duration": "4 Weeks",
+        "skills": ["Figma Core Tools", "Auto-Layout & Constraints", "Components & Variants", "Figma Variables & Tokens"],
+        "topics": ["Mastering nested Auto-Layout for responsive components", "Component properties, booleans, and variants", "Setting up design tokens (colors, spacing, radii) with Figma Variables", "Organizing Figma project files for team handoff"],
+        "practice_tasks": ["Build a fully responsive navigation bar and card component with Auto-Layout", "Create a versatile button component with 12 variants using properties"],
+        "project": "Modular Figma Design System for a Multi-Platform SaaS App",
+        "milestone": "Build scalable, production-ready design systems in Figma."
+      },
+      {
+        "phase": 3,
+        "title": "User Research & Information Architecture",
+        "duration": "4 Weeks",
+        "skills": ["User Interviews & Surveys", "User Personas & Empathy Maps", "User Journey Mapping", "Information Architecture & Card Sorting"],
+        "topics": ["Conducting non-biased user interviews and synthesizing insights", "Creating data-backed personas and journey pain points", "Site maps, navigation hierarchy, and user flows", "Card sorting methodologies for intuitive information organization"],
+        "practice_tasks": ["Conduct 3 user interviews and synthesize a user journey map with pain points", "Create an intuitive site map for a complex healthcare booking app"],
+        "project": "End-to-End User Research & Discovery Case Study",
+        "milestone": "Ground design decisions in genuine human psychology and user needs."
+      },
+      {
+        "phase": 4,
+        "title": "Wireframing, Low-Fi & High-Fi Prototyping",
+        "duration": "4 Weeks",
+        "skills": ["Low-Fidelity Wireframes", "High-Fidelity Mockups", "Interactive Prototyping", "Micro-Interactions & Smart Animate"],
+        "topics": ["Rapid sketching and grayscale wireframing", "Translating wireframes into high-fidelity UI screens", "Building interactive click-through prototypes with Figma Smart Animate", "Designing micro-animations for feedback and delight"],
+        "practice_tasks": ["Sketch 10 rapid wireframe variations for a mobile checkout screen", "Build a high-fidelity interactive prototype with realistic page transitions"],
+        "project": "Interactive High-Fidelity Mobile App Prototype with Micro-Interactions",
+        "milestone": "Turn abstract concepts into interactive prototypes indistinguishable from real apps."
+      },
+      {
+        "phase": 5,
+        "title": "Usability Testing & Iterative Design",
+        "duration": "3 Weeks",
+        "skills": ["Usability Testing Sessions", "Think-Aloud Protocols", "SUS (System Usability Scale) Metrics", "Design Iteration"],
+        "topics": ["Writing usability testing scripts and task scenarios", "Moderating user testing sessions without leading the user", "Measuring task completion rates, time-on-task, and SUS scores", "Synthesizing usability feedback into design iteration sprints"],
+        "practice_tasks": ["Run usability testing with 5 participants on your mobile prototype", "Create a before-and-after redesign summary addressing discovered pain points"],
+        "project": "Usability Testing Report & Prototype Iteration Case Study",
+        "milestone": "Validate and refine user experiences through rigorous testing."
+      },
+      {
+        "phase": 6,
+        "title": "Developer Handoff & Portfolio Case Studies",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Developer Specs & Handoff", "Design Tokens & WCAG Accessibility", "Case Study Storytelling", "Portfolio Website Creation"],
+        "topics": ["Creating clear design specifications and redlines for developers", "Understanding HTML/CSS constraints and responsive behavior", "Writing in-depth UX case studies (Problem, Process, Solution, Impact)", "Publishing a personal portfolio website"],
+        "practice_tasks": ["Prepare developer handoff documentation with component annotations in Figma", "Write a comprehensive 1,500-word UX case study with rich visuals"],
+        "project": "Professional UI/UX Portfolio Website Featuring 3 In-Depth Case Studies",
+        "milestone": "Ready to land UI/UX Designer, Product Designer, and UX Researcher roles."
+      }
+    ]
+  },
+  "data_engineer": {
+    "career_title": "Database/Data Engineer",
+    "summary": "Master data modeling, high-throughput ETL/ELT pipelines, distributed processing with Spark, data warehousing with Snowflake, and real-time streaming with Kafka.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "SQL Mastery & Relational Data Modeling",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Advanced SQL", "Dimensional Data Modeling", "Star & Snowflake Schemas", "Database Indexing & Performance"],
+        "topics": ["Complex joins, aggregations, window functions, and CTEs", "Fact and dimension tables, slowly changing dimensions (SCD Types 1, 2, 3)", "Relational database normalization vs dimensional modeling", "Query optimization and index strategies (B-tree, Hash, GiST)"],
+        "practice_tasks": ["Design a dimensional star schema for a global retail business", "Write SQL window function queries to compute running totals and moving averages"],
+        "project": "Enterprise Dimensional Data Warehouse Schema & SQL Modeling Suite",
+        "milestone": "Architect robust dimensional schemas and query terabytes of relational data."
+      },
+      {
+        "phase": 2,
+        "title": "Python for Data Engineering & Storage Formats",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Python for Data Engineering", "File Formats (Parquet, Avro, ORC)", "Object Storage (AWS S3)", "Data Ingestion & Cleaning"],
+        "topics": ["Working with columnar storage formats and compression codecs (Snappy, Zstandard)", "Interacting with AWS S3 using Boto3", "Streaming large file streams without memory overflow", "Data validation with Pydantic and Great Expectations"],
+        "practice_tasks": ["Convert 10GB of messy CSV files into partitioned Parquet files on S3", "Build a Python script that validates incoming JSON records against schema rules"],
+        "project": "Automated Data Ingestion, Cleaning & Parquet Transformation Pipeline",
+        "milestone": "Process and store massive datasets efficiently using columnar formats."
+      },
+      {
+        "phase": 3,
+        "title": "ETL Orchestration with Apache Airflow",
+        "duration": "4 Weeks",
+        "skills": ["Apache Airflow", "DAG Authoring & Task Dependencies", "Operators & Sensors", "Error Handling & Retries"],
+        "topics": ["Airflow architecture (Scheduler, Webserver, Worker, Metadata DB)", "Authoring modular Python DAGs with dynamic task generation", "Using Airflow Sensors, Hooks, and Custom Operators", "Backfilling, idempotency, and automated failure alerting"],
+        "practice_tasks": ["Build a multi-task Airflow DAG that extracts data from an API, transforms, and loads into Postgres", "Configure automated Slack notifications on pipeline task failures"],
+        "project": "Production-Grade Daily ETL Workflow Orchestrated by Apache Airflow",
+        "milestone": "Orchestrate complex, fault-tolerant data workflows with automated retries."
+      },
+      {
+        "phase": 4,
+        "title": "Distributed Computing with Apache Spark (PySpark)",
+        "duration": "4 - 5 Weeks",
+        "skills": ["Apache Spark Architecture", "PySpark DataFrames & SQL", "Transformations & Actions", "Spark Optimization & Partitioning"],
+        "topics": ["Spark driver, executors, RDDs, and lazy evaluation", "Distributed joins, aggregations, and window functions in PySpark", "Partitioning, shuffling, broadcast joins, and caching strategies", "Reading and writing to cloud data lakes (Delta Lake / Iceberg)"],
+        "practice_tasks": ["Process a 50M-row dataset using PySpark and perform distributed aggregations", "Optimize a slow Spark job by fixing data skew with salting techniques"],
+        "project": "Large-Scale Distributed Analytics Pipeline with PySpark & Delta Lake",
+        "milestone": "Process multi-gigabyte and terabyte datasets using distributed computing."
+      },
+      {
+        "phase": 5,
+        "title": "Cloud Data Warehouses & dbt (Data Build Tool)",
+        "duration": "3 - 4 Weeks",
+        "skills": ["Snowflake / Google BigQuery", "dbt (Data Build Tool)", "ELT Data Transformation", "Data Quality Testing"],
+        "topics": ["Cloud data warehouse architecture (separated storage and compute)", "Writing modular SQL data transformations in dbt", "Automated data documentation, lineage, and schema tests", "Incremental models and table materialization strategies"],
+        "practice_tasks": ["Build a dbt project that transforms raw staging data into clean analytics mart models", "Write automated dbt tests verifying primary keys and column constraints"],
+        "project": "Modern Analytics Engineering Stack with Snowflake + dbt + Lineage Documentation",
+        "milestone": "Build modern, test-driven ELT pipelines using dbt and cloud warehouses."
+      },
+      {
+        "phase": 6,
+        "title": "Real-Time Streaming (Kafka) & Data Architecture",
+        "duration": "4 Weeks",
+        "skills": ["Apache Kafka (Producers, Consumers, Topics)", "Kafka Connect & Schema Registry", "Streaming with Spark / Flink", "System Design & Interview Prep"],
+        "topics": ["Event-driven streaming architecture and topic partitioning", "Ensuring exactly-once vs at-least-once delivery semantics", "Real-time stream processing and windowing", "Data engineering system design interviews (e.g. designing a metrics aggregator)"],
+        "practice_tasks": ["Set up a local Kafka cluster and write Python producers and consumers", "Process real-time streaming clickstream events and compute metrics in sliding windows"],
+        "project": "Real-Time Clickstream Streaming Analytics Platform with Kafka & Spark Streaming",
+        "milestone": "Ready to land Data Engineer, ETL Developer, and Big Data Engineer positions."
+      }
+    ]
+  },
+  "mobile": {
+    "career_title": "Mobile App Developer",
+    "summary": "Master cross-platform and native mobile app development, state management, mobile UI/UX, device APIs, and app store deployment.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Mobile Foundations & JavaScript/TypeScript",
+        "duration": "3 - 4 Weeks",
+        "skills": ["TypeScript Basics", "Mobile UI Patterns", "React Fundamentals", "Git Workflow"],
+        "topics": ["TypeScript types, interfaces, and generics", "Mobile UI touch patterns, navigation ergonomics", "Component state, props, and hooks", "Mobile developer environment setup (Xcode, Android Studio)"],
+        "practice_tasks": ["Build a responsive mobile-first UI layout with TypeScript", "Set up Android and iOS simulators on your workstation"],
+        "project": "Interactive Mobile Recipe Explorer with TypeScript",
+        "milestone": "Solidify TypeScript and mobile-first architectural concepts."
+      },
+      {
+        "phase": 2,
+        "title": "React Native & Core Components",
+        "duration": "4 - 5 Weeks",
+        "skills": ["React Native (Expo / CLI)", "Core Components (View, Text, FlatList)", "Flexbox for Mobile", "React Navigation v6"],
+        "topics": ["React Native architecture and bridge/fabric concepts", "High-performance scrolling lists with FlatList and SectionList", "Stack, Bottom Tab, and Drawer navigation patterns", "Styling with StyleSheet and NativeWind (Tailwind)"],
+        "practice_tasks": ["Build a multi-screen mobile app with nested bottom tabs and stack navigation", "Create an infinite-scrolling social feed with pull-to-refresh"],
+        "project": "Multi-Screen Social Feed App with Dynamic Navigation in React Native",
+        "milestone": "Build fluid, multi-screen cross-platform mobile apps."
+      },
+      {
+        "phase": 3,
+        "title": "State Management & Device Hardware APIs",
+        "duration": "4 Weeks",
+        "skills": ["Global State (Zustand / Redux)", "Camera & Image Picker", "Location & Maps (GPS)", "Biometrics (FaceID/TouchID)"],
+        "topics": ["Managing global application state across mobile screens", "Accessing camera, photo library, and microphone", "Geolocation tracking and interactive map rendering", "Authenticating users with device biometrics"],
+        "practice_tasks": ["Build an app that takes a photo, tags current GPS location, and saves to state", "Implement FaceID authentication gate on app launch"],
+        "project": "Geo-Tagged Travel Photo Journal Mobile App with Biometric Lock",
+        "milestone": "Integrate native device sensors and hardware features."
+      },
+      {
+        "phase": 4,
+        "title": "Offline Storage & Backend Sync",
+        "duration": "3 - 4 Weeks",
+        "skills": ["SQLite / WatermelonDB", "AsyncStorage / MMKV", "REST API & WebSocket Integration", "Offline-First Sync"],
+        "topics": ["Fast key-value storage with MMKV", "Local relational databases with SQLite", "Caching API responses and handling offline states", "Syncing offline changes back to cloud backends when online"],
+        "practice_tasks": ["Build an offline-first note-taking app that syncs when network returns", "Implement real-time push notifications using Expo Notifications"],
+        "project": "Offline-First Mobile Expense Tracker with SQLite & Cloud Sync",
+        "milestone": "Build resilient mobile apps that work flawlessly without an internet connection."
+      },
+      {
+        "phase": 5,
+        "title": "Mobile Animations & Gesture Handling",
+        "duration": "3 - 4 Weeks",
+        "skills": ["React Native Reanimated", "Gesture Handler", "Lottie Animations", "Mobile Performance Profiling"],
+        "topics": ["60FPS native thread animations with Reanimated 3", "Pan, pinch, and swipe gesture recognizers", "Embedding lightweight vector Lottie animations", "Memory leak detection and FPS profiling in Flipper"],
+        "practice_tasks": ["Create a Tinder-style swipeable card deck with gestures and haptic feedback", "Build a micro-interaction animation for button confirmation"],
+        "project": "Interactive Habit Tracker App with Smooth Gestures & Reanimated 3",
+        "milestone": "Deliver delight through 60fps animations and tactile gesture interactions."
+      },
+      {
+        "phase": 6,
+        "title": "App Store Deployment & Production Release",
+        "duration": "3 Weeks",
+        "skills": ["EAS Build & Fastlane", "App Store & Google Play Guidelines", "In-App Purchases (RevenueCat)", "CI/CD & Crashlytics"],
+        "topics": ["Automated app compilation and signing with EAS/Fastlane", "Navigating Apple App Store and Google Play review requirements", "Implementing subscription paywalls with RevenueCat", "Real-time crash reporting with Sentry and Firebase Crashlytics"],
+        "practice_tasks": ["Build and sign production .ipa and .aab release bundles", "Set up automated GitHub Actions workflow deploying to TestFlight / Internal Track"],
+        "project": "Production Mobile App Published to TestFlight & Google Play Beta",
+        "milestone": "Ready to land Mobile Developer and React Native Engineer positions."
+      }
+    ]
+  }
+}

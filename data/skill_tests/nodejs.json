@@ -1,0 +1,144 @@
+{
+  "test_id": "nodejs",
+  "title": "Node.js Mastery Test",
+  "category": "Technology",
+  "total_questions": 10,
+  "description": "Test your Node.js expertise: libuv, event loop phases, streams, buffer, clustering, async I/O, and Express middlewares.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What C library handles asynchronous I/O, thread pool operations, and the Event Loop in Node.js?",
+      "options": ["libuv", "V8", "OpenSSL", "zlib"],
+      "correct_answer": 0,
+      "topic": "Node.js Architecture",
+      "difficulty": "medium",
+      "explanation": "Node.js combines Google's V8 JavaScript engine with `libuv`, a multi-platform C library providing asynchronous I/O and thread pool management."
+    },
+    {
+      "id": 2,
+      "question": "What is the order of phases in the Node.js Event Loop?",
+      "options": [
+        "Timers -> Pending Callbacks -> Idle/Prepare -> Poll -> Check -> Close Callbacks",
+        "Poll -> Timers -> Check -> Close -> Pending",
+        "Microtasks -> Macrotasks -> Timers -> Garbage Collection",
+        "Check -> Poll -> Timers -> Pending"
+      ],
+      "correct_answer": 0,
+      "topic": "Event Loop Phases",
+      "difficulty": "hard",
+      "explanation": "The Node.js event loop cycles through Timers (setTimeout), Pending Callbacks (I/O), Idle/Prepare, Poll (incoming I/O), Check (setImmediate), and Close callbacks."
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between `process.nextTick()` and `setImmediate()` in Node.js?",
+      "options": [
+        "`process.nextTick()` callbacks execute immediately after the current operation finishes before the event loop continues; `setImmediate()` executes in the Check phase",
+        "`setImmediate()` executes before `process.nextTick()`",
+        "`process.nextTick()` executes after a 10ms delay",
+        "They are aliases for the exact same function"
+      ],
+      "correct_answer": 0,
+      "topic": "Async Execution Scheduling",
+      "difficulty": "medium",
+      "explanation": "`process.nextTick` queues a callback in the nextTick queue, processed immediately after the active operation before proceeding to the event loop phases."
+    },
+    {
+      "id": 4,
+      "question": "Why are Node.js Streams preferred when processing large multi-gigabyte files?",
+      "options": [
+        "Streams read and process data chunk-by-chunk in small memory buffers without loading the entire file into RAM at once",
+        "Streams compress files automatically by 90%",
+        "Streams bypass disk I/O completely",
+        "Streams only work with JSON formats"
+      ],
+      "correct_answer": 0,
+      "topic": "Streams & Buffers",
+      "difficulty": "easy",
+      "explanation": "Streaming enables handling data larger than available RAM with minimal memory footprint and faster time-to-first-byte."
+    },
+    {
+      "id": 5,
+      "question": "What is 'Backpressure' in Node.js Streams?",
+      "options": [
+        "A condition where data is being written faster than the destination stream can consume it, signaling the readable stream to pause",
+        "A network timeout error in HTTP servers",
+        "A CPU bottleneck caused by infinite loops",
+        "A memory leak in the garbage collector"
+      ],
+      "correct_answer": 0,
+      "topic": "Stream Optimization",
+      "difficulty": "medium",
+      "explanation": "Backpressure occurs when the writable stream's buffer fills up (`write()` returns false), telling the readable stream to pause until 'drain' fires."
+    },
+    {
+      "id": 6,
+      "question": "What is the Node.js `cluster` module used for?",
+      "options": [
+        "Spawning multiple worker processes that share the same server port to take advantage of multi-core CPU architectures",
+        "Connecting to distributed database clusters",
+        "Clustering CSS files into a single bundle",
+        "Synchronizing browser tabs"
+      ],
+      "correct_answer": 0,
+      "topic": "Clustering & Scaling",
+      "difficulty": "medium",
+      "explanation": "Because Node runs on a single main thread, the cluster module forks worker processes running across all available CPU cores."
+    },
+    {
+      "id": 7,
+      "question": "In Express.js, what is the role of the `next()` function inside a middleware?",
+      "options": [
+        "Passes control to the next middleware or route handler in the execution chain",
+        "Restarts the Node.js server process",
+        "Redirects the client to the next webpage",
+        "Sends a 200 OK response immediately"
+      ],
+      "correct_answer": 0,
+      "topic": "Express Middleware",
+      "difficulty": "easy",
+      "explanation": "If a middleware does not end the request-response cycle (e.g. `res.send()`), it must call `next()` to pass control to the subsequent handler."
+    },
+    {
+      "id": 8,
+      "question": "What happens if an unhandled promise rejection occurs in modern Node.js (v15+)?",
+      "options": [
+        "The Node.js process terminates with a non-zero exit code by default",
+        "It is silently ignored and the process continues",
+        "The server retries the promise indefinitely",
+        "The terminal clears and prints a warning"
+      ],
+      "correct_answer": 0,
+      "topic": "Error Handling",
+      "difficulty": "medium",
+      "explanation": "Since Node 15, unhandled promise rejections default to throwing an UnhandledPromiseRejection exception that crashes the process."
+    },
+    {
+      "id": 9,
+      "question": "What is the primary difference between CommonJS (`require`) and ES Modules (`import`) in Node.js?",
+      "options": [
+        "CommonJS is synchronous and evaluated at runtime; ES Modules are static, asynchronous, and support top-level `await` and tree-shaking",
+        "ES Modules only work in the browser",
+        "CommonJS is faster than ES Modules in all cases",
+        "ES Modules cannot export functions"
+      ],
+      "correct_answer": 0,
+      "topic": "Module Systems (CJS vs ESM)",
+      "difficulty": "medium",
+      "explanation": "ES Modules (ESM) enable static analysis for tree-shaking, asynchronous module loading, and standardized syntax across browser and server."
+    },
+    {
+      "id": 10,
+      "question": "What is the default size of the `libuv` thread pool in Node.js, and how can it be adjusted?",
+      "options": [
+        "Default is 4 threads; adjusted by setting the `UV_THREADPOOL_SIZE` environment variable",
+        "Default is 16 threads; adjusted via `package.json`",
+        "Default is 1 thread; cannot be changed",
+        "Default matches the number of RAM gigabytes"
+      ],
+      "correct_answer": 0,
+      "topic": "Libuv Thread Pool",
+      "difficulty": "hard",
+      "explanation": "The libuv thread pool handles disk I/O, DNS lookups, and crypto operations with 4 threads by default, configurable up to 1024."
+    }
+  ]
+}

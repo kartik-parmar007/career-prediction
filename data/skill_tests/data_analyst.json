@@ -1,0 +1,124 @@
+{
+  "test_id": "data_analyst",
+  "title": "Data Analyst Readiness",
+  "category": "Career Field",
+  "total_questions": 10,
+  "description": "Test your mastery of SQL queries, aggregations, Excel modeling, Power BI/Tableau dashboards, and business data analysis.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which SQL clause is used to filter the results of an aggregate function (e.g., `COUNT(*) > 5`)?",
+      "options": ["WHERE", "HAVING", "GROUP BY", "ORDER BY"],
+      "correct_answer": 1,
+      "topic": "SQL Aggregations",
+      "difficulty": "easy",
+      "explanation": "HAVING filters aggregated groups created by GROUP BY, while WHERE filters individual rows before aggregation."
+    },
+    {
+      "id": 2,
+      "question": "What is the key difference between an `INNER JOIN` and a `LEFT JOIN` in SQL?",
+      "options": [
+        "INNER JOIN returns only matching rows from both tables; LEFT JOIN returns all rows from the left table and matching rows from the right",
+        "LEFT JOIN only works on numerical IDs",
+        "INNER JOIN drops duplicate columns automatically",
+        "LEFT JOIN deletes un-matched rows from the database"
+      ],
+      "correct_answer": 0,
+      "topic": "SQL Joins",
+      "difficulty": "easy",
+      "explanation": "LEFT JOIN preserves every record from the left table, filling in NULLs for non-matching rows from the right table."
+    },
+    {
+      "id": 3,
+      "question": "In SQL, what is the purpose of the `ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC)` window function?",
+      "options": [
+        "Assigns a sequential integer rank to each employee within their specific department sorted by salary",
+        "Calculates the total salary of each department",
+        "Deletes all rows except the highest paid employee in each department",
+        "Creates a new database partition table on disk"
+      ],
+      "correct_answer": 0,
+      "topic": "SQL Window Functions",
+      "difficulty": "medium",
+      "explanation": "PARTITION BY divides the result set into partitions (e.g., departments) and ROW_NUMBER() assigns a sequential rank within each partition."
+    },
+    {
+      "id": 4,
+      "question": "In Pandas (Python), how do you remove rows containing missing (`NaN`) values from a DataFrame `df`?",
+      "options": ["df.dropna()", "df.remove_nan()", "df.clean()", "df.drop_nulls()"],
+      "correct_answer": 0,
+      "topic": "Python Pandas",
+      "difficulty": "easy",
+      "explanation": "`df.dropna()` drops rows or columns with null values based on the axis parameter."
+    },
+    {
+      "id": 5,
+      "question": "What is a 'Star Schema' in data warehousing and business intelligence modeling?",
+      "options": [
+        "A schema consisting of a central Fact table containing numerical metrics surrounded by Dimension tables containing descriptive attributes",
+        "A relational schema where all tables are fully normalized to Boyce-Codd Normal Form",
+        "A database that stores data in celestial astronomical coordinates",
+        "A graph database model with node vertices"
+      ],
+      "correct_answer": 0,
+      "topic": "Data Modeling",
+      "difficulty": "medium",
+      "explanation": "The star schema is the standard dimensional modeling technique for BI, with a central fact table joined to denormalized dimension tables."
+    },
+    {
+      "id": 6,
+      "question": "In statistics, what measure is most resilient against extreme outliers in a skewed distribution?",
+      "options": ["Mean", "Median", "Standard Deviation", "Variance"],
+      "correct_answer": 1,
+      "topic": "Descriptive Statistics",
+      "difficulty": "easy",
+      "explanation": "The median represents the middle value of a sorted distribution and is unaffected by extreme high or low outlier values."
+    },
+    {
+      "id": 7,
+      "question": "What metric represents the percentage of customers who stop subscribing to or buying a service over a given period?",
+      "options": ["Churn Rate", "CAC (Customer Acquisition Cost)", "NPS (Net Promoter Score)", "CLV (Customer Lifetime Value)"],
+      "correct_answer": 0,
+      "topic": "Business Metrics & KPIs",
+      "difficulty": "easy",
+      "explanation": "Churn rate is the business metric tracking the rate at which customers discontinue their subscriptions or business relationships."
+    },
+    {
+      "id": 8,
+      "question": "In Excel or Power BI, what does DAX stand for?",
+      "options": [
+        "Data Analysis Expressions",
+        "Dynamic Array Extension",
+        "Database Analytical XML",
+        "Data Aggregation Execution"
+      ],
+      "correct_answer": 0,
+      "topic": "Power BI & DAX",
+      "difficulty": "easy",
+      "explanation": "DAX (Data Analysis Expressions) is the formula language used across Power BI, Analysis Services, and Power Pivot in Excel."
+    },
+    {
+      "id": 9,
+      "question": "What type of chart is most suitable for visualizing the distribution and spread of continuous numerical data across quartiles?",
+      "options": ["Box Plot (Box-and-Whisker)", "Pie Chart", "Donut Chart", "Stacked Bar Chart"],
+      "correct_answer": 0,
+      "topic": "Data Visualization",
+      "difficulty": "medium",
+      "explanation": "Box plots display minimum, first quartile (Q1), median, third quartile (Q3), maximum, and outlier points clearly."
+    },
+    {
+      "id": 10,
+      "question": "In cohort analysis, what does a retention heatmap matrix illustrate?",
+      "options": [
+        "How different groups of users acquired at the same time continue engaging over successive weeks/months",
+        "The CPU temperature of the database server",
+        "The geographical location of active IP addresses",
+        "The correlation matrix between all numeric variables"
+      ],
+      "correct_answer": 0,
+      "topic": "Cohort Analysis",
+      "difficulty": "medium",
+      "explanation": "Cohort retention tables track user groups based on signup date and show what percentage return across subsequent time periods."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Technical Skill Assessment (10 MCQs) — AI IT Career Advisor{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10 md:py-14">
+  
+  <!-- Header Bar -->
+  <div class="glass-card p-4 sm:p-6 mb-5 sm:mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div>
+      <div class="flex items-center gap-2 mb-1">
+        <span id="test-category" class="badge-pill badge-indigo">Career</span>
+        <span class="badge-pill badge-cyan">10 Questions</span>
+      </div>
+      <h1 id="test-title" class="text-lg sm:text-2xl font-bold text-white font-display">
+        Skill Assessment
+      </h1>
+    </div>
+
+    <!-- Timer & Progress Counter -->
+    <div class="flex items-center gap-3 sm:gap-4 bg-slate-900/80 p-2.5 sm:p-3 rounded-xl border border-slate-800 self-start sm:self-auto">
+      <div>
+        <span class="text-[10px] text-slate-500 font-semibold block uppercase">Time</span>
+        <span id="test-timer" class="text-xs sm:text-sm font-bold text-emerald-400 font-mono">00:00</span>
+      </div>
+      <div class="h-6 sm:h-8 w-px bg-slate-800"></div>
+      <div>
+        <span class="text-[10px] text-slate-500 font-semibold block uppercase">Progress</span>
+        <span id="mcq-answered-count" class="text-xs sm:text-sm font-bold text-indigo-400">0 / 10</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Quick Question Palette (Shown on mobile screens < 1024px) -->
+  <div class="lg:hidden glass-card p-3 mb-4">
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Quick Navigation</span>
+      <span id="mobile-palette-status" class="text-[11px] text-indigo-300 font-semibold">Q1</span>
+    </div>
+    <div id="mobile-question-palette" class="mobile-palette-scroll">
+      <!-- 10 quick jump buttons populated by skill-test.js -->
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="mb-5 sm:mb-6">
+    <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5 font-semibold">
+      <span id="mcq-progress-text">Question 1 of 10</span>
+      <span>10 MCQs</span>
+    </div>
+    <div class="progress-bar-container">
+      <div id="mcq-progress-fill" class="progress-bar-fill" style="width: 10%;"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-5 sm:gap-6">
+    
+    <!-- Question Main Container -->
+    <div class="lg:col-span-3">
+      <div id="skill-quiz-container" class="glass-card p-5 sm:p-8 shadow-2xl relative min-h-[380px] flex flex-col justify-between">
+        <!-- Rendered dynamically by static/js/skill-test.js -->
+        <div class="flex items-center justify-center py-16 text-indigo-300 text-sm">
+          <i class="fa-solid fa-spinner fa-spin text-xl mr-2"></i> Loading 10 MCQs...
+        </div>
+      </div>
+    </div>
+
+    <!-- Question Palette Desktop Sidebar -->
+    <div class="hidden lg:block lg:col-span-1">
+      <div class="glass-card p-5 sticky top-24">
+        <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-3 flex items-center justify-between">
+          <span>Question Grid</span>
+          <span class="text-[10px] text-slate-500">1-10</span>
+        </h3>
+        
+        <div id="question-palette-grid" class="grid grid-cols-5 gap-2 mb-4">
+          <!-- 10 buttons populated by skill-test.js -->
+        </div>
+
+        <div class="pt-3 border-t border-slate-800 space-y-1.5 text-[11px] text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded bg-emerald-950 border border-emerald-500/50"></span>
+            <span>Answered</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded bg-slate-800 border border-slate-700"></span>
+            <span>Unanswered</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded border-indigo-500 bg-indigo-950"></span>
+            <span>Current</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/skill-test.js') }}"></script>
+{% endblock %}
