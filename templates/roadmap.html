@@ -6,33 +6,33 @@
 <div id="roadmap-view-container" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-14">
   
   <!-- Header Banner -->
-  <div class="glass-card p-5 sm:p-8 md:p-10 mb-8 sm:mb-10 bg-gradient-to-r from-indigo-950/70 via-slate-900/90 to-cyan-950/70 border border-indigo-500/30">
+  <div class="glass-card p-5 sm:p-8 md:p-10 mb-8 sm:mb-10 bg-gradient-to-r from-indigo-50 via-white to-cyan-50 border border-indigo-200 shadow-sm">
     <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 sm:gap-6">
       <div>
         <div class="flex flex-wrap items-center gap-2 mb-2 sm:mb-3">
           <span id="roadmap-source-badge" class="badge-pill badge-indigo">
-            <i class="fa-solid fa-sparkles text-cyan-400"></i> AI Generated
+            <i class="fa-solid fa-sparkles text-indigo-600"></i> AI Generated
           </span>
           <span id="roadmap-total-duration" class="badge-pill badge-cyan">
             5 - 6 Months Pacing
           </span>
         </div>
 
-        <h1 class="text-xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-display mb-1.5">
+        <h1 class="text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display mb-1.5">
           Personalized <span id="roadmap-career-title" class="gradient-text">Full Stack</span> Roadmap
         </h1>
 
-        <p id="roadmap-custom-summary" class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed mt-1">
+        <p id="roadmap-custom-summary" class="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed mt-1">
           Targeted curriculum designed to bridge diagnostic skill gaps and prepare you for job readiness.
         </p>
       </div>
 
       <div class="flex flex-row md:flex-col gap-2 shrink-0">
-        <a href="/mentor" class="gradient-btn px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 flex-1 md:flex-initial">
+        <a href="/mentor" class="gradient-btn px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 flex-1 md:flex-initial shadow-sm">
           <i class="fa-solid fa-robot"></i> AI Mentor
         </a>
-        <button onclick="regenerateRoadmap()" class="px-3.5 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs font-semibold transition flex items-center justify-center gap-1.5 flex-1 md:flex-initial">
-          <i class="fa-solid fa-rotate text-[10px]"></i> Regenerate
+        <button onclick="regenerateRoadmap()" class="btn-secondary px-3.5 py-2 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1.5 flex-1 md:flex-initial shadow-sm">
+          <i class="fa-solid fa-rotate text-[10px] text-indigo-600"></i> Regenerate
         </button>
       </div>
     </div>
@@ -41,7 +41,7 @@
   <!-- Phases Timeline Container -->
   <div id="roadmap-phases-timeline" class="space-y-4 sm:space-y-6">
     <!-- Populated by static/js/roadmap.js -->
-    <div class="py-16 text-center text-indigo-300 text-sm">
+    <div class="py-16 text-center text-indigo-600 text-sm font-medium">
       <i class="fa-solid fa-spinner fa-spin text-2xl mb-2"></i>
       <p>Building your personalized roadmap...</p>
     </div>
@@ -50,17 +50,17 @@
 </div>
 
 <!-- Loading Overlay for Roadmap Generation -->
-<div id="roadmap-loading-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden px-4">
-  <div class="glass-panel p-6 sm:p-8 rounded-2xl max-w-sm sm:max-w-md w-full border border-indigo-500/40 shadow-2xl animate-fade-in text-center">
-    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-950/80 border border-indigo-500/50 text-indigo-400 flex items-center justify-center text-xl sm:text-2xl mx-auto mb-3 shadow-glow">
+<div id="roadmap-loading-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-md hidden px-4">
+  <div class="glass-panel p-6 sm:p-8 rounded-2xl max-w-sm sm:max-w-md w-full border border-slate-200 shadow-2xl animate-fade-in text-center bg-white">
+    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center text-xl sm:text-2xl mx-auto mb-3 shadow-glow">
       <i class="fa-solid fa-route fa-pulse"></i>
     </div>
-    <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Creating Your Roadmap...</h3>
-    <p class="text-xs text-slate-400 mb-4">Synthesizing diagnostic weak areas and project milestones.</p>
+    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-1">Creating Your Roadmap...</h3>
+    <p class="text-xs text-slate-500 mb-4">Synthesizing diagnostic weak areas and project milestones.</p>
 
-    <div class="space-y-2 text-xs text-slate-300 text-left pl-2">
-      <div class="flex items-center gap-2 text-emerald-400"><i class="fa-solid fa-check"></i> Analyzing performance & skill gaps</div>
-      <div class="flex items-center gap-2 text-indigo-300"><i class="fa-solid fa-circle-notch fa-spin"></i> Structuring learning phases</div>
+    <div class="space-y-2 text-xs text-slate-700 text-left pl-2">
+      <div class="flex items-center gap-2 text-emerald-700 font-medium"><i class="fa-solid fa-check text-emerald-600"></i> Analyzing performance & skill gaps</div>
+      <div class="flex items-center gap-2 text-indigo-700 font-medium"><i class="fa-solid fa-circle-notch fa-spin text-indigo-600"></i> Structuring learning phases</div>
       <div class="flex items-center gap-2 text-slate-400"><i class="fa-regular fa-circle"></i> Mapping milestone capstone projects</div>
     </div>
   </div>

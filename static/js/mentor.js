@@ -1,5 +1,5 @@
 /**
- * AI Career Mentor Chatbot Script
+ * AI Career Mentor Chatbot Script (Clean White Theme)
  * Real-time conversation interface with session context awareness and mobile-optimized display.
  */
 
@@ -41,9 +41,9 @@ function renderMentorContextSidebar() {
 
   if (weakEl) {
     if (context.weak_topics && context.weak_topics.length > 0) {
-      weakEl.innerHTML = context.weak_topics.map(t => `<span class="px-2 py-0.5 rounded-md bg-amber-950/60 border border-amber-500/30 text-amber-300 text-[10px] sm:text-[11px]">${t}</span>`).join(' ');
+      weakEl.innerHTML = context.weak_topics.map(t => `<span class="px-2 py-0.5 rounded-md bg-amber-50 border border-amber-200 text-amber-800 text-[10px] sm:text-[11px] font-medium">${t}</span>`).join(' ');
     } else {
-      weakEl.innerHTML = `<span class="text-xs text-emerald-400">✓ Foundations Verified</span>`;
+      weakEl.innerHTML = `<span class="text-xs text-emerald-600 font-medium">✓ Foundations Verified</span>`;
     }
   }
 }
@@ -59,18 +59,18 @@ function renderChatHistory() {
     const career = context.selected_career_title || 'IT Software Engineer';
 
     messagesContainer.innerHTML = `
-      <div class="chat-bubble-ai p-3.5 sm:p-5 max-w-[90%] sm:max-w-[85%] self-start animate-fade-in">
+      <div class="chat-bubble-ai p-3.5 sm:p-5 max-w-[90%] sm:max-w-[85%] self-start animate-fade-in bg-white border border-slate-200 shadow-sm">
         <div class="flex items-center gap-2 mb-1.5 sm:mb-2">
           <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-indigo-600 flex items-center justify-center text-white text-[10px] sm:text-xs">
             <i class="fa-solid fa-robot"></i>
           </div>
-          <span class="text-xs font-bold text-indigo-300">AI Career Mentor</span>
+          <span class="text-xs font-bold text-indigo-700">AI Career Mentor</span>
         </div>
-        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed mb-2">
+        <p class="text-xs sm:text-sm text-slate-800 leading-relaxed mb-2">
           Hello! I have reviewed your target career path (<strong>${career}</strong>), 
           compatibility match (<strong>${context.compatibility_pct}%</strong>), and technical score (<strong>${context.readiness_pct}%</strong>).
         </p>
-        <p class="text-[11px] sm:text-xs text-slate-400 leading-relaxed">
+        <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
           How can I assist your learning journey? Select a question or ask anything below!
         </p>
       </div>
@@ -91,14 +91,14 @@ function renderChatHistory() {
       `;
     } else {
       html += `
-        <div class="chat-bubble-ai p-3.5 sm:p-5 max-w-[90%] sm:max-w-[85%] self-start animate-fade-in">
+        <div class="chat-bubble-ai p-3.5 sm:p-5 max-w-[90%] sm:max-w-[85%] self-start animate-fade-in bg-white border border-slate-200 shadow-sm">
           <div class="flex items-center gap-2 mb-1.5 sm:mb-2">
             <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-indigo-600 flex items-center justify-center text-white text-[10px] sm:text-xs">
               <i class="fa-solid fa-robot"></i>
             </div>
-            <span class="text-xs font-bold text-indigo-300">AI Career Mentor</span>
+            <span class="text-xs font-bold text-indigo-700">AI Career Mentor</span>
           </div>
-          <div class="text-xs sm:text-sm text-slate-200 leading-relaxed space-y-1.5 sm:space-y-2">${formattedContent}</div>
+          <div class="text-xs sm:text-sm text-slate-800 leading-relaxed space-y-1.5 sm:space-y-2">${formattedContent}</div>
         </div>
       `;
     }
@@ -156,11 +156,11 @@ function showTypingIndicator() {
   if (!typingEl) {
     typingEl = document.createElement('div');
     typingEl.id = 'mentor-typing-indicator';
-    typingEl.className = 'chat-bubble-ai p-2.5 sm:p-3 max-w-[100px] self-start flex items-center gap-1.5';
+    typingEl.className = 'chat-bubble-ai p-2.5 sm:p-3 max-w-[100px] self-start flex items-center gap-1.5 bg-white border border-slate-200 shadow-sm';
     typingEl.innerHTML = `
-      <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce"></span>
-      <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce [animation-delay:0.2s]"></span>
-      <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce [animation-delay:0.4s]"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-bounce"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-bounce [animation-delay:0.2s]"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-bounce [animation-delay:0.4s]"></span>
     `;
     container.appendChild(typingEl);
     scrollChatToBottom();
@@ -189,9 +189,9 @@ function scrollChatToBottom() {
 function formatChatMessage(text) {
   if (!text) return '';
   let formatted = text
-    .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-bold">$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em class="text-indigo-200">$1</em>')
-    .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-700 text-indigo-300 font-mono text-[11px] sm:text-xs">$1</code>');
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-900 font-bold">$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em class="text-indigo-700 font-medium">$1</em>')
+    .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-indigo-700 font-mono text-[11px] sm:text-xs">$1</code>');
 
   const lines = formatted.split('\n');
   let result = [];
@@ -201,13 +201,13 @@ function formatChatMessage(text) {
     const trimmed = line.trim();
     if (trimmed.startsWith('• ') || trimmed.startsWith('- ')) {
       if (!inList) {
-        result.push('<ul class="list-disc pl-4 space-y-1 my-1 marker:text-indigo-400 text-xs sm:text-sm">');
+        result.push('<ul class="list-disc pl-4 space-y-1 my-1 marker:text-indigo-600 text-xs sm:text-sm text-slate-700">');
         inList = true;
       }
       result.push(`<li>${trimmed.substring(2)}</li>`);
     } else if (/^\d+\.\s/.test(trimmed)) {
       if (!inList) {
-        result.push('<ol class="list-decimal pl-4 space-y-1 my-1 marker:text-indigo-400 text-xs sm:text-sm">');
+        result.push('<ol class="list-decimal pl-4 space-y-1 my-1 marker:text-indigo-600 text-xs sm:text-sm text-slate-700">');
         inList = true;
       }
       result.push(`<li>${trimmed.replace(/^\d+\.\s/, '')}</li>`);
@@ -217,7 +217,7 @@ function formatChatMessage(text) {
         inList = false;
       }
       if (trimmed) {
-        result.push(`<p class="leading-relaxed mb-1">${trimmed}</p>`);
+        result.push(`<p class="leading-relaxed mb-1 text-slate-700">${trimmed}</p>`);
       }
     }
   }

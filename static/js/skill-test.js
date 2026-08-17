@@ -1,6 +1,6 @@
 /**
  * Technical Skill Test Engine (10 MCQs)
- * Question pagination, answer tracking, timer, responsive mobile palette, and evaluation submission.
+ * Light theme, question pagination, answer tracking, timer, responsive mobile palette, and auto-scroll.
  */
 
 let currentTestId = null;
@@ -52,17 +52,17 @@ async function loadSkillTest(testId) {
   } catch (err) {
     console.error(err);
     container.innerHTML = `
-      <div class="glass-card p-6 sm:p-8 text-center text-rose-300">
+      <div class="glass-card p-6 sm:p-8 text-center text-rose-600 bg-rose-50/50 border border-rose-200">
         <i class="fa-solid fa-triangle-exclamation text-2xl sm:text-3xl mb-2 sm:mb-3"></i>
         <h3 class="text-lg sm:text-xl font-bold mb-2">Skill Test Not Found</h3>
-        <p class="text-xs sm:text-sm text-slate-400 mb-4">${err.message}</p>
+        <p class="text-xs sm:text-sm text-slate-600 mb-4">${err.message}</p>
         <a href="/skill-tests" class="gradient-btn px-5 py-2 rounded-xl text-xs sm:text-sm inline-block">Explore All Tests</a>
       </div>
     `;
   }
 }
 
-function renderMcqQuestion() {
+function renderMcqQuestion(options = {}) {
   const container = document.getElementById('skill-quiz-container');
   if (!container || !testData || !testData.questions) return;
 
@@ -84,6 +84,7 @@ function renderMcqQuestion() {
   if (progressCount) progressCount.innerText = `${answeredCount} / 10`;
 
   const selectedIdx = userMcqAnswers[q.id.toString()];
+  const hasAnswer = selectedIdx !== undefined;
 
   let optionsHtml = '';
   q.options.forEach((optText, optIdx) => {
@@ -91,9 +92,9 @@ function renderMcqQuestion() {
     const selectedClass = isSelected ? 'selected' : '';
 
     optionsHtml += `
-      <div class="mcq-option ${selectedClass}" onclick="selectMcqAnswer(${q.id}, ${optIdx})">
+      <div id="skill-option-${optIdx}" class="mcq-option ${selectedClass}" onclick="selectMcqAnswer(${q.id}, ${optIdx})">
         <div class="mcq-radio-indicator"></div>
-        <div class="flex-1 text-slate-200 text-xs sm:text-sm md:text-base font-medium leading-snug">
+        <div class="mcq-option-title flex-1 text-slate-800 text-xs sm:text-sm md:text-base font-medium leading-snug">
           ${optText}
         </div>
       </div>
@@ -109,36 +110,40 @@ function renderMcqQuestion() {
       <div>
         <div class="flex items-center justify-between gap-2 mb-3">
           <span class="badge-pill badge-cyan text-[11px]">${q.topic || 'Core Concept'}</span>
-          <span class="text-[11px] text-slate-400 font-medium capitalize">${q.difficulty || 'Medium'}</span>
+          <span class="text-[11px] text-slate-500 font-medium capitalize">${q.difficulty || 'Medium'}</span>
         </div>
 
-        <h2 class="text-base sm:text-lg md:text-xl font-bold text-slate-100 mb-5 leading-relaxed">
+        <h2 class="text-base sm:text-lg md:text-xl font-bold text-slate-900 mb-5 leading-relaxed">
           ${q.question}
         </h2>
 
-        <div class="flex flex-col gap-2.5 sm:gap-3 mb-6">
+        <div id="skill-options-wrapper" class="flex flex-col gap-2.5 sm:gap-3 mb-6">
           ${optionsHtml}
         </div>
       </div>
 
-      <div class="flex items-center justify-between pt-4 border-t border-slate-800 gap-2">
+      <!-- Action Navigation Footer -->
+      <div id="skill-action-footer" class="flex items-center justify-between pt-4 border-t border-slate-200 gap-2">
         <button 
+          id="skill-prev-btn"
           onclick="prevMcq()" 
-          class="px-4 sm:px-5 py-2.5 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-800 text-xs sm:text-sm font-medium transition ${isFirst ? 'opacity-30 pointer-events-none' : ''}">
+          class="px-4 sm:px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 text-xs sm:text-sm font-medium transition shadow-sm ${isFirst ? 'opacity-30 pointer-events-none' : ''}">
           <i class="fa-solid fa-arrow-left mr-1.5"></i> Previous
         </button>
 
         <div class="flex items-center gap-2">
           ${isLast ? `
             <button 
+              id="skill-next-btn"
               onclick="submitSkillTest()" 
-              class="gradient-btn px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 ${!allAnswered ? 'opacity-70' : ''}">
+              class="gradient-btn px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 ${hasAnswer ? 'next-btn-ready shadow-lg' : ''} ${!allAnswered ? 'opacity-80' : ''}">
               <i class="fa-solid fa-circle-check"></i> Submit (${answeredCount}/10)
             </button>
           ` : `
             <button 
+              id="skill-next-btn"
               onclick="nextMcq()" 
-              class="gradient-btn px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+              class="gradient-btn px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 ${hasAnswer ? 'next-btn-ready shadow-lg' : ''}">
               Next <i class="fa-solid fa-arrow-right ml-1"></i>
             </button>
           `}
@@ -148,6 +153,18 @@ function renderMcqQuestion() {
   `;
 
   renderQuestionGrid();
+
+  // Auto-scroll handling
+  if (options.scrollToTop) {
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else if (options.scrollToNextBtn) {
+    const nextBtn = document.getElementById('skill-next-btn');
+    if (nextBtn && window.innerWidth <= 768) {
+      setTimeout(() => {
+        nextBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 80);
+    }
+  }
 }
 
 function renderQuestionGrid() {
@@ -161,17 +178,17 @@ function renderQuestionGrid() {
     const isAnswered = userMcqAnswers[qid] !== undefined;
     const isCurrent = (i === currentQIdx);
 
-    let btnClass = 'bg-slate-800 text-slate-400 border-slate-700 hover:border-slate-500';
+    let btnClass = 'bg-slate-100 text-slate-600 border-slate-200 hover:border-slate-300';
     if (isCurrent) {
-      btnClass = 'border-indigo-500 bg-indigo-950/90 text-indigo-200 ring-2 ring-indigo-500/50 font-bold';
+      btnClass = 'border-indigo-600 bg-indigo-50 text-indigo-700 ring-2 ring-indigo-500/40 font-bold';
     } else if (isAnswered) {
-      btnClass = 'bg-emerald-950/70 border-emerald-500/50 text-emerald-300 font-semibold';
+      btnClass = 'bg-emerald-50 border-emerald-300 text-emerald-700 font-semibold';
     }
 
     buttonsHtml += `
       <button 
         onclick="jumpToQuestion(${i})" 
-        class="w-8 h-8 sm:w-8 sm:h-8 shrink-0 rounded-lg text-xs border transition flex items-center justify-center ${btnClass}">
+        class="w-8 h-8 sm:w-8 sm:h-8 shrink-0 rounded-lg text-xs border transition flex items-center justify-center shadow-sm ${btnClass}">
         ${i + 1}
       </button>
     `;
@@ -183,27 +200,27 @@ function renderQuestionGrid() {
 
 function selectMcqAnswer(qid, optionIdx) {
   userMcqAnswers[qid.toString()] = optionIdx;
-  renderMcqQuestion();
+  renderMcqQuestion({ scrollToNextBtn: true });
 }
 
 function nextMcq() {
   if (currentQIdx < 9) {
     currentQIdx++;
-    renderMcqQuestion();
+    renderMcqQuestion({ scrollToTop: true });
   }
 }
 
 function prevMcq() {
   if (currentQIdx > 0) {
     currentQIdx--;
-    renderMcqQuestion();
+    renderMcqQuestion({ scrollToTop: true });
   }
 }
 
 function jumpToQuestion(idx) {
   if (idx >= 0 && idx < 10) {
     currentQIdx = idx;
-    renderMcqQuestion();
+    renderMcqQuestion({ scrollToTop: true });
   }
 }
 

@@ -6,31 +6,31 @@
 <div id="skill-results-view" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-14">
   
   <!-- Score Summary Hero Card -->
-  <div class="glass-card p-5 sm:p-8 md:p-10 mb-8 sm:mb-10 bg-gradient-to-r from-indigo-950/60 via-slate-900/90 to-cyan-950/60 border border-indigo-500/30">
+  <div class="glass-card p-5 sm:p-8 md:p-10 mb-8 sm:mb-10 bg-gradient-to-r from-indigo-50 via-white to-cyan-50 border border-indigo-200 shadow-sm">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-center">
       
       <!-- Left: Title & Readiness -->
       <div class="lg:col-span-2">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-2 sm:mb-3">
-          <i class="fa-solid fa-circle-check"></i> Assessment Completed
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/80 border border-emerald-300 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-2 sm:mb-3">
+          <i class="fa-solid fa-circle-check text-emerald-600"></i> Assessment Completed
         </div>
 
-        <h1 id="result-test-title" class="text-xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-display mb-1.5">
+        <h1 id="result-test-title" class="text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display mb-1.5">
           Skill Assessment Results
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-600 max-w-xl leading-relaxed">
           Diagnostic summary of core concepts, problem-solving, and implementation readiness.
         </p>
 
-        <div class="flex flex-wrap items-center gap-4 sm:gap-6 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-800">
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-200">
           <div>
-            <span class="text-[11px] text-slate-400 block mb-0.5">Score</span>
-            <span id="result-correct-count" class="text-base sm:text-xl font-bold text-white">8 / 10 Correct</span>
+            <span class="text-[11px] text-slate-500 block mb-0.5">Score</span>
+            <span id="result-correct-count" class="text-base sm:text-xl font-bold text-slate-900">8 / 10 Correct</span>
           </div>
-          <div class="h-6 sm:h-8 w-px bg-slate-800"></div>
+          <div class="h-6 sm:h-8 w-px bg-slate-200"></div>
           <div>
-            <span class="text-[11px] text-slate-400 block mb-0.5">Proficiency Level</span>
-            <span id="result-level-badge" class="px-2.5 py-0.5 rounded-lg bg-indigo-950 border border-indigo-500/40 text-indigo-300 text-xs font-bold">
+            <span class="text-[11px] text-slate-500 block mb-0.5">Proficiency Level</span>
+            <span id="result-level-badge" class="px-2.5 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-bold">
               Intermediate
             </span>
           </div>
@@ -38,12 +38,12 @@
       </div>
 
       <!-- Right: Big Radial Readiness Meter & CTA -->
-      <div class="flex flex-col items-center justify-center p-5 sm:p-6 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
-        <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Technical Readiness</div>
+      <div class="flex flex-col items-center justify-center p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 text-center shadow-md">
+        <div class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Technical Readiness</div>
         <div id="result-score-pct" class="text-4xl sm:text-5xl md:text-6xl font-black gradient-text font-display my-1 sm:my-2">
           80%
         </div>
-        <p class="text-xs text-slate-400 mb-3 sm:mb-4">Benchmark Score</p>
+        <p class="text-xs text-slate-500 mb-3 sm:mb-4">Benchmark Score</p>
         
         <a href="/roadmap" class="gradient-btn w-full py-2.5 sm:py-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2">
           <i class="fa-solid fa-route"></i> Generate Learning Roadmap
@@ -60,8 +60,8 @@
     <div class="glass-card p-5 sm:p-7">
       <div class="flex items-center justify-between mb-3 sm:mb-4">
         <div>
-          <h3 class="text-sm sm:text-base font-bold text-white">Topic Performance Breakdown</h3>
-          <p class="text-xs text-slate-400">Score percentage by subject area</p>
+          <h3 class="text-sm sm:text-base font-bold text-slate-900">Topic Performance Breakdown</h3>
+          <p class="text-xs text-slate-500">Score percentage by subject area</p>
         </div>
         <span class="badge-pill badge-cyan">Analysis</span>
       </div>
@@ -73,11 +73,11 @@
     <!-- Strengths vs Needs Improvement -->
     <div class="glass-card p-5 sm:p-7 flex flex-col justify-between">
       <div>
-        <h3 class="text-sm sm:text-base font-bold text-white mb-3 sm:mb-4">Skill Gap Diagnostics</h3>
+        <h3 class="text-sm sm:text-base font-bold text-slate-900 mb-3 sm:mb-4">Skill Gap Diagnostics</h3>
 
         <div class="mb-4 sm:mb-5">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5 flex items-center gap-1.5">
-            <i class="fa-solid fa-check"></i> Strong Areas (70%+)
+          <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-1.5 flex items-center gap-1.5">
+            <i class="fa-solid fa-check text-emerald-600"></i> Strong Areas (70%+)
           </h4>
           <ul id="strong-areas-list" class="space-y-1">
             <!-- Populated dynamically -->
@@ -85,8 +85,8 @@
         </div>
 
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1.5 flex items-center gap-1.5">
-            <i class="fa-solid fa-triangle-exclamation"></i> Growth Areas (<70%)
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800 mb-1.5 flex items-center gap-1.5">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600"></i> Growth Areas (<70%)
           </h4>
           <ul id="weak-areas-list" class="space-y-1">
             <!-- Populated dynamically -->
@@ -94,9 +94,9 @@
         </div>
       </div>
 
-      <div class="pt-3 sm:pt-4 mt-4 sm:mt-6 border-t border-slate-800 flex items-center justify-between">
-        <span class="text-xs text-slate-400">Ready for tailored practice?</span>
-        <a href="/roadmap" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+      <div class="pt-3 sm:pt-4 mt-4 sm:mt-6 border-t border-slate-100 flex items-center justify-between">
+        <span class="text-xs text-slate-500">Ready for tailored practice?</span>
+        <a href="/roadmap" class="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1">
           Build Roadmap <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
@@ -108,8 +108,8 @@
   <div class="glass-card p-5 sm:p-7">
     <div class="flex items-center justify-between mb-4 sm:mb-6">
       <div>
-        <h3 class="text-base sm:text-lg font-bold text-white">Question Review & Explanations</h3>
-        <p class="text-xs text-slate-400">Answer key with technical explanations</p>
+        <h3 class="text-base sm:text-lg font-bold text-slate-900">Question Review & Explanations</h3>
+        <p class="text-xs text-slate-500">Answer key with technical explanations</p>
       </div>
       <span class="badge-pill badge-indigo">10 MCQs</span>
     </div>

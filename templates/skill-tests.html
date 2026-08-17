@@ -8,13 +8,13 @@
   <!-- Header & Search Filter -->
   <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
     <div>
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-2 sm:mb-3">
-        <i class="fa-solid fa-list-check"></i> Skill Diagnostics
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-semibold uppercase tracking-wider mb-2 sm:mb-3">
+        <i class="fa-solid fa-list-check text-cyan-600"></i> Skill Diagnostics
       </div>
-      <h1 class="text-xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-display">
+      <h1 class="text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
         Technical Readiness Assessments
       </h1>
-      <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
+      <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
         Select any career or tech stack. Each assessment features 10 targeted MCQs to evaluate your technical proficiency.
       </p>
     </div>
@@ -22,18 +22,18 @@
     <!-- Search & Filter Controls -->
     <div class="flex flex-col sm:flex-row gap-2.5 w-full md:w-auto">
       <div class="relative flex-1 sm:flex-initial">
-        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
         <input 
           type="text" 
           id="skill-search-input" 
           placeholder="Search careers or tech..." 
           oninput="filterSkillCards()"
-          class="w-full sm:w-60 pl-9 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-xs focus:border-indigo-500 focus:outline-none placeholder:text-slate-500">
+          class="w-full sm:w-60 pl-9 pr-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-800 text-xs focus:border-indigo-500 focus:outline-none placeholder:text-slate-400 shadow-sm">
       </div>
-      <div class="flex rounded-xl bg-slate-900 border border-slate-800 p-1 overflow-x-auto">
-        <button onclick="setCategoryFilter('all')" id="filter-btn-all" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0">All (21)</button>
-        <button onclick="setCategoryFilter('Career Field')" id="filter-btn-career" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition shrink-0">Careers (12)</button>
-        <button onclick="setCategoryFilter('Technology')" id="filter-btn-tech" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition shrink-0">Tech Stacks (9)</button>
+      <div class="flex rounded-xl bg-slate-100 border border-slate-200 p-1 overflow-x-auto">
+        <button onclick="setCategoryFilter('all')" id="filter-btn-all" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0 shadow-sm">All (21)</button>
+        <button onclick="setCategoryFilter('Career Field')" id="filter-btn-career" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition shrink-0">Careers (12)</button>
+        <button onclick="setCategoryFilter('Technology')" id="filter-btn-tech" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition shrink-0">Tech Stacks (9)</button>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
   <!-- Skill Cards Grid -->
   <div id="all-skill-tests-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
     <!-- Populated dynamically -->
-    <div class="col-span-full py-16 text-center text-indigo-300 text-sm">
+    <div class="col-span-full py-16 text-center text-indigo-600 text-sm font-medium">
       <i class="fa-solid fa-spinner fa-spin text-2xl mb-2"></i>
       <p>Loading available skill assessments...</p>
     </div>
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function setCategoryFilter(category) {
   activeCategory = category;
-  document.getElementById('filter-btn-all').className = category === 'all' ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0' : 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition shrink-0';
-  document.getElementById('filter-btn-career').className = category === 'Career Field' ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0' : 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition shrink-0';
-  document.getElementById('filter-btn-tech').className = category === 'Technology' ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0' : 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition shrink-0';
+  document.getElementById('filter-btn-all').className = category === 'all' ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0 shadow-sm' : 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition shrink-0';
+  document.getElementById('filter-btn-career').className = category === 'Career Field' ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0 shadow-sm' : 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition shrink-0';
+  document.getElementById('filter-btn-tech').className = category === 'Technology' ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shrink-0 shadow-sm' : 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition shrink-0';
   renderSkillTestsGrid();
 }
 
@@ -94,9 +94,9 @@ function renderSkillTestsGrid() {
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div class="col-span-full glass-card p-10 text-center text-slate-400">
-        <i class="fa-solid fa-filter-circle-xmark text-3xl mb-2 text-slate-500"></i>
-        <h4 class="text-sm sm:text-base font-bold text-slate-200">No skill tests match your filter</h4>
+      <div class="col-span-full glass-card p-10 text-center text-slate-500">
+        <i class="fa-solid fa-filter-circle-xmark text-3xl mb-2 text-slate-400"></i>
+        <h4 class="text-sm sm:text-base font-bold text-slate-800">No skill tests match your filter</h4>
         <p class="text-xs text-slate-500 mt-1">Try searching for a different keyword.</p>
       </div>
     `;
@@ -106,22 +106,22 @@ function renderSkillTestsGrid() {
   container.innerHTML = filtered.map(t => {
     const isTech = (t.category === 'Technology');
     return `
-      <div class="glass-card p-4 sm:p-5 flex flex-col justify-between group">
+      <div class="glass-card p-4 sm:p-5 flex flex-col justify-between group hover:border-indigo-300">
         <div>
           <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="w-10 h-10 rounded-xl bg-indigo-950/80 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-lg group-hover:scale-105 transition">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center text-lg group-hover:scale-105 transition">
               <i class="${t.icon || 'fa-solid fa-code'}"></i>
             </div>
             <span class="badge-pill ${isTech ? 'badge-cyan' : 'badge-indigo'} text-[10px]">${t.category}</span>
           </div>
 
-          <h3 class="text-sm sm:text-base font-bold text-white mb-1 group-hover:text-indigo-300 transition">${t.title}</h3>
-          <p class="text-xs text-slate-400 leading-relaxed mb-3 line-clamp-2">${t.short_description}</p>
+          <h3 class="text-sm sm:text-base font-bold text-slate-900 mb-1 group-hover:text-indigo-600 transition">${t.title}</h3>
+          <p class="text-xs text-slate-500 leading-relaxed mb-3 line-clamp-2">${t.short_description}</p>
         </div>
 
-        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-          <span class="text-[11px] font-semibold text-slate-400 flex items-center gap-1">
-            <i class="fa-solid fa-circle-question text-xs text-indigo-400"></i> 10 MCQs
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
+            <i class="fa-solid fa-circle-question text-xs text-indigo-600"></i> 10 MCQs
           </span>
           <a href="/skill-test?test_id=${t.id}" class="gradient-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1">
             Start <i class="fa-solid fa-chevron-right text-[10px]"></i>
