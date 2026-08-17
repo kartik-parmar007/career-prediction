@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>{% block title %}AI IT Career Advisor — Discover Your Tech Path{% endblock %}</title>
-  <meta name="description" content="AI-powered IT career guidance matching your skills and preferences to tech careers with personalized roadmaps and 10-MCQ skill assessments.">
+  <meta name="description" content="AI-powered IT career guidance matching your skills and preferences to tech careers with personalized roadmaps and 10-MCQ skill assessments. Made by Eaglebyte.in founder Kartik Parmar.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -41,10 +41,10 @@
 
   <!-- Header / Navbar -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
       
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2.5 group">
+      <a href="/" class="flex items-center gap-2.5 group shrink-0">
         <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition">
           <i class="fa-solid fa-compass text-base sm:text-lg"></i>
         </div>
@@ -64,8 +64,14 @@
         <a href="/mentor" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50/60 transition">AI Mentor</a>
       </nav>
 
+      <!-- Founder & Eaglebyte.in Highlight Pill (Desktop) -->
+      <a href="https://eaglebyte.in" target="_blank" rel="noopener noreferrer" class="hidden xl:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-indigo-50 via-white to-cyan-50 border border-indigo-200 text-[11px] font-medium text-slate-700 hover:border-indigo-400 hover:text-indigo-700 transition shadow-2xs group">
+        <span>Made by <strong class="text-indigo-600 font-bold">Eaglebyte.in</strong> founder <strong class="text-slate-900 font-bold group-hover:text-indigo-700">Kartik Parmar</strong></span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-indigo-500"></i>
+      </a>
+
       <!-- Session Indicator & Actions -->
-      <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <div id="navbar-session-status" class="hidden items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-[11px] sm:text-xs text-slate-700">
           <!-- Populated by main.js -->
         </div>
@@ -94,6 +100,13 @@
 
     <!-- Mobile Dropdown / Drawer -->
     <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-5 border-t border-slate-200 bg-white shadow-xl animate-fade-in space-y-1">
+      
+      <!-- Creator Highlight Banner on Mobile Menu -->
+      <a href="https://eaglebyte.in" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 mb-2 rounded-xl bg-gradient-to-r from-indigo-50 via-white to-cyan-50 border border-indigo-200 text-xs">
+        <span class="text-slate-700 font-medium">Made by <strong class="text-indigo-600 font-bold">Eaglebyte.in</strong> founder <strong class="text-slate-900 font-bold">Kartik Parmar</strong></span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-indigo-600 ml-1"></i>
+      </a>
+
       <a href="/" class="mobile-nav-link flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100">
         <i class="fa-solid fa-house text-slate-500 w-4 text-center"></i> Home
       </a>
@@ -125,6 +138,25 @@
   <!-- Footer -->
   <footer class="border-t border-slate-200 bg-white py-8 sm:py-10 mt-12 sm:mt-16 text-slate-500 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Creator Highlight Banner -->
+      <div class="mb-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-indigo-50/90 via-white to-cyan-50/90 border border-indigo-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white text-lg shadow-md shadow-indigo-500/20 shrink-0">
+            <i class="fa-solid fa-crown text-amber-300"></i>
+          </div>
+          <div>
+            <div class="text-sm sm:text-base font-extrabold text-slate-900">
+              Made by <a href="https://eaglebyte.in" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline font-bold">Eaglebyte.in</a> founder <span class="text-indigo-700 font-black">Kartik Parmar</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-0.5">Empowering developers & students with intelligent AI-powered IT career guidance</p>
+          </div>
+        </div>
+        <a href="https://eaglebyte.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white border border-indigo-200 hover:border-indigo-400 text-indigo-600 hover:text-indigo-700 text-xs font-bold transition shadow-xs shrink-0">
+          Visit Eaglebyte.in <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
         <div class="sm:col-span-2">
           <div class="flex items-center gap-2 mb-2">
@@ -160,7 +192,7 @@
       </div>
 
       <div class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-center sm:text-left">
-        <p>© 2026 AI IT Career Advisor. All rights reserved.</p>
+        <p>© 2026 AI IT Career Advisor • Made by <a href="https://eaglebyte.in" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-600 hover:underline">Eaglebyte.in</a> founder <strong>Kartik Parmar</strong></p>
         <div class="flex items-center gap-2 text-slate-600">
           <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
           <span>Online & Ready</span>
